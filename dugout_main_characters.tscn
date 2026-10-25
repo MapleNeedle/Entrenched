@@ -1,0 +1,477 @@
+[gd_scene format=3 uid="uid://u1mnjdadm1pc"]
+
+[ext_resource type="Script" uid="uid://bojpe0rx0pbqa" path="res://scripts/Dugoutmaincharacter.gd" id="1_ewkov"]
+[ext_resource type="Texture2D" uid="uid://dsviw2y7oijlx" path="res://character sprite Main character/WalkDugout/Amainsprite For Inside Dugout.png" id="2_8d371"]
+[ext_resource type="Texture2D" uid="uid://ceqtbo0plm11i" path="res://character sprite Main character/WalkDugout/Fmainsprite For Inside Dugout.png" id="3_rbhtk"]
+[ext_resource type="Texture2D" uid="uid://bme2s5ugc6422" path="res://character sprite Main character/WalkDugout/Lmainsprite For Inside Dugout.png" id="4_seuny"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46oym"]
+atlas = ExtResource("2_8d371")
+region = Rect2(0, 0, 181, 194)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0abi0"]
+atlas = ExtResource("2_8d371")
+region = Rect2(181, 0, 181, 194)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efer2"]
+atlas = ExtResource("2_8d371")
+region = Rect2(362, 0, 181, 194)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_371uq"]
+atlas = ExtResource("3_rbhtk")
+region = Rect2(0, 0, 182, 206)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uh3tx"]
+atlas = ExtResource("3_rbhtk")
+region = Rect2(182, 0, 182, 206)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqkjs"]
+atlas = ExtResource("3_rbhtk")
+region = Rect2(364, 0, 182, 206)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3e8di"]
+atlas = ExtResource("4_seuny")
+region = Rect2(21, 0, 168, 173)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ejul2"]
+atlas = ExtResource("4_seuny")
+region = Rect2(189, 0, 168, 173)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pm8vu"]
+atlas = ExtResource("4_seuny")
+region = Rect2(357, 0, 168, 173)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ea8y6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46oym")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0abi0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_efer2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0abi0")
+}],
+"loop": true,
+"name": &"walk A",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_371uq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uh3tx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqkjs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uh3tx")
+}],
+"loop": true,
+"name": &"walk F",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3e8di")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejul2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pm8vu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejul2")
+}],
+"loop": true,
+"name": &"walk L",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3e8di")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejul2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pm8vu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejul2")
+}],
+"loop": true,
+"name": &"walk R",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_j0axn"]
+resource_name = "ADugoutWalk"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk A"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_tf53c"]
+resource_name = "DugoutWalk_Forward"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk F"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_dn2a8"]
+resource_name = "LDugoutWalk"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk L"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_2xgcq"]
+resource_name = "RDugoutWalk"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk R"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:flip_v")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_lkayx"]
+resource_name = "IdleADugout"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.033333335),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk A"]
+}
+
+[sub_resource type="Animation" id="Animation_qlp01"]
+resource_name = "IdleFDugout"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk F"]
+}
+
+[sub_resource type="Animation" id="Animation_yklq5"]
+resource_name = "IdleLDugout"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk L"]
+}
+
+[sub_resource type="Animation" id="Animation_62pic"]
+resource_name = "IdleRDugout"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk R"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:flip_v")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_s82dp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk F"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:flip_v")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y7tie"]
+_data = {
+&"DugoutWalk_Away": SubResource("Animation_j0axn"),
+&"DugoutWalk_Forward": SubResource("Animation_tf53c"),
+&"DugoutWalk_Left": SubResource("Animation_dn2a8"),
+&"DugoutWalk_Right": SubResource("Animation_2xgcq"),
+&"IdleDugout_Away": SubResource("Animation_lkayx"),
+&"IdleDugout_Forward": SubResource("Animation_qlp01"),
+&"IdleDugout_Left": SubResource("Animation_yklq5"),
+&"IdleDugout_Right": SubResource("Animation_62pic"),
+&"RESET": SubResource("Animation_s82dp")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rnmpm"]
+radius = 66.007576
+
+[node name="DugoutMainCharacters" type="CharacterBody2D" unique_id=904227767]
+script = ExtResource("1_ewkov")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2003077227]
+sprite_frames = SubResource("SpriteFrames_ea8y6")
+animation = &"walk F"
+frame = 1
+flip_h = true
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=281980969]
+libraries/ = SubResource("AnimationLibrary_y7tie")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2134736533]
+position = Vector2(0, -8)
+shape = SubResource("CircleShape2D_rnmpm")

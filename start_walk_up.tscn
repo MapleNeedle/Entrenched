@@ -1,0 +1,138 @@
+[gd_scene format=3 uid="uid://8sna0o8mdo1i"]
+
+[ext_resource type="Texture2D" uid="uid://clhx5wwv5q0cf" path="res://Backgrounds/start walking scene.png" id="2_22oye"]
+[ext_resource type="Script" uid="uid://ce7pdg2as7cc8" path="res://scripts/trigger_1.gd" id="3_3vjr7"]
+[ext_resource type="Texture2D" uid="uid://j577t3xvirbe" path="res://Backgrounds/start walking scene #2.png" id="3_fr5ff"]
+[ext_resource type="Script" uid="uid://cswa7s3xd0887" path="res://scripts/trigger_2.gd" id="4_5ifme"]
+[ext_resource type="PackedScene" uid="uid://bbpkrp2ou73nt" path="res://maincharacter.tscn" id="4_bln8t"]
+[ext_resource type="Script" uid="uid://d4gwfmerv6r2v" path="res://scripts/trigger_3.gd" id="5_tyr6b"]
+[ext_resource type="Script" uid="uid://bsynqpwlbdy3t" path="res://scripts/trigger_4.gd" id="6_aqckw"]
+[ext_resource type="Script" uid="uid://h1f0xph1ym1" path="res://scripts/trigger_5.gd" id="7_8au5d"]
+[ext_resource type="Script" uid="uid://cywqapcdd815n" path="res://scripts/next_scene1.gd" id="8_tyr6b"]
+[ext_resource type="PackedScene" uid="uid://bo2h148okhotg" path="res://signal.tscn" id="10_aqckw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ifme"]
+size = Vector2(135, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tyr6b"]
+size = Vector2(106, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1wti"]
+size = Vector2(92, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqckw"]
+size = Vector2(68, 20)
+
+[node name="Node2D" type="Node2D" unique_id=1899780286]
+
+[node name="StartWalkingScene2" type="Sprite2D" parent="." unique_id=849420025]
+position = Vector2(513, 1157)
+texture = ExtResource("2_22oye")
+
+[node name="StartWalkingScene#2" type="Sprite2D" parent="." unique_id=281843679]
+position = Vector2(513, 390)
+texture = ExtResource("3_fr5ff")
+
+[node name="StartWalkingScene#3" type="Sprite2D" parent="." unique_id=1665002486]
+position = Vector2(513, -378)
+texture = ExtResource("3_fr5ff")
+
+[node name="ReferenceRect" type="ReferenceRect" parent="." unique_id=927079349]
+offset_left = 1.0
+offset_top = -762.0
+offset_right = 41.0
+offset_bottom = -722.0
+scale = Vector2(25.627953, 57.64173)
+border_width = 0.1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1465000143]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1231260115]
+polygon = PackedVector2Array(494, 1540, 512, 1451, 512, 1440, 485, 1278, 486, 1243, 497, 1039, 482, 773, 509, 669, 485, 510, 498, 249, 482, 0, 508, -111, 485, -255, 495, -502, 480, -763, 1262, 540)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=33301088]
+polygon = PackedVector2Array(420, 1541, 455, 1404, 427, 1282, 439, 1037, 424, 774, 452, 641, 427, 520, 443, 249, 428, 0, 456, -132, 427, -255, 440, -497, 428, -765, -97, 279)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=267541640]
+position = Vector2(468, 1551)
+shape = SubResource("RectangleShape2D_5ifme")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=2036639871]
+position = Vector2(454, -777)
+shape = SubResource("RectangleShape2D_tyr6b")
+
+[node name="Trigger1" type="Area2D" parent="." unique_id=340574473]
+script = ExtResource("3_3vjr7")
+
+[node name="Box1" type="CollisionShape2D" parent="Trigger1" unique_id=1113845818]
+position = Vector2(464, 1525)
+shape = SubResource("RectangleShape2D_r1wti")
+
+[node name="Trigger2" type="Area2D" parent="." unique_id=183985666]
+script = ExtResource("4_5ifme")
+
+[node name="Box2" type="CollisionShape2D" parent="Trigger2" unique_id=2146884355]
+position = Vector2(469, 1027)
+shape = SubResource("RectangleShape2D_r1wti")
+
+[node name="Trigger3" type="Area2D" parent="." unique_id=240613368]
+script = ExtResource("5_tyr6b")
+
+[node name="Box3" type="CollisionShape2D" parent="Trigger3" unique_id=150496649]
+position = Vector2(462, 429)
+shape = SubResource("RectangleShape2D_r1wti")
+
+[node name="Trigger4" type="Area2D" parent="." unique_id=1603223542]
+script = ExtResource("6_aqckw")
+
+[node name="Box4" type="CollisionShape2D" parent="Trigger4" unique_id=790792606]
+position = Vector2(475, -125)
+shape = SubResource("RectangleShape2D_r1wti")
+
+[node name="Trigger5" type="Area2D" parent="." unique_id=415171069]
+script = ExtResource("7_8au5d")
+
+[node name="Box5" type="CollisionShape2D" parent="Trigger5" unique_id=1787129852]
+position = Vector2(461, -636)
+shape = SubResource("RectangleShape2D_r1wti")
+
+[node name="NextScene" type="Area2D" parent="." unique_id=93401839]
+script = ExtResource("8_tyr6b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextScene" unique_id=19046977]
+position = Vector2(455, -772)
+shape = SubResource("RectangleShape2D_aqckw")
+
+[node name="Main_Character" parent="." unique_id=341919493 instance=ExtResource("4_bln8t")]
+position = Vector2(471, 1533)
+
+[node name="Node2D" parent="." unique_id=657468987 instance=ExtResource("10_aqckw")]
+position = Vector2(461, 1299)
+rotation = 1.5707964
+
+[node name="Node2D2" parent="." unique_id=1573851945 instance=ExtResource("10_aqckw")]
+position = Vector2(463, 875)
+rotation = 1.5707964
+
+[node name="Node2D3" parent="." unique_id=1523835651 instance=ExtResource("10_aqckw")]
+position = Vector2(465, 451)
+rotation = 1.5707964
+
+[node name="Node2D4" parent="." unique_id=1604196105 instance=ExtResource("10_aqckw")]
+position = Vector2(461, 86)
+rotation = 1.5707964
+
+[node name="Node2D5" parent="." unique_id=787631796 instance=ExtResource("10_aqckw")]
+position = Vector2(458, -266)
+rotation = 1.5707964
+
+[node name="Node2D6" parent="." unique_id=190049941 instance=ExtResource("10_aqckw")]
+position = Vector2(460, -675)
+rotation = 1.5707964
+
+[connection signal="body_entered" from="Trigger1" to="Trigger1" method="_on_body_entered"]
+[connection signal="body_entered" from="Trigger2" to="Trigger2" method="_on_body_entered"]
+[connection signal="body_entered" from="Trigger3" to="Trigger3" method="_on_body_entered"]
+[connection signal="body_entered" from="Trigger4" to="Trigger4" method="_on_body_entered"]
+[connection signal="body_entered" from="Trigger5" to="Trigger5" method="_on_body_entered"]
+[connection signal="body_entered" from="NextScene" to="NextScene" method="_on_body_entered"]

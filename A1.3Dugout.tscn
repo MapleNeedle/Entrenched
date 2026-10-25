@@ -1,0 +1,281 @@
+[gd_scene format=3 uid="uid://u6vmylrlwx4j"]
+
+[ext_resource type="Script" uid="uid://biv16btoidtof" path="res://scripts/AAchangeDialogicVar.gd" id="1_726js"]
+[ext_resource type="Texture2D" uid="uid://0i7pkh1goxsy" path="res://Backgrounds/Dugout.png" id="1_akesl"]
+[ext_resource type="PackedScene" uid="uid://bcwqeuqdmk3w5" path="res://transition_layer.tscn" id="1_btcqu"]
+[ext_resource type="PackedScene" uid="uid://u1mnjdadm1pc" path="res://dugout_main_characters.tscn" id="2_akesl"]
+[ext_resource type="Script" uid="uid://488h7b1xkgtm" path="res://scripts/trigger_box_&_signals.gd" id="3_elweg"]
+[ext_resource type="Script" uid="uid://cy3uf5s7h80ma" path="res://scripts/A1.3; Dugout.gd" id="5_7dkte"]
+[ext_resource type="PackedScene" uid="uid://bo2h148okhotg" path="res://signal.tscn" id="6_5gu6h"]
+[ext_resource type="Script" uid="uid://dktfmnv5m3crv" path="res://scripts/A1.3; Dugout Morning.gd" id="7_c7upp"]
+[ext_resource type="Script" uid="uid://dpqewhu6i45xf" path="res://scripts/dugout_breakfast_(day_2).gd" id="10_ba3q5"]
+[ext_resource type="Texture2D" uid="uid://4d1yo5lh6xyj" path="res://other characters/Rat.png" id="10_fam1k"]
+[ext_resource type="Script" uid="uid://8b1tsn110ws" path="res://scripts/R1.gd" id="12_cnfja"]
+[ext_resource type="Script" uid="uid://bn35ns8t8hb7l" path="res://scripts/R2.gd" id="13_1btc5"]
+[ext_resource type="Script" uid="uid://d28ydjkni7qix" path="res://scripts/day 2aft.gd" id="14_mhhdr"]
+[ext_resource type="Script" uid="uid://2bnmjpvnlvjg" path="res://scripts/To Fix & Coms.gd" id="15_hs24q"]
+[ext_resource type="Script" uid="uid://c4b3wq67e3vui" path="res://scripts/EDashCharge1.gd" id="16_7pj02"]
+[ext_resource type="Texture2D" uid="uid://8c7prleyugsg" path="res://other characters/Cpl Barron Dugout.png" id="16_hs24q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_akesl"]
+size = Vector2(164, 314)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_elweg"]
+size = Vector2(165, 315)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dkte"]
+size = Vector2(94, 180)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5gu6h"]
+radius = 65.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c7upp"]
+size = Vector2(165, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7217f"]
+size = Vector2(172, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cnfja"]
+size = Vector2(55, 55.5)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1btc5"]
+radius = 30.718452
+height = 174.07129
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7pj02"]
+size = Vector2(676, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5gu6h"]
+size = Vector2(188, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqa0m"]
+size = Vector2(178, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_31cfh"]
+size = Vector2(191, 79)
+
+[node name="Node2D" type="Node2D" unique_id=541158053]
+script = ExtResource("1_726js")
+new_value = "EDashCharge1"
+
+[node name="TransitionLayer" parent="." unique_id=533543378 instance=ExtResource("1_btcqu")]
+
+[node name="Dugout" type="Sprite2D" parent="." unique_id=1053476278]
+z_index = -2
+position = Vector2(7, 3)
+texture = ExtResource("1_akesl")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=862969999]
+scale = Vector2(1, 1.0074477)
+zoom = Vector2(0.65, 0.52)
+
+[node name="DugoutMainCharacters2" parent="." unique_id=904227767 instance=ExtResource("2_akesl")]
+position = Vector2(8, -476)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1630549796]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1651375162]
+polygon = PackedVector2Array(-78, -597, -78, -362, -317, -362, -318, 367, 332, 367, 332, -362, 87, -362, 87, -597, 803, -600, 808, 600, -793, 600, -793, -597)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=231882114]
+position = Vector2(-206, -159)
+shape = SubResource("RectangleShape2D_akesl")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=486121282]
+position = Vector2(-205.5, 170.5)
+shape = SubResource("RectangleShape2D_elweg")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1021659122]
+position = Vector2(254, 63)
+shape = SubResource("RectangleShape2D_7dkte")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=671690029]
+position = Vector2(231, -167)
+shape = SubResource("CircleShape2D_5gu6h")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=690046150]
+position = Vector2(4.5, -597)
+shape = SubResource("RectangleShape2D_c7upp")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1553242162]
+polygon = PackedVector2Array(-36, 340, -37, 180, 50, 182, 50, 306, 204, 306, 203, 183, 266, 182, 266, 340)
+
+[node name="Node2D" type="Node2D" parent="." unique_id=961430176]
+position = Vector2(7, -496)
+script = ExtResource("3_elweg")
+
+[node name="Dugout" type="Sprite2D" parent="Node2D" unique_id=134815741]
+position = Vector2(-7, 496)
+
+[node name="Node2D" parent="Node2D/Dugout" unique_id=657468987 instance=ExtResource("6_5gu6h")]
+position = Vector2(130, 108.00001)
+rotation = -1.5707964
+scale = Vector2(1.5, 1.5)
+
+[node name="StandTo" type="Area2D" parent="Node2D/Dugout" unique_id=1758256221]
+script = ExtResource("7_c7upp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Dugout/StandTo" unique_id=1553434440]
+position = Vector2(125, 296.5)
+shape = SubResource("RectangleShape2D_7217f")
+
+[node name="TransitionLayer" parent="Node2D/Dugout/StandTo" unique_id=878718628 instance=ExtResource("1_btcqu")]
+
+[node name="ColorRect" parent="Node2D/Dugout/StandTo/TransitionLayer/AnimationPlayer" parent_id_path=PackedInt32Array(878718628, 976009718) index="0" unique_id=997188241]
+offset_left = -819.0
+offset_top = -621.0
+offset_right = -819.0
+offset_bottom = -621.0
+scale = Vector2(1.6257877, 2.0403793)
+
+[node name="Morning Stand to" type="Sprite2D" parent="Node2D" unique_id=298704770]
+y_sort_enabled = true
+
+[node name="Node2D" parent="Node2D/Morning Stand to" unique_id=1626341610 instance=ExtResource("6_5gu6h")]
+y_sort_enabled = true
+position = Vector2(32, 322)
+rotation = 3.1415927
+scale = Vector2(1.5, 1.5)
+
+[node name="Dugout Breakfast (Day 2)" type="Area2D" parent="Node2D/Morning Stand to" unique_id=1976972370]
+script = ExtResource("10_ba3q5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Morning Stand to/Dugout Breakfast (Day 2)" unique_id=545913880]
+position = Vector2(130.5, 326.25)
+shape = SubResource("RectangleShape2D_cnfja")
+
+[node name="TransitionLayer" parent="Node2D/Morning Stand to/Dugout Breakfast (Day 2)" unique_id=818695167 instance=ExtResource("1_btcqu")]
+
+[node name="ColorRect" parent="Node2D/Morning Stand to/Dugout Breakfast (Day 2)/TransitionLayer/AnimationPlayer" parent_id_path=PackedInt32Array(818695167, 976009718) index="0" unique_id=997188241]
+offset_left = -819.0
+offset_top = -621.0
+offset_right = -819.0
+offset_bottom = -621.0
+scale = Vector2(1.6257877, 2.0403793)
+
+[node name="Rat 1" type="Sprite2D" parent="Node2D" unique_id=1764181384]
+position = Vector2(0, -1)
+
+[node name="Rat" type="Sprite2D" parent="Node2D/Rat 1" unique_id=653187155]
+z_index = -2
+y_sort_enabled = true
+position = Vector2(-1.9999981, 213)
+rotation = -3.1415925
+scale = Vector2(0.39064473, 0.39064473)
+texture = ExtResource("10_fam1k")
+
+[node name="Area2D" type="Area2D" parent="Node2D/Rat 1/Rat" unique_id=510751691]
+script = ExtResource("12_cnfja")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Rat 1/Rat/Area2D" unique_id=541395158]
+position = Vector2(1.5786227e-06, -25.598713)
+shape = SubResource("CapsuleShape2D_1btc5")
+
+[node name="Rat 2" type="Sprite2D" parent="Node2D" unique_id=36505077]
+position = Vector2(0, -1)
+
+[node name="Rat" type="Sprite2D" parent="Node2D/Rat 2" unique_id=1901345877]
+z_index = -2
+y_sort_enabled = true
+position = Vector2(-1.9999981, 213)
+rotation = -3.1415925
+scale = Vector2(0.39064473, 0.39064473)
+texture = ExtResource("10_fam1k")
+
+[node name="Area2D" type="Area2D" parent="Node2D/Rat 2/Rat" unique_id=245919572]
+script = ExtResource("13_1btc5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Rat 2/Rat/Area2D" unique_id=2098322439]
+position = Vector2(1.5786227e-06, -25.598713)
+shape = SubResource("CapsuleShape2D_1btc5")
+
+[node name="day 2 aft" type="Sprite2D" parent="Node2D" unique_id=220487082]
+
+[node name="CplBarronDugout" type="Sprite2D" parent="Node2D/day 2 aft" unique_id=1119672797]
+position = Vector2(-71, 221.00003)
+scale = Vector2(1.5943393, 1.5943394)
+texture = ExtResource("16_hs24q")
+
+[node name="Node2D" parent="Node2D/day 2 aft" unique_id=1246834658 instance=ExtResource("6_5gu6h")]
+position = Vector2(3, 16)
+rotation = 1.5707964
+scale = Vector2(1.5, 1.5)
+
+[node name="Area2D" type="Area2D" parent="Node2D/day 2 aft" unique_id=464809662]
+position = Vector2(-3, 230)
+script = ExtResource("14_mhhdr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/day 2 aft/Area2D" unique_id=2130343571]
+position = Vector2(7, -71)
+shape = SubResource("RectangleShape2D_7pj02")
+
+[node name="TransitionLayer" parent="Node2D/day 2 aft/Area2D" unique_id=2062768514 instance=ExtResource("1_btcqu")]
+
+[node name="ColorRect" parent="Node2D/day 2 aft/Area2D/TransitionLayer/AnimationPlayer" parent_id_path=PackedInt32Array(2062768514, 976009718) index="0" unique_id=997188241]
+offset_left = -819.0
+offset_top = -621.0
+offset_right = -819.0
+offset_bottom = -621.0
+scale = Vector2(1.6257877, 2.0403793)
+
+[node name="dugout" type="Sprite2D" parent="Node2D" unique_id=1926069870]
+
+[node name="trigger 1" type="Area2D" parent="Node2D/dugout" unique_id=1517905954]
+y_sort_enabled = true
+position = Vector2(1, -1)
+script = ExtResource("5_7dkte")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/dugout/trigger 1" unique_id=1175250815]
+position = Vector2(-5, 115)
+shape = SubResource("RectangleShape2D_5gu6h")
+
+[node name="Fix Trench" type="Sprite2D" parent="Node2D" unique_id=1863723202]
+
+[node name="Area2D2" type="Area2D" parent="Node2D/Fix Trench" unique_id=1892215452]
+script = ExtResource("15_hs24q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Fix Trench/Area2D2" unique_id=249796806]
+position = Vector2(-2, -86)
+shape = SubResource("RectangleShape2D_yqa0m")
+
+[node name="Node2D" parent="Node2D/Fix Trench" unique_id=420566786 instance=ExtResource("6_5gu6h")]
+position = Vector2(3, 16)
+rotation = 1.5707964
+scale = Vector2(1.5, 1.5)
+
+[node name="Communication Wire" type="Sprite2D" parent="Node2D" unique_id=900050124]
+
+[node name="Area2D2" type="Area2D" parent="Node2D/Communication Wire" unique_id=848416997]
+script = ExtResource("15_hs24q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Communication Wire/Area2D2" unique_id=721381864]
+position = Vector2(-2, -86)
+shape = SubResource("RectangleShape2D_yqa0m")
+
+[node name="Node2D" parent="Node2D/Communication Wire" unique_id=1440032834 instance=ExtResource("6_5gu6h")]
+position = Vector2(3, 16)
+rotation = 1.5707964
+scale = Vector2(1.5, 1.5)
+
+[node name="EDashCharge1" type="Sprite2D" parent="Node2D" unique_id=1169629810]
+
+[node name="Area2D" type="Area2D" parent="Node2D/EDashCharge1" unique_id=291233370]
+script = ExtResource("16_7pj02")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/EDashCharge1/Area2D" unique_id=530036483]
+position = Vector2(-4.5, 53.5)
+shape = SubResource("RectangleShape2D_31cfh")
+
+[connection signal="body_entered" from="Node2D/Dugout/StandTo" to="Node2D/Dugout/StandTo" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/Morning Stand to/Dugout Breakfast (Day 2)" to="Node2D/Morning Stand to/Dugout Breakfast (Day 2)" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/Rat 1/Rat/Area2D" to="Node2D/Rat 1/Rat/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/Rat 2/Rat/Area2D" to="Node2D/Rat 2/Rat/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/day 2 aft/Area2D" to="Node2D/day 2 aft/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/dugout/trigger 1" to="Node2D/dugout/trigger 1" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/Fix Trench/Area2D2" to="Node2D/Fix Trench/Area2D2" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/Communication Wire/Area2D2" to="Node2D/Communication Wire/Area2D2" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/EDashCharge1/Area2D" to="Node2D/EDashCharge1/Area2D" method="_on_body_entered"]
+
+[editable path="Node2D/Dugout/StandTo/TransitionLayer"]
+[editable path="Node2D/Morning Stand to/Dugout Breakfast (Day 2)/TransitionLayer"]
+[editable path="Node2D/day 2 aft/Area2D/TransitionLayer"]

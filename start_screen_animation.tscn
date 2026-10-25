@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://cnbcxq2f0sh6m"]
+
+[ext_resource type="Texture2D" uid="uid://cqj7libq5an82" path="res://Backgrounds/entrenched start screen.png" id="1_rrjky"]
+[ext_resource type="Script" uid="uid://brmr75i1e4rl5" path="res://scripts/start_screen_animation.gd" id="2_dpn32"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dpn32"]
+atlas = ExtResource("1_rrjky")
+region = Rect2(0, 0, 1024, 613)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yklml"]
+atlas = ExtResource("1_rrjky")
+region = Rect2(1024, 0, 1024, 613)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iw6t8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dpn32")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yklml")
+}],
+"loop": true,
+"name": &"start screen",
+"speed": 10.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1410772311]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_iw6t8")
+animation = &"start screen"
+frame = 1
+offset = Vector2(512, 306)
+script = ExtResource("2_dpn32")

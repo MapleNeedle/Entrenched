@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://cuyyjloibead4"]
+
+[ext_resource type="Texture2D" uid="uid://dlip6aa0pb4en" path="res://Backgrounds/opening trench bottom.png" id="1_cgtnq"]
+[ext_resource type="Script" uid="uid://biv16btoidtof" path="res://scripts/AAchangeDialogicVar.gd" id="1_j74td"]
+[ext_resource type="Texture2D" uid="uid://b8pde2ohksgyd" path="res://Backgrounds/periscopeBotton.png" id="2_n5nd6"]
+[ext_resource type="PackedScene" uid="uid://bbpkrp2ou73nt" path="res://maincharacter.tscn" id="3_5hr5a"]
+[ext_resource type="PackedScene" uid="uid://bo2h148okhotg" path="res://signal.tscn" id="4_j74td"]
+[ext_resource type="Script" uid="uid://bncyie2ugvoo4" path="res://scripts/CTD1.gd" id="5_240ai"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bjxqw"]
+size = Vector2(20, 91)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_htakn"]
+size = Vector2(51, 97)
+
+[node name="Node2D" type="Node2D" unique_id=1195753118]
+y_sort_enabled = true
+script = ExtResource("1_j74td")
+new_value = "go to the right"
+
+[node name="ReferenceRect" type="ReferenceRect" parent="." unique_id=1778019438]
+z_index = 1
+y_sort_enabled = true
+offset_left = -530.0
+offset_top = -396.0
+offset_right = -490.0
+offset_bottom = -356.0
+scale = Vector2(25.631756, 19.22408)
+border_width = 0.1
+metadata/_edit_use_anchors_ = true
+
+[node name="OpeningTrenchBottom" type="Sprite2D" parent="." unique_id=1424569333]
+z_index = -1
+y_sort_enabled = true
+position = Vector2(-13, -391)
+scale = Vector2(-1, 1)
+texture = ExtResource("1_cgtnq")
+offset = Vector2(4, 381)
+
+[node name="PeriscopeBotton" type="Sprite2D" parent="." unique_id=1475212885]
+y_sort_enabled = true
+position = Vector2(25.999992, -130)
+scale = Vector2(-1.296, 1.296)
+texture = ExtResource("2_n5nd6")
+offset = Vector2(35.15625, 88.28125)
+
+[node name="PeriscopeBotton" type="Sprite2D" parent="PeriscopeBotton" unique_id=361938345]
+z_index = -2
+y_sort_enabled = true
+position = Vector2(46.29846, -64.81784)
+scale = Vector2(0.73522574, 0.6169994)
+texture = ExtResource("2_n5nd6")
+offset = Vector2(35.15625, 88.28125)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1857613672]
+y_sort_enabled = true
+position = Vector2(-29, -1)
+scale = Vector2(-1, 1)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=289336308]
+polygon = PackedVector2Array(-521, -93, -284, -93, -252, -183, -77, -183, -68, -287, -69, -299, -82, -299, -84, -340, -239, -340, -239, -299, -248, -298, -249, -284, -247, -280, -262, -279, -269, -217, -298, -157, -315, -158, -313, -224, -467, -225, -468, -177, -520, -178)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=665691394]
+polygon = PackedVector2Array(-25, -183, 135, -183, 170, -84, 503, -71, 503, -195, 203, -195, 190, -263, 143, -295, 129, -296, 127, -341, 101, -341, 99, -295, 7, -298, 4, -340, -28, -341, -28, -299, -37, -298)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=518733232]
+position = Vector2(-532, -57)
+shape = SubResource("RectangleShape2D_bjxqw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=470826379]
+position = Vector2(515, -45)
+shape = SubResource("RectangleShape2D_bjxqw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=800024652]
+position = Vector2(-99.54966, 61.67314)
+polygon = PackedVector2Array(187.54965, -203.67314, 188.54965, -177.67314, 183.54965, -176.67314, 183.54965, -157.67314, 190.54965, -151.67314, 196.54965, -94.67314, 233.54965, -80.67314, 283.54965, -77.67314, 616.5497, -77.67314, 605.5497, 310.32684, -422.45035, 312.32684, -429.45035, -80.67314, -105.45034, -80.67314, -74.45034, -177.67314, -76.45034, -206.67314)
+
+[node name="Main_Character" parent="." unique_id=341919493 instance=ExtResource("3_5hr5a")]
+y_sort_enabled = true
+position = Vector2(-485, -33)
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1230210210]
+y_sort_enabled = true
+scale = Vector2(-1, 1)
+
+[node name="Go to the Right" type="Sprite2D" parent="Node2D" unique_id=9341188]
+y_sort_enabled = true
+
+[node name="Node2D2" parent="Node2D/Go to the Right" unique_id=657468987 instance=ExtResource("4_j74td")]
+y_sort_enabled = true
+position = Vector2(-254, -57)
+
+[node name="Node2D3" parent="Node2D/Go to the Right" unique_id=1388942140 instance=ExtResource("4_j74td")]
+y_sort_enabled = true
+position = Vector2(96, -173)
+
+[node name="Area2D" type="Area2D" parent="Node2D/Go to the Right" unique_id=559143819]
+y_sort_enabled = true
+script = ExtResource("5_240ai")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Go to the Right/Area2D" unique_id=416284277]
+y_sort_enabled = true
+position = Vector2(-367.5, -54.5)
+shape = SubResource("RectangleShape2D_htakn")
+
+[connection signal="body_entered" from="Node2D/Go to the Right/Area2D" to="Node2D/Go to the Right/Area2D" method="_on_body_entered"]

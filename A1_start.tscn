@@ -1,0 +1,216 @@
+[gd_scene format=3 uid="uid://c2w47akex5rd8"]
+
+[ext_resource type="Texture2D" uid="uid://dlip6aa0pb4en" path="res://Backgrounds/opening trench bottom.png" id="1_cejjl"]
+[ext_resource type="Texture2D" uid="uid://bw8umvf4m6kdb" path="res://Backgrounds/start trench scene top.png" id="2_vq7pe"]
+[ext_resource type="PackedScene" uid="uid://bbpkrp2ou73nt" path="res://maincharacter.tscn" id="3_86ns7"]
+[ext_resource type="Script" uid="uid://dmjawte8qnvug" path="res://scripts/static_body_2d_2.gd" id="4_dj4i2"]
+[ext_resource type="Texture2D" uid="uid://b17kus2kt1c6k" path="res://other characters/Cpl Barron.png" id="5_k7l3u"]
+[ext_resource type="Script" uid="uid://bulfu83onmv1n" path="res://scripts/cpl_trigger_box.gd" id="6_sgiab"]
+[ext_resource type="Script" uid="uid://488h7b1xkgtm" path="res://scripts/trigger_box_&_signals.gd" id="7_aixqa"]
+[ext_resource type="PackedScene" uid="uid://bo2h148okhotg" path="res://signal.tscn" id="8_tqggu"]
+[ext_resource type="Script" uid="uid://bsrh3ay0i5nud" path="res://scripts/to_a_1_1.gd" id="9_em75g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ienyo"]
+size = Vector2(20, 91)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nvmja"]
+radius = 35.83139
+height = 168.61829
+
+[sub_resource type="Animation" id="Animation_ienyo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CplBarron:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.47444442, 0.47444445)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CplBarron:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_k7l3u")]
+}
+
+[sub_resource type="Animation" id="Animation_3ovj8"]
+resource_name = "cpl barron idle"
+length = 0.9
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CplBarron:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.45, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.47444442, 0.47444445), Vector2(0.474, 0.424), Vector2(0.474, 0.474)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CplBarron:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3k6iv"]
+_data = {
+&"RESET": SubResource("Animation_ienyo"),
+&"cpl barron idle": SubResource("Animation_3ovj8")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_65opk"]
+radius = 41.109608
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_65opk"]
+size = Vector2(9, 80)
+
+[node name="Node2D" type="Node2D" unique_id=1557323486]
+y_sort_enabled = true
+
+[node name="OpeningTrenchBottom" type="Sprite2D" parent="." unique_id=1167445003]
+y_sort_enabled = true
+position = Vector2(-13, -391)
+texture = ExtResource("1_cejjl")
+offset = Vector2(4, 381)
+
+[node name="ReferenceRect" type="ReferenceRect" parent="." unique_id=1956245144]
+y_sort_enabled = true
+offset_left = -521.0
+offset_top = -394.0
+offset_right = -481.0
+offset_bottom = -354.0
+scale = Vector2(25.631756, 19.22408)
+border_width = 0.1
+metadata/_edit_use_anchors_ = true
+
+[node name="StartTrenchSceneTop" type="Sprite2D" parent="." unique_id=1265703119]
+y_sort_enabled = true
+position = Vector2(-58.999996, -146)
+scale = Vector2(1.0079992, 1)
+texture = ExtResource("2_vq7pe")
+offset = Vector2(50.59527, 136)
+
+[node name="Main_Character" parent="." unique_id=341919493 instance=ExtResource("3_86ns7")]
+y_sort_enabled = true
+position = Vector2(-55, 373)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1824166963]
+y_sort_enabled = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1573477494]
+polygon = PackedVector2Array(-168, -157, -80, -157, -78, -156, -92, 108, -92, 121, -67, 234, -101, 374, -524, 374, -521, -17, -202, -17, -172, -119, -176, -147)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=134102420]
+polygon = PackedVector2Array(-24, -154, 88, -154, 99, -30, 137, -17, 499, -12, 508, 373, -28, 374, -9, 281, -38, 98)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=266116597]
+polygon = PackedVector2Array(-521, -93, -284, -93, -252, -183, -77, -183, -68, -287, -69, -299, -82, -299, -84, -340, -239, -340, -239, -299, -248, -298, -249, -284, -247, -280, -262, -279, -269, -217, -298, -157, -315, -158, -313, -224, -467, -225, -468, -177, -520, -178)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=316453618]
+polygon = PackedVector2Array(-25, -183, 135, -183, 170, -84, 503, -71, 503, -195, 203, -195, 190, -263, 143, -295, 129, -296, 127, -341, 101, -341, 99, -295, 7, -298, 4, -340, -28, -341, -28, -299, -37, -298)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=106754353]
+position = Vector2(-532, -57)
+shape = SubResource("RectangleShape2D_ienyo")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=613952217]
+position = Vector2(514, -45)
+shape = SubResource("RectangleShape2D_ienyo")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=729073207]
+position = Vector2(-70, 384)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_ienyo")
+
+[node name="cplBarron" type="StaticBody2D" parent="." unique_id=1226596397]
+y_sort_enabled = true
+script = ExtResource("4_dj4i2")
+
+[node name="CplBarron" type="Sprite2D" parent="cplBarron" unique_id=995073219]
+y_sort_enabled = true
+position = Vector2(-236, -159)
+scale = Vector2(0.47444442, 0.47444445)
+texture = ExtResource("5_k7l3u")
+offset = Vector2(-2.1077576, -84.30914)
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cplBarron" unique_id=352988318]
+y_sort_enabled = true
+position = Vector2(-244.00002, -196.00002)
+scale = Vector2(0.47444442, 0.47444445)
+shape = SubResource("CapsuleShape2D_nvmja")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="cplBarron" unique_id=1861306045]
+libraries/ = SubResource("AnimationLibrary_3k6iv")
+
+[node name="cpl trigger box" type="Area2D" parent="." unique_id=432911047]
+y_sort_enabled = true
+rotation = 0.0005780879
+script = ExtResource("6_sgiab")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cpl trigger box" unique_id=535085086]
+y_sort_enabled = true
+position = Vector2(-229, -168)
+shape = SubResource("CircleShape2D_65opk")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1621382335]
+y_sort_enabled = true
+script = ExtResource("7_aixqa")
+
+[node name="sandbags" type="Sprite2D" parent="Node2D" unique_id=1237505073]
+y_sort_enabled = true
+
+[node name="Node2D" parent="Node2D/sandbags" unique_id=657468987 instance=ExtResource("8_tqggu")]
+y_sort_enabled = true
+position = Vector2(-455, -49)
+
+[node name="to A1_1" type="Area2D" parent="Node2D/sandbags" unique_id=663751672]
+y_sort_enabled = true
+script = ExtResource("9_em75g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/sandbags/to A1_1" unique_id=2097371855]
+y_sort_enabled = true
+position = Vector2(-521.5, -55)
+shape = SubResource("RectangleShape2D_65opk")
+
+[node name="sentry" type="Sprite2D" parent="Node2D" unique_id=540068577]
+y_sort_enabled = true
+position = Vector2(3, 0)
+
+[node name="Node2D" parent="Node2D/sentry" unique_id=1994008502 instance=ExtResource("8_tqggu")]
+y_sort_enabled = true
+position = Vector2(-458, -49)
+
+[node name="to A1_2" type="Area2D" parent="Node2D/sentry" unique_id=486968661]
+y_sort_enabled = true
+position = Vector2(-3, 0)
+script = ExtResource("9_em75g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/sentry/to A1_2" unique_id=42926165]
+position = Vector2(-521.5, -55)
+shape = SubResource("RectangleShape2D_65opk")
+
+[connection signal="body_entered" from="cpl trigger box" to="cpl trigger box" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/sandbags/to A1_1" to="Node2D/sandbags/to A1_1" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/sentry/to A1_2" to="Node2D/sentry/to A1_2" method="_on_body_entered"]

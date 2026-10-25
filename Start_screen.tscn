@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://clca1pmam8ful"]
+
+[ext_resource type="PackedScene" uid="uid://cnbcxq2f0sh6m" path="res://start_screen_animation.tscn" id="1_rgkik"]
+[ext_resource type="PackedScene" uid="uid://c71ia1x12agcb" path="res://StartButton.tscn" id="2_crrd5"]
+
+[node name="Node2D2" type="Control" unique_id=1523421353]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -128.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimatedSprite2D" parent="." unique_id=1410772311 instance=ExtResource("1_rgkik")]
+
+[node name="StartButton" parent="AnimatedSprite2D" unique_id=2002312205 instance=ExtResource("2_crrd5")]
+offset_left = 400.99994
+offset_top = 453.99997
+offset_right = 1481.0
+offset_bottom = 1354.0
+scale = Vector2(0.2444735, 0.2444735)
+toggle_mode = true
+texture_disabled = null
+
+[connection signal="start_game_requesed" from="AnimatedSprite2D/StartButton" to="AnimatedSprite2D" method="_on_start_button_start_game_requesed"]

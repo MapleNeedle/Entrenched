@@ -1,0 +1,31 @@
+label Box1
+“WARNING\
+\
+It is 1917.\
+\
+You are a CANADIAN SOLDIER on the WESTERN FRONT.\
+\
+Every decision you make has CONSEQUENCES.\
+\
+Nearly 11 MILLION soldiers died in THE GREAT WAR.\
+\
+More than 66,000 were CANADIAN…\
+\
+… will YOU survive?”
+[end_timeline]
+label Box2
+You are a soldier in the Third Toronto Battalion of the Canadian Expeditionary Force, an infantry unit formed in September 1914 from regiments based around the city. You hold the rank of Private and have already taken part in some of the largest battles on the Western Front, including Ypres, the Somme, and Vimy Ridge. \
+\
+*CONTINUE TO THE FRONT LINE…’
+[end_timeline]
+label Box3
+It’s been 172 days since you fought at Vimy Ridge. During the battle, your right leg was hit by shrapnel, knocking you to the ground. What happened after is still a blur\: searing pain, shouting, hands looking in your tunic for your field dressing, and being dragged by your webbing onto a stretcher. \
+\
+‘CONTINUE TO THE FRONT LINES’
+[end_timeline]
+label Box4
+After your operation, you spent some time on sick leave. Now you’re going back to the front lines….
+[end_timeline]
+label Box5
+‘FRONT LINES - Cpl BARRON is signaling you to speak to him’
+[end_timeline]

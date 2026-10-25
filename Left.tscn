@@ -1,0 +1,301 @@
+[gd_scene format=3 uid="uid://bclvu3xmu2yu2"]
+
+[ext_resource type="Texture2D" uid="uid://dlip6aa0pb4en" path="res://Backgrounds/opening trench bottom.png" id="1_81wgx"]
+[ext_resource type="Script" uid="uid://biv16btoidtof" path="res://scripts/AAchangeDialogicVar.gd" id="1_iv3hp"]
+[ext_resource type="PackedScene" uid="uid://bbpkrp2ou73nt" path="res://maincharacter.tscn" id="3_iv3hp"]
+[ext_resource type="Texture2D" uid="uid://b8pde2ohksgyd" path="res://Backgrounds/periscopeBotton.png" id="3_v0tc8"]
+[ext_resource type="Script" uid="uid://488h7b1xkgtm" path="res://scripts/trigger_box_&_signals.gd" id="5_xs3hy"]
+[ext_resource type="PackedScene" uid="uid://bo2h148okhotg" path="res://signal.tscn" id="6_xs3hy"]
+[ext_resource type="Script" uid="uid://doqhfrsmrs7vp" path="res://scripts/CT2.gd" id="7_5mic4"]
+[ext_resource type="Script" uid="uid://eoae70acgd5g" path="res://scripts/blonde_solder.gd" id="8_c4rdj"]
+[ext_resource type="Texture2D" uid="uid://caop43xh4deb3" path="res://other characters/blonde solder.png" id="9_ueoub"]
+[ext_resource type="Script" uid="uid://dielu0nw4u8a2" path="res://scripts/asian_solder.gd" id="10_up0ak"]
+[ext_resource type="Texture2D" uid="uid://djhbvuh8e15h7" path="res://other characters/asian solder.png" id="11_755ft"]
+[ext_resource type="Script" uid="uid://dqpit3nmnhfqo" path="res://scripts/you fix.gd" id="12_ueoub"]
+[ext_resource type="PackedScene" uid="uid://bcwqeuqdmk3w5" path="res://transition_layer.tscn" id="13_up0ak"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0tc8"]
+size = Vector2(20, 91)
+
+[sub_resource type="Animation" id="Animation_7si2w"]
+resource_name = "blonde npc up down"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlondeSolder:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("9_ueoub")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlondeSolder:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.45, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.025, 1.02), Vector2(1.025, 0.98), Vector2(1.025, 1.02)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8e65l"]
+_data = {
+&"blonde npc up down": SubResource("Animation_7si2w")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wehk5"]
+radius = 18.666672
+height = 56.0
+
+[sub_resource type="Animation" id="Animation_bjxv0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AsianSolder:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("11_755ft")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AsianSolder:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-0.896, 0.896)]
+}
+
+[sub_resource type="Animation" id="Animation_mgbtu"]
+resource_name = "asian npc up down"
+length = 0.9
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AsianSolder:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("11_755ft")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AsianSolder:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.45, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-0.896, 0.896), Vector2(-0.896, 0.856), Vector2(-0.896, 0.896)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rkf51"]
+_data = {
+&"RESET": SubResource("Animation_bjxv0"),
+&"asian npc up down": SubResource("Animation_mgbtu")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gdox5"]
+radius = 15.9999695
+height = 82.66667
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ykno"]
+size = Vector2(90.66667, 73.33334)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_up0ak"]
+size = Vector2(172.00002, 20)
+
+[node name="Node2D" type="Node2D" unique_id=166442334]
+y_sort_enabled = true
+script = ExtResource("1_iv3hp")
+new_value = "you fix"
+
+[node name="ReferenceRect" type="ReferenceRect" parent="." unique_id=1351849035]
+z_index = 1
+y_sort_enabled = true
+offset_left = -521.0
+offset_top = -395.99997
+offset_right = -481.0
+offset_bottom = -355.99997
+scale = Vector2(25.631756, 19.22408)
+border_width = 0.1
+metadata/_edit_use_anchors_ = true
+
+[node name="OpeningTrenchBottom" type="Sprite2D" parent="." unique_id=1393605481]
+z_index = -2
+y_sort_enabled = true
+position = Vector2(-13, -391)
+texture = ExtResource("1_81wgx")
+offset = Vector2(4, 381)
+
+[node name="PeriscopeBotton" type="Sprite2D" parent="." unique_id=463576561]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(-56, -127)
+scale = Vector2(1.2959394, 1.2959394)
+texture = ExtResource("3_v0tc8")
+offset = Vector2(35.15625, 88.28125)
+
+[node name="PeriscopeBotton" type="Sprite2D" parent="PeriscopeBotton" unique_id=2045166480]
+z_index = -5
+y_sort_enabled = true
+position = Vector2(46.29846, -64.81784)
+scale = Vector2(0.73522574, 0.6169994)
+texture = ExtResource("3_v0tc8")
+offset = Vector2(35.15625, 88.28125)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=338697570]
+y_sort_enabled = true
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=697919471]
+polygon = PackedVector2Array(-521, -93, -284, -93, -252, -183, -77, -183, -68, -287, -69, -299, -82, -299, -84, -340, -239, -340, -239, -299, -248, -298, -249, -284, -247, -280, -262, -279, -269, -217, -298, -157, -315, -158, -313, -224, -467, -225, -468, -177, -520, -178)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=226424254]
+polygon = PackedVector2Array(-25, -183, 135, -183, 170, -84, 503, -71, 503, -195, 203, -195, 190, -263, 143, -295, 129, -296, 127, -341, 101, -341, 99, -295, 7, -298, 4, -340, -28, -341, -28, -299, -37, -298)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1997372003]
+position = Vector2(-532, -57)
+shape = SubResource("RectangleShape2D_v0tc8")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=639618717]
+position = Vector2(515, -45)
+shape = SubResource("RectangleShape2D_v0tc8")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1128149817]
+position = Vector2(-99.54966, 61.67314)
+polygon = PackedVector2Array(187.54965, -203.67314, 188.54965, -177.67314, 183.54965, -176.67314, 183.54965, -157.67314, 190.54965, -151.67314, 196.54965, -94.67314, 233.54965, -80.67314, 283.54965, -77.67314, 616.5497, -77.67314, 605.5497, 310.32684, -422.45035, 312.32684, -429.45035, -80.67314, -105.45034, -80.67314, -74.45034, -177.67314, -76.45034, -206.67314)
+
+[node name="Main_Character" parent="." unique_id=341919493 instance=ExtResource("3_iv3hp")]
+y_sort_enabled = true
+position = Vector2(443, -24)
+
+[node name="blonde solder" type="StaticBody2D" parent="." unique_id=861638990]
+y_sort_enabled = true
+position = Vector2(-481, -92)
+scale = Vector2(0.75, 0.75)
+script = ExtResource("8_c4rdj")
+
+[node name="BlondeSolder" type="Sprite2D" parent="blonde solder" unique_id=1791257861]
+y_sort_enabled = true
+position = Vector2(390.66666, -29.333344)
+scale = Vector2(1.025, 1.02)
+texture = ExtResource("9_ueoub")
+offset = Vector2(-1.300766, -55.052208)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="blonde solder" unique_id=1107697419]
+libraries/ = SubResource("AnimationLibrary_8e65l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blonde solder" unique_id=966453955]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(393.33334, -58.666668)
+shape = SubResource("CapsuleShape2D_wehk5")
+
+[node name="asian solder" type="StaticBody2D" parent="." unique_id=854619995]
+y_sort_enabled = true
+position = Vector2(-489, -33)
+scale = Vector2(0.75, 0.75)
+script = ExtResource("10_up0ak")
+
+[node name="AsianSolder" type="Sprite2D" parent="asian solder" unique_id=1831723433]
+position = Vector2(285.54382, -75.77179)
+scale = Vector2(-0.896, 0.896)
+texture = ExtResource("11_755ft")
+offset = Vector2(-2.741272, -59.778503)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="asian solder" unique_id=1084137534]
+libraries/ = SubResource("AnimationLibrary_rkf51")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="asian solder" unique_id=1925488096]
+position = Vector2(280, -124)
+shape = SubResource("CapsuleShape2D_gdox5")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=943866351]
+y_sort_enabled = true
+position = Vector2(-489, -33)
+scale = Vector2(0.75, 0.75)
+script = ExtResource("5_xs3hy")
+
+[node name="Go to the left" type="Sprite2D" parent="Node2D" unique_id=567139923]
+y_sort_enabled = true
+
+[node name="Node2D" parent="Node2D/Go to the left" unique_id=657468987 instance=ExtResource("6_xs3hy")]
+y_sort_enabled = true
+position = Vector2(710.6667, -198.66675)
+
+[node name="Area2D" type="Area2D" parent="Node2D/Go to the left" unique_id=479489769]
+y_sort_enabled = true
+script = ExtResource("7_5mic4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Go to the left/Area2D" unique_id=1365946427]
+y_sort_enabled = true
+position = Vector2(586.6667, -172.66667)
+shape = SubResource("RectangleShape2D_0ykno")
+
+[node name="You Fix" type="Sprite2D" parent="Node2D" unique_id=74497762]
+
+[node name="Node2D" parent="Node2D/You Fix" unique_id=829719683 instance=ExtResource("6_xs3hy")]
+z_index = -2
+y_sort_enabled = true
+position = Vector2(350.66666, -182.66667)
+rotation = -1.5707964
+
+[node name="Area2D" type="Area2D" parent="Node2D/You Fix" unique_id=868194269]
+script = ExtResource("12_ueoub")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/You Fix/Area2D" unique_id=1085593255]
+position = Vector2(340.66666, -120)
+shape = SubResource("RectangleShape2D_up0ak")
+
+[node name="TransitionLayer" parent="Node2D/You Fix" unique_id=818695167 instance=ExtResource("13_up0ak")]
+z_index = 11
+
+[node name="ColorRect" parent="Node2D/You Fix/TransitionLayer/AnimationPlayer" parent_id_path=PackedInt32Array(818695167, 976009718) index="0" unique_id=997188241]
+z_index = 10
+offset_left = -819.0
+offset_top = -621.0
+offset_right = -819.0
+offset_bottom = -621.0
+scale = Vector2(1.6257877, 2.0403793)
+
+[node name="You Join" type="Sprite2D" parent="Node2D" unique_id=1546912420]
+
+[node name="Node2D" parent="Node2D/You Join" unique_id=1326390939 instance=ExtResource("6_xs3hy")]
+z_index = -2
+y_sort_enabled = true
+position = Vector2(350.66666, -182.66667)
+rotation = -1.5707964
+
+[node name="Area2D" type="Area2D" parent="Node2D/You Join" unique_id=1312788489]
+script = ExtResource("12_ueoub")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/You Join/Area2D" unique_id=1732863446]
+position = Vector2(340.66666, -120)
+shape = SubResource("RectangleShape2D_up0ak")
+
+[connection signal="body_entered" from="Node2D/Go to the left/Area2D" to="Node2D/Go to the left/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/You Fix/Area2D" to="Node2D/You Fix/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/You Join/Area2D" to="Node2D/You Join/Area2D" method="_on_body_entered"]
+
+[editable path="Node2D/You Fix/TransitionLayer"]

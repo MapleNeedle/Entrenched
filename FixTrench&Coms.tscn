@@ -1,0 +1,197 @@
+[gd_scene format=3 uid="uid://fgu85wchepfr"]
+
+[ext_resource type="Script" uid="uid://biv16btoidtof" path="res://scripts/AAchangeDialogicVar.gd" id="1_3ga2s"]
+[ext_resource type="Texture2D" uid="uid://dlip6aa0pb4en" path="res://Backgrounds/opening trench bottom.png" id="1_ppdql"]
+[ext_resource type="Texture2D" uid="uid://bw8umvf4m6kdb" path="res://Backgrounds/start trench scene top.png" id="2_7jx3h"]
+[ext_resource type="PackedScene" uid="uid://bbpkrp2ou73nt" path="res://maincharacter.tscn" id="4_o00uc"]
+[ext_resource type="Script" uid="uid://488h7b1xkgtm" path="res://scripts/trigger_box_&_signals.gd" id="5_6chuc"]
+[ext_resource type="PackedScene" uid="uid://bo2h148okhotg" path="res://signal.tscn" id="6_8xhh1"]
+[ext_resource type="Script" uid="uid://bgajduyh8fsek" path="res://scripts/Fix Trench2.gd" id="7_6chuc"]
+[ext_resource type="Script" uid="uid://ewpy4juba470" path="res://scripts/Com Wire2.gd" id="8_8xhh1"]
+[ext_resource type="PackedScene" uid="uid://bcwqeuqdmk3w5" path="res://transition_layer.tscn" id="9_8xhh1"]
+[ext_resource type="Script" uid="uid://dj0ogqu7keqme" path="res://scripts/right or left.gd" id="10_u3s0c"]
+[ext_resource type="Script" uid="uid://tuedu83eg3h7" path="res://scripts/to_the_right.gd" id="11_qk4oj"]
+[ext_resource type="Script" uid="uid://br6io6jacqfmk" path="res://scripts/to_the_left.gd" id="12_ut48u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t5lqi"]
+size = Vector2(20, 91)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u3s0c"]
+size = Vector2(54, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uuhw2"]
+size = Vector2(105, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ha8q"]
+size = Vector2(41, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lvooo"]
+size = Vector2(30, 100.5)
+
+[node name="Node2D" type="Node2D" unique_id=960905488]
+y_sort_enabled = true
+script = ExtResource("1_3ga2s")
+new_value = "CT1"
+
+[node name="OpeningTrenchBottom" type="Sprite2D" parent="." unique_id=577156977]
+z_index = -1
+y_sort_enabled = true
+position = Vector2(-13, -391)
+texture = ExtResource("1_ppdql")
+offset = Vector2(4, 381)
+
+[node name="ReferenceRect" type="ReferenceRect" parent="." unique_id=383063504]
+y_sort_enabled = true
+offset_left = -521.0
+offset_top = -394.0
+offset_right = -481.0
+offset_bottom = -354.0
+scale = Vector2(25.631756, 19.22408)
+border_width = 0.1
+metadata/_edit_use_anchors_ = true
+
+[node name="StartTrenchSceneTop" type="Sprite2D" parent="." unique_id=876908205]
+y_sort_enabled = true
+position = Vector2(-58.999996, -146)
+scale = Vector2(1.0079992, 1)
+texture = ExtResource("2_7jx3h")
+offset = Vector2(50.59527, 136)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1925983194]
+y_sort_enabled = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1920854088]
+polygon = PackedVector2Array(-168, -157, -80, -157, -78, -156, -92, 108, -92, 121, -67, 234, -101, 374, -524, 374, -521, -17, -202, -17, -172, -119, -176, -147)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1911716934]
+polygon = PackedVector2Array(-24, -154, 88, -154, 99, -30, 137, -17, 499, -12, 508, 373, -28, 374, -9, 281, -38, 98)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=692407598]
+polygon = PackedVector2Array(-521, -93, -284, -93, -252, -183, -77, -183, -68, -287, -69, -299, -82, -299, -84, -340, -239, -340, -239, -299, -248, -298, -249, -284, -247, -280, -262, -279, -269, -217, -298, -157, -315, -158, -313, -224, -467, -225, -468, -177, -520, -178)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=133084117]
+polygon = PackedVector2Array(-25, -183, 135, -183, 170, -84, 503, -71, 503, -195, 203, -195, 190, -263, 143, -295, 129, -296, 127, -341, 101, -341, 99, -295, 7, -298, 4, -340, -28, -341, -28, -299, -37, -298)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=695530904]
+position = Vector2(-532, -57)
+shape = SubResource("RectangleShape2D_t5lqi")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1045228078]
+position = Vector2(514, -45)
+shape = SubResource("RectangleShape2D_t5lqi")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1448573820]
+position = Vector2(-70, 384)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_t5lqi")
+
+[node name="Main_Character" parent="." unique_id=341919493 instance=ExtResource("4_o00uc")]
+y_sort_enabled = true
+position = Vector2(-485, -19)
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1987453417]
+y_sort_enabled = true
+script = ExtResource("5_6chuc")
+
+[node name="fix Trench" type="Sprite2D" parent="Node2D" unique_id=120643706]
+y_sort_enabled = true
+
+[node name="TransitionLayer" parent="Node2D/fix Trench" unique_id=818695167 instance=ExtResource("9_8xhh1")]
+
+[node name="ColorRect" parent="Node2D/fix Trench/TransitionLayer/AnimationPlayer" parent_id_path=PackedInt32Array(818695167, 976009718) index="0" unique_id=997188241]
+offset_left = -819.0
+offset_top = -621.0
+offset_right = -819.0
+offset_bottom = -621.0
+scale = Vector2(1.6257877, 2.0403793)
+
+[node name="Node2D" parent="Node2D/fix Trench" unique_id=657468987 instance=ExtResource("6_8xhh1")]
+y_sort_enabled = true
+position = Vector2(-208, -164)
+rotation = 3.1415927
+
+[node name="Node2D2" parent="Node2D/fix Trench" unique_id=393363454 instance=ExtResource("6_8xhh1")]
+z_index = -1
+y_sort_enabled = true
+position = Vector2(283, -26)
+rotation = 1.5707964
+
+[node name="Area2D" type="Area2D" parent="Node2D/fix Trench" unique_id=501201892]
+script = ExtResource("7_6chuc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/fix Trench/Area2D" unique_id=359485581]
+position = Vector2(283, -78)
+shape = SubResource("RectangleShape2D_u3s0c")
+
+[node name="Communication Wire" type="Sprite2D" parent="Node2D" unique_id=448852424]
+y_sort_enabled = true
+
+[node name="TransitionLayer" parent="Node2D/Communication Wire" unique_id=1523003212 instance=ExtResource("9_8xhh1")]
+
+[node name="ColorRect" parent="Node2D/Communication Wire/TransitionLayer/AnimationPlayer" parent_id_path=PackedInt32Array(1523003212, 976009718) index="0" unique_id=997188241]
+offset_left = -819.0
+offset_top = -621.0
+offset_right = -819.0
+offset_bottom = -621.0
+scale = Vector2(1.6257877, 2.0403793)
+
+[node name="Node2D" parent="Node2D/Communication Wire" unique_id=960313792 instance=ExtResource("6_8xhh1")]
+y_sort_enabled = true
+position = Vector2(-208, -165)
+rotation = 3.1415927
+
+[node name="Node2D2" parent="Node2D/Communication Wire" unique_id=7854691 instance=ExtResource("6_8xhh1")]
+z_index = -1
+y_sort_enabled = true
+position = Vector2(283, -27)
+rotation = 1.5707964
+
+[node name="Area2D" type="Area2D" parent="Node2D/Communication Wire" unique_id=2130507365]
+position = Vector2(0, -1)
+script = ExtResource("8_8xhh1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Communication Wire/Area2D" unique_id=1914669646]
+position = Vector2(283, -78)
+shape = SubResource("RectangleShape2D_u3s0c")
+
+[node name="CT1" type="Sprite2D" parent="Node2D" unique_id=1533729225]
+
+[node name="Node2D" parent="Node2D/CT1" unique_id=1798186840 instance=ExtResource("6_8xhh1")]
+y_sort_enabled = true
+position = Vector2(154, -52)
+rotation = -3.1415925
+
+[node name="Node2D2" parent="Node2D/CT1" unique_id=831569644 instance=ExtResource("6_8xhh1")]
+y_sort_enabled = true
+position = Vector2(-250, -57.999992)
+
+[node name="Area2D" type="Area2D" parent="Node2D/CT1" unique_id=1027145771]
+position = Vector2(0, -2)
+script = ExtResource("10_u3s0c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/CT1/Area2D" unique_id=528849389]
+position = Vector2(-53.5, -170)
+shape = SubResource("RectangleShape2D_uuhw2")
+
+[node name="to the right" type="Area2D" parent="Node2D/CT1" unique_id=1968766556]
+script = ExtResource("11_qk4oj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/CT1/to the right" unique_id=888688882]
+position = Vector2(486.5, -50)
+shape = SubResource("RectangleShape2D_4ha8q")
+
+[node name="to the left" type="Area2D" parent="Node2D/CT1" unique_id=1966334167]
+script = ExtResource("12_ut48u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/CT1/to the left" unique_id=915370850]
+position = Vector2(-521, -55.75)
+shape = SubResource("RectangleShape2D_lvooo")
+
+[connection signal="body_entered" from="Node2D/fix Trench/Area2D" to="Node2D/fix Trench/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/Communication Wire/Area2D" to="Node2D/Communication Wire/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/CT1/Area2D" to="Node2D/CT1/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/CT1/to the right" to="Node2D/CT1/to the right" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/CT1/to the left" to="Node2D/CT1/to the left" method="_on_body_entered"]
+
+[editable path="Node2D/fix Trench/TransitionLayer"]
+[editable path="Node2D/Communication Wire/TransitionLayer"]

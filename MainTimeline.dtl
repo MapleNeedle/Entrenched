@@ -1,0 +1,872 @@
+label A1: Start
+You see Corporal Barron, your Section Commander. \
+\
+Cpl Barron\: “I need volunteers for sentry duty and laying sandbags. Today is your lucky day - I’m going to let you pick which you want to do…”
+- Lay sandbags
+	set {chosen_path} = "sandbags"
+- Go on sentry duty
+	set {chosen_path} = "sentry"
+[end_timeline]
+label A1.1: Laying Sandbags
+You start the all too familiar task of filling and placing sandbags onto the parapet. It’s repetitive but important work. A sentry keeps a close watch on No Man’s Land, using a Trench Periscope to safely scan the battlefield for any hints of enemy activity.
+The soldier already on sentry duty takes a minute to stretch his back. He notes the badge on the bottom of your left sleeve - an inverted chevron. Known as a Good Conduct Badge, they were awarded every two years to soldiers in the Canadian Expeditionary Force below the rank of Sergeant, but only if their service was deemed exemplary.
+You did what you were told, followed the rules, and learned the all too important lesson of knowing when to talk and when to stay silent.  \
+\
+Soldier\: “You’ve been at this a bit, eh?”
+You\: “Yeah, joined up right away. Everyone said the war would be done before Christmas; that it would be an adventure and we’d even get to travel.”\
+\
+You shake your head.
+You\: “The only thing I’ve seen is mud, and the most I travelled was to a hospital.”\
+Sentry. “Too bad it wasn’t a blighty wound. You could have gone home.”\
+\
+You\: “If they can patch you back up and send you back to the front, they will.”
+set {chosen_path} = "dugout"
+[end_timeline]
+label A2.1: Go on Sentry Duty
+You step up onto the Fire Step and prepare to keep watch over No Man’s Land.
+- Look over the Trench
+	set {chosen_path} = "look_over"
+- Use the Trench Periscope
+	set {chosen_path} = "periscope"
+- Use Decoy
+	set {chosen_path} = "decoy"
+[end_timeline]
+label ChoiceD1
+You peer over the parapet and scan the muddy, crater-filled landscape. Once a farmer’s field used for growing either wheat, sugar beets, or potatoes, it’s now a perilous hellscape full of unexploded shells, barbed wire, and the bodies of dead soldiers in varying states of decay. Somewhere in the distance, approximately a hundred meters from you, the enemy awaits in their trench.
+You wonder if a German soldier is also looking into No Man’s Land. Suddenly, you notice what appears to be the silhouette of a helmet in the distance. Before you can react, you see the muzzle flash of a sniper’s rifle… it’s the last thing you ever see. The bullet strikes your head. \
+\
+You Died.
+set {chosen_path} = "Death"
+[end_timeline]
+label A2.13: Periscope
+Using a Trench Periscope you peer into No Man’s Land. Your eyes scan the muddy, crater-filled landscape. Once a farmer’s field used for growing either wheat, sugar beets, or potatoes, it’s now a perilous hellscape full of unexploded shells, barbed wire, and the bodies of dead soldiers in varying states of decay.
+Somewhere in the distance, approximately a hundred meters from you, the enemy awaits in their trench. You wonder if a German soldier is also looking into No Man’s Land.
+The soldier already on sentry duty takes a minute to stretch his back. He notes the badge on the bottom of your left sleeve - an inverted chevron. Known as a Good Conduct Badge, they were awarded every two years to soldiers in the Canadian Expeditionary Force below the rank of Sergeant, but only if their service was deemed exemplary.
+You did what you were told, followed the rules, and learned the all too important lesson of knowing when to talk and when to stay silent.  \
+\
+Soldier\: “You’ve been at this a bit, eh?”
+You\: “Yeah, joined up right away. Everyone said the war would be done before Christmas; that it would be an adventure and we’d even get to travel.”\
+\
+You shake your head.
+You\: “The only thing I’ve seen is mud, and the most I travelled was to a hospital.”\
+\
+Soldier. “Too bad it wasn’t a blighty wound. You could have gone home.”\
+\
+You\: “If they can patch you up and send you back to the front, they will.”
+set {chosen_path} = "dugout"
+[end_timeline]
+label A2.12: Decoy
+You grab what looks like a broom stick fitted with a straw-stuffed canvas bag wearing a cloth Service Dress Cap.\
+\
+You\: “Let’s see if Jerry is awake?”\
+\
+You raise the decoy just above the parapet. A few seconds pass.
+Soldier\: “Maybe they’re taking a holiday?”\
+\
+Before you answer a gunshot rings out and the cap flies up into the air and lands on the trench floor. Retrieving it, you show the man the bullet hole.\
+\
+You\: “Jerry never takes a holiday.”
+set {chosen_path} = "Periscope"
+[end_timeline]
+label A1.3: Dugout (Day 1)
+Two soldiers appear.\
+\
+Soldier\: “Cpl Barron sent us to take over.”\
+\
+You head off to your dugout.
+Passing through some heavy, dirty wool blankets, you enter the underground shelter, a large, open space reinforced by wooden beams and sandbags. Several cots line the shelter, surrounding a small stove situated in the centre.
+Various lanterns and candles provide dim light. Most men are resting, eating rations, writing or reading letters, or studying newspapers from back home. One reads a copy of The Listening Post. 
+You sniff the air and frown.\
+\
+You\: “I miss the chalk dugouts we had at Vimy. At least they didn’t smell like wet dirt.”
+You make yourself a cup of tea in your metal mug. As usual, the drink tasted odd. Since the army reused gasoline tins to transport water to the front, the tea had what soldiers called a petrol tang.
+Opening a can of Bully Beef, you soak some hard tack in  your tea and then take a seat on the edge of your cot.
+Another soldier enters - his name is Brad and he joined the army at the same time you did. Unlike you, Brad has somehow avoided being wounded or injured despite having gone over the top as many times as you. He was what soldiers on the front lines referred to as a “Jammy”.
+In fact, you doubt that he’s even suffered as little a scratch since 1914.
+Your eyes focus on the left sleeve of your uniform. Above the Good Conduct Badge is a 1.5-inch vertical stripe of gold-colored brass metal - a Wound Stripe - indicating that you’d been injured in action.
+You figured you should have two, but the Chlorine Gas you took at Ypres wasn’t apparently bad enough to count.
+Brad\: I can’t believe it! I thought for sure you were going home.
+You both hug and then take seats.\
+\
+You\: So, what did I miss? Are Jack and Bill still in our platoon?
+A shadow falls across Brad’s face, his smile fading. You recognize the look.  \
+\
+You\: “Tell me...”
+Brad\: “Jerry got Jack’s number a month ago and Bill was listed MIA a few days ago. He went on a raid… I told him not to volunteer but, you know Bill - never listens. He didn’t make it back and I doubt he was taken prisoner.”
+For a while you both sit in silence as you absorb the information. There’s nothing to say; while it’s upsetting to hear what had transpired during your convalescence, the front line wasn’t a place to express grief.
+Jack and Bill were school friends. They, along with four other students had joined you and Brad at the Toronto recruitment centre, where you all enlisted in the CEF. Eight young, idealistic and naïve kids who were barely men. You remember feeling fortunate to have been accepted on the first intake.
+All eight of you trained at Valcartier, traveled across the Atlantic Ocean, and were assigned to the same platoon in France.
+One died at Ypres, another three at the Somme, and you nearly bought-it at Vimy.  \
+\
+Now, only you and Brad remained.
+Cpl Barron\: Maybe. If command starts delivering wooden overcoats, then it’s a yes.
+Cpl Barron\: Just heard from Fitzy … command might be up to something.\
+\
+Brad\: Another push?
+The corporal shrugs. \
+\
+Cpl Barron\: Maybe. If the Tumpline starts delivering wooden overcoats then it’s a yes.
+A familiar weight rests upon your shoulders. Whenever a major offensive was planned, cheap wooden coffins would arrive at the rear lines. It was a sobering sight.  \
+\
+Cpl Barron\: Anyways, Stand To in five minutes. \
+\
+Brad\: Yes Corporal.
+Every morning and evening, all soldiers along the front had to line-up on the fire steps of the forward trenches, rifles in hand, ready to repel an enemy attack. The odd thing was that this wasn’t a secret – the enemy knew about the ritual and never attacked at these times, yet command insisted on the practice continuing. After morning stand-to, an inspection by the Platoon Sergeant or, sometimes, the Platoon Commander, would occur.
+Despite this, the practice has endured and typically, in the morning, is followed by an inspection by your Platoon Commander or, sometimes just Platoon Sergeant.
+At the appointed time you get ready and follow Brad back to the front lines, taking your place along the fire steps. Rifle in hand, you hold your position for thirty minutes. Nothing happens.
+After this, you step down off the firing line and form-up along the back wall of the trench, holding your rifle in front of your chest to allow Cpl Barron to inspect the action. The drill is laxed, unlike formal morning inspections which are done by an officer and senior NCO.
+Cpl Barron also makes a quick check to ensure nobody is missing any kit - if a soldier needs something replaced, he’ll see that they get it. Once he’s finished, you prepare to receive your evening orders. 
+Cpl Barron\: “Since it’s your first day back, I’m going to let you rest in the barracks tonight. Of course, be ready in case something happens but otherwise, we’ll see you in the morning.”
+You thank him – it was a generous gesture. He also lets Brad off, and you suspect the consideration was because he felt you might need time to mourn the loss of your friends. In the army, support was shown by actions, not words.
+The trenches didn’t afford the luxury to talk about your feelings. Anything that might cause a soldier to drop their guard - limit their situational awareness – was avoided. You had to remain vigilant or else people died…  
+… and a soldier’s worst fear wasn’t losing their own life but being responsible for the death of the man standing beside them.
+You head back to the dugout. Brad offers to play a game of cards, but you're feeling unusually tired and decide to sleep. It isn’t easy getting back into the routine.
+set {chosen_path} = "Dugout"
+[end_timeline]
+label A1.3: Dugout Morning/Stand To and Inspection (Day 2)
+You awaken in your cramped dugout, still in uniform save for your webbing and footwear. Muscle memory allows you to slip these back on without much thought - socks, boots, and puddies before standing and slipping both arms through your webbing, securing it around your waist with the brass, gated buckle.
+As usual, the first order of business was morning Stand To, which typically required everyone to be on the front lines 30 minutes before dawn.
+You head out of the dugout and into a cold, breezy morning. Everything is damp. Soon you’re lined up along the fire steps, rifle in hand, ready and waiting until finally the order to stand down is given. Everyone prepares for the morning inspection.
+This is much more formal than in the evenings. The section is brought to attention and then ordered to do an elbow dressing before finally standing easy. When the Platoon Commander and his Sergeant arrive at your section, Cpl Barron brings you all to attention and then marches up to the officer - or at least as best as one can march in a narrow trench – and salutes him.
+The officer, Second Lieutenant Holmes, returns the compliment, and then proceeds to check each soldier, Sergeant Fitzgerald following closely behind. While the officer makes some idle chit chat and gives the odd word of encouragement, the Platoon Sergeant eyes every man’s uniform, noting things that need fixing.
+2Lt Holmes arrives before you. He’s young, in his early twenties, and was in the process of completing his undergraduate degree at the University of Toronto when he decided to join the war effort. Like all officers, he wears a distinct looking uniform with a Sam Browne belt - a wide leather waist belt with a narrow diagonal shoulder strap - upon which he has holstered his revolver.
+Like all officers, he wears a distinct looking uniform, along with a Sam Browne belt - a wide leather waist belt with a narrow diagonal shoulder strap - upon which he has holstered his revolver.
+2Lt Holmes\: Ah, good to have you back. How’s the injury?\
+\
+You\: Still a bit stiff, but otherwise I’m well.\
+\
+2Lt Holmes\: That’s the spirit private.
+He notes your good conduct badge.\
+\
+2Lt Holmes\: You should be up for another soon. And I have my eye on you for promotion, if you keep up the good work.\
+\
+You\: Yes sir!
+He smiles and proceeds to the next man, Sgt Fitzgerald taking his place. Affectionately known as “Fitzy” - not that you would ever call him that to his face - Fitzgerald is a broad-shouldered, tall, and grim looking man who you both fear and respect.
+Nearly thirty years old, Fitzgerald is experienced, tough, demanding, but also fair. A year ago, Fitzgerald was Mentioned-in-Dispatches for saving several wounded soldiers in No Man’s Land.
+Sgt Fitzgerald\: Did you have a nice holiday?\
+\
+The joke makes you smirk.\
+\
+You\: It was a bit long, Sergeant.
+Sgt Fitzgerald\: Keep your eyes on these Greenies. They ain’t cut from the same cloth. nd.\
+\
+You\: Yes Sergeant!
+set {chosen_path} = "Morning Stand to"
+[end_timeline]
+label Dugout Breakfast (Day 2)
+You return to your dugout and begin breakfast, which consists of some bread, bacon, and biscuits. You also get served your daily ration of Rum.
+A large rat - nearly the size of a cat - brazenly moves up to the stove, sniffing at the meat cooking on a pan.
+- Hit the rat with your shovel
+	set {chosen_path} = "Rat 1"
+- Ignore the rat
+	set {chosen_path} = "Rat 2"
+[end_timeline]
+label R1
+Like all soldiers, you have a particular dislike for trench rats because of they grew fat off the corpses of dead soldiers in No Man’s Land. They would even start eating a wounded man if he couldn’t defend himself.
+The sound of them in No Man’s Land was constant at times, especially after a battle.
+You reach for your entrenchment tool, sliding the metal spade onto your wooden handle. Quietly, you sneak up, raise the spade, and strike the rat - it’s a quick end.  \
+\
+Brad\: Good hit. \
+\
+You\: I’m sick of these rats.
+set {chosen_path} = "day 2 aft"
+[end_timeline]
+label R2
+You feel too tired to anything about the rat. Like all soldiers, you have a particular dislike for trench rats because of they grew fat off the corpses of dead soldiers in No Man’s Land. They would even start eating a wounded man if he couldn’t defend himself. The sound of them in No Man’s Land was constant at times, especially after a battle.
+Brad notices and prepares his entrenchment tool, sliding the metal spade onto a wooden handle. Quietly, he sneaks up, raises the spade, and strikes the rat - it’s a quick end.
+set {chosen_path} = "day 2 aft"
+[end_timeline]
+label A1: Day 2 Morning-Afternoon
+Cpl Barron enters your dugout and points at both you and Brad.
+Cpl Barron\: “Just the two I wanted to see. I need some communication wire installed along a section of trench that got blasted by the last artillery barrage. Or you can help rebuild the damaged trench.
+- Communication Wire
+	set {chosen_path} = "Communication Wire"
+- Fix Trench
+	set {chosen_path} = "Fix Trench"
+[end_timeline]
+label C1: Communication Wire
+You head through the zig-zagging trenches all the way back to the First Support Line, approximately 100 yards behind the fire line. Its function was to supply the front with needed equipment, ammunition, and rations.
+You retrieve a spool of communication wire from a Signaler consulting a map. You’re also given some insulation tape to protect the exposed wires that you splice together.
+[end_timeline]
+label C1: Communication Wire2
+You grab the spool and begin to walk it down along a communication trench, pausing to allow Brad an opportunity to secure it along the top of the trench wall using pickets.
+In some places you need to connect the wire to other lines, while in others, you have to bury it underground, which involves lifting duckboards. By midday you break for dinner and then continue your work.
+set {chosen_path} = "CT1"
+[end_timeline]
+label T1: Fix Trench
+You head through the zig-zagging trenches all the way back to the First Support Line, approximately 100 yards behind the fire line. Its function was to supply the front with needed equipment, ammunition, and rations.  s.
+Grabbing the necessary equipment, as well as a map, you and Brad make your way towards the first damage section of the trench.
+[end_timeline]
+label T1: Fix Trench2
+It’s busy, tiring work, involving repairing damage from explosions, reshaping walls and fixing supports to prevent the earth from collapsing, and replacing duckboards. By midday you break for dinner and then continue your work.
+set {chosen_path} = "CT1"
+[end_timeline]
+label CT1: Damaged Front Lines
+By late afternoon you’re finally at the damaged front line. Brad consults a map roughly sketched onto a piece of paper.
+Brad\: “Uh, the map says we have to stick to the south-east trench. Apparently, the North-Western part of the trench is being dealt with by the Ordnance Corps.”
+set {chosen_path} = "CT1"
+[end_timeline]
+label CT2 (go left)
+You arrive at the damaged trench and join two other soldiers already working on the trench.
+- Have a few keep watch while you and Brad fix the trench.
+	set {chosen_path} = "You Fix"
+- Join the men working to finish the trench in a shorter and more efficient manner.
+	set {chosen_path} = "You Join"
+[end_timeline]
+label CTD1 (go right)
+You go right and eventually come upon a damaged trench with two Ordnance Corps soldiers. \
+\
+Brad\: I think we went the wrong way…
+UXO\: Freeze - don’t step there!\
+\
+Before he finishes, Brad ends up stepping on a buried, unexploded shell. It detonates, killing everyone in the trench.
+set {chosen_path} = "Death1"
+[end_timeline]
+label TT1 (rebuild trench with solider’s keeping watch)
+You instruct the two soldiers to keep watch at the firestep while you and Brad take over rebuilding the trench. By supper you are finally finished, and are relieved.
+set {chosen_path} = "TT1"
+[end_timeline]
+label TT2 (help soldiers rebuild the trench)
+You decide that ‘more hands make less work’, and join the two soldiers already working on the trench. Unfortunately, since nobody was watching No Man’s Land, you are completely caught off guard by a sudden attack which kills all four of you.\
+\
+The End
+set {chosen_path} = "Death2"
+[end_timeline]
+label A1: Day 2 Evening
+After you’ve eaten you head back to the front line and meet up with Cpl Barron. Then it’s Stand To and yet another quick inspection.
+Cpl Barron\: Well, another glorious evening in his majesty’s service. So, what will it be? Sentry duty or laying sandbags?
+- Lay sandbags
+	set {chosen_path} = "Choice 1.1"
+- Go on sentry duty
+	set {chosen_path} = "Choice 2.1"
+[end_timeline]
+label A2: Laying Sandbags (Day 2)
+You start the all too familiar task of filling and placing sandbags onto the parapet. It’s repetitive but important work. A sentry keeps a close watch on No Man’s Land,
+using a Trench Periscope to safely scan the battlefield for any hints of enemy activity. Twenty minutes in, you hear the sentry whisper something to you\:
+Sentry\: “Hey, I think I see something…”\
+\
+You stop and approach him. His eyes remain glued to the periscope.
+You\: “What is it?” \
+\
+Sentry\: “People, but I’m not sure.”
+- Get a runner to inform Cpl Barron and join the sentry on the firestep.
+	set {chosen_path} = "Choice A 1.2"
+- Tell him to report the incident to Cpl Barron and continue working.
+	set {chosen_path} = "Choice D 2.2"
+- Abandon your post and make a mad dash for your dugout.
+	set {chosen_path} = "EDashCharge1"
+[end_timeline]
+label Abandon Your post and make a Mad Dash for you dug out (EDashCharged)
+You panic, and run to your dugout. In short order, you are charged and found guilty of leaving your post without orders and are given the maximum punishment\:
+execution by firing squad, which is commuted to a prison term with hard labour. You are dishonourably discharged from the military, a shame that follows you for the rest of your life.
+set {chosen_path} = "DISHONOURABLE DISCHARGE1"
+[end_timeline]
+label Choice A 1.2
+You signal a runner and tell them to report the incident to Cpl Barron, then join the sentry on the fire step.
+- Look into No Man’s Land
+	set {chosen_path} = "Choice D 1.2-A"
+- Use the Trench Periscope
+	set {chosen_path} = "Choice A 1.2-B"
+[end_timeline]
+label D1 Look into No Man’s Land
+You peer over the parapet and scan the muddy, crater-filled landscape. Once a farmer’s field used for growing either wheat, sugar beets, or potatoes,
+it’s now a perilous hellscape full of unexploded shells, barbed wire, and the bodies of dead soldiers in varying states of decay. Somewhere in the distance, approximately a hundred meters from you, the enemy awaits in their trench.
+You wonder if a German soldier is also looking into No Man’s Land. Suddenly, you notice what appears to be the silhouette of a helmet in the distance.
+Before you can react, there is a distant muzzle flash from a sniper’s rifle … it’s the last thing you ever see. The bullet strikes your head.\
+\
+You Died.
+set {chosen_path} = "Death3"
+[end_timeline]
+label Choice A 1.2-B Use Trench Periscope
+You nudge the sentry and ask for the periscope - the last thing you want to do is look over the parapet and get shot by a German sniper! Using the device, you safely scan the muddy, crater-filled landscape.
+Once a farmer’s field used for growing either wheat, sugar beets, or potatoes, it’s now a perilous hellscape full of unexploded shells, barbed wire, and the bodies of dead soldiers in varying states of decay.
+Somewhere in the distance, approximately a hundred meters from you, the enemy awaits in their trench. You wonder if a German soldier is also looking into No Man’s Land.
+Suddenly, you notice some shapes moving into a crater. You can’t be certain, but you believe it looked like three men.
+You hear men approaching behind you; the sentry has returned along with Cpl Barron, two more privates, and Sgt Fitzgerald. \
+Sgt Fitzgerald\: “What have you got?”
+You\: “I think I see three people hiding in a crater, Sergeant.”\
+\
+Sgt Fitzgerald\: “Might be a raiding party. Keep a watch and I’ll go tell the platoon commander.”
+Sgt Fitzgerald leaves but not before ordering the other two soldiers to stand by, just in case anything happened before he returned. Cpl Barron also remains. Minutes pass as you continue to watch the shapes which now appear to be slowly making their way towards another crater. Eventually, Sgt. Fitzgerald returns along with Second Lieutenant Holmes, the officer in charge of your platoon. A flare gun is clutched in his hands.
+2Lt Holmes\: “You’ve got something?”\
+You\: “Yes Sir, three shapes making their way slowly towards us.”\
+2Lt Holmes\: “Well, it can’t be any of ours - let’s say we help them see where they’re going?”
+As Holmes loads the flare gun, Fitzgerald has you, along with the other three soldiers and Cpl Barron, stand to. You stash the periscope and grasp your rifle in your hands. \
+\
+Sgt Fitzgerald\: “Fix bayonets, just in case.”
+You reach down to your left hip where, between some ammunition pouches, you grab the hilt of the dagger and pull it out of its frog. A 17 inch blade is an intimidating looking weapon, especially when it’s attached to the muzzle of your Lee-Enfield.
+The bayonet clicks securely into place. You work the rifle’s action, grabbing the bolt and chambering a round, and then join the others, weapons held at the ready.
+2Lt Holmes takes aim with the flaregun, pointing it up towards the sky above No Man’s Land, and pulls the trigger. A distinct ‘PLOOP’ sound rings out, followed by a ‘SWOOSH’ as the projectile launches into the air, detonating with a muffled bang.
+Instantly, the area in front of you becomes brightly illuminated and you find yourself looking in the eyes of three German soldiers, laying in a prone position, rifles in hand, each with a surprised look on their faces.  … each much closer than you anticipated!
+- Shoot your rifle
+	set {chosen_path} = "Choice A 1.2-C"
+- Wait
+	set {chosen_path} = "Choice D 1.2-D"
+[end_timeline]
+label Choice A 1.2-C
+Without hesitation, you take aim, the face of a German soldier square in your rifle’s sights. In unison, you open fire into the enemy and then duck back down into the trench. Using the periscope, you manage to glimpse the bodies just as the flare burns out. The sound of rifle and machine guns erupt from the enemy trench. Above, the sandbags of the parapet shutter as they absorb rounds.
+The sound of rifle and machine gun fire dominates the night as the Germans open fire on the point where they caught your muzzle flashes. Above, the sandbags of the parapet shutter as they absorb rounds.
+2Lt “Take cover!”\
+Sgt Fitzgerald “Move back, clear the area!”
+Pushing off the firestep, you leap to the other side of the trench, your body slamming into the muddy wall. You recover quickly and continue into a communication trench, just as the whistle of mortar rounds join the chaos of noise.
+One explodes right in front of the trench where you all had been positioned, blowing the parapet apart. Had you not moved, you would have certainly been killed. After a minute the enemy fire ceases and things return to normal, or at least what counts as normal on the Western Front.
+2Lt Holmes\: “Good work men, especially you Private. They were undoubtedly a raiding party and might have managed to take us unaware had you not responded the way you did.”
+You\: “Thank-you, Sir.”\
+\
+Holmes gives an approving nod and then turns to the NCO.\
+\
+2Lt Holmes\: “Sergeant, over to you.”
+Sgt Fitzgerald\: “Yes sir.”\
+\
+The officer departs, heading back to his quarters to undoubtedly file a report.
+Sgt Fitzgerald\: “That’s some fine soldering, lads. Remember, don’t take chances. Better to be safe than sorry.”
+“Yes sergeant!” You all reply. Fitzgerald gives you a tap on the shoulder, his usual way of saying good job, which always hits harder than you believe the man intended. He gestures to Cpl Barron.
+Sgt Fitzgerald “Let’s see these men relieved and given an extra ration of rum Corporal."\
+\
+Cpl Barron “Will do, Sergeant.”
+set {chosen_path} = "3.1AMM"
+[end_timeline]
+label Choice D 1.2-D
+The enemy is in your sights but you hesitate, a mere second’s pause - a fatal error. One of the Germans fires at you before being shot by your comrade. The round strikes and penetrates your helmet, launching you off the firestep. You’re dead before hitting the ground.
+set {chosen_path} = "Death4"
+[end_timeline]
+label Choice D 2.2
+You tell the sentry to go and report the incident to Corporal Barron. He takes off down a communication trench and you proceed back to the task of filling and placing sandbags. Minutes go by. Suddenly, you think you hear something coming from No Man’s Land.
+- Stop what you’re doing and listen closely.
+	set {chosen_path} = "Choice D 2.2-A"
+- Continue your assigned task.
+	set {chosen_path} = "Choice D 2.2-B"
+[end_timeline]
+label Choice D 2.2-A
+You stop and listen closely. A minute goes by without any sound, but then you hear a quiet ‘SNAP’, similar to the sound wire cutters make. You glance back at the communication trench - the sentry has not yet returned.
+- Leave and get help.
+	set {chosen_path} = "Choice D2.2-A1"
+- Resume filling sandbags.
+	set {chosen_path} = "Choice D2.2-A2"
+- Investigate the sound.
+	set {chosen_path} = "Choice D2.2-A3"
+[end_timeline]
+label Choice D2.2-A1
+Alarmed by the sound, and the fact that you are alone, you decide it’s best to head down the trench in search of someone to help. Which way to go?
+- Left
+	set {chosen_path} = "D2.2-A11"
+- Right
+	set {chosen_path} = "D2.2-A12"
+[end_timeline]
+label Choice D2.2-A11
+A German raiding party made it into your trench. An enemy soldier attacks you from behind, his calloused, muddy hand cupping your mouth while the other plunges a dagger into your side.
+You scream and struggle, but the soldier holds you in place - nobody can hear your muffled cry. In a matter of seconds, your legs become weak and your vision fades. Only now you realize that had you not dismissed the sentry, the enemy would never have been able to sneak into the trench.
+Before you die, you wonder how many of your comrades will also die because of your mistake?
+set {chosen_path} = "Death5"
+[end_timeline]
+label Choice D2.2-A12
+You notice three soldiers, one of them a Lance Corporal, and you immediately report what you heard. He orders one of his men to get help and the other to remain on sentry.
+Lance Corporal “Ready your weapon Private and lead the way.”\
+\
+Before you can move the sounds of screams, followed by gun shots ring out. \
+\
+Lance Corporal “Oh no, c’mon, hurry!”
+While you were gone, the sentry had returned, led by Sergeant Fitzgerald, the Platoon Sergeant, along with Cpl Barron and another soldier. They arrived just as the German raiding party slipped into the trench, attacking your comrades from behind. 
+Hand-to-hand combat ensued. In the end, two Canadians were killed while Cpl Barron sustained a serious injury. Sergeant Fitzgerald, a broad-shouldered, grim looking man, cuts you the coldest look you’ve ever seen. 
+Sgt Fitzgerald “Why did you leave this post undefended? You dismiss a sentry but don’t take up the task yourself?”
+Before you answer, Second Lieutenant Holmes, the Platoon Commander, appears, pistol in hand, along with two other soldiers. He points at you.
+2Lt Holmes “Private, I’m placing you under arrest and charging you with neglect of duty.”
+You are court martialed and found guilty of leaving your post without orders, and since three soldiers lost their lives (Cpl Barron succumbed to his wounds), you are given the maximum punishment\: execution by firing squad, which is commuted to a prison term with hard labour.
+You are dishonourably discharged from the military, a shame that follows you for the rest of your life. But the worst punishment is knowing that those men died because of what you did.
+set {chosen_path} = "DISHONOURABLE DISCHARGE2"
+[end_timeline]
+label Choice D 2.2-B
+You decide it's better to continue your work; the sentry is likely to be back soon, and you don’t want to get in trouble for being behind in your task. Unfortunately, the ‘SNAP’ sound you heard was a German soldier cutting the barbed wire on the other side of your parapet. You don’t notice a three-man,
+German raiding party slipping into your trench. As you fill yet another bag an enemy soldier attacks you from behind, a calloused, muddy hand cupping your mouth while the other plunges a dagger into your side. You scream and struggle, but the soldier holds you in place - nobody can hear your muffled cry.
+In a matter of seconds, your legs become weak and your vision fades. Only now you realize that had you not dismissed the sentry, the enemy would never have been able to sneak into the trench. Before you die, you wonder how many of your comrades will perish because of your mistake.
+set {chosen_path} = "Death6"
+[end_timeline]
+label Choice D2.2-A2
+You decide it's better to continue your work; the sentry is likely to be back soon, and you don’t want to get in trouble for being behind in your task.
+Unfortunately, the ‘SNAP’ sound you heard was a German soldier cutting the barbed wire on the other side of your parapet. You don’t notice a three-man, German raiding party slipping into your trench.
+As you fill yet another bag an enemy soldier attacks you from behind, a calloused, muddy hand cupping your mouth while the other plunges a dagger into your side. You scream and struggle, but the soldier holds you in place - nobody can hear your muffled cry.
+In a matter of seconds, your legs become weak and your vision fades. Only now you realize that had you not dismissed the sentry, the enemy would never have been able to sneak into the trench. Before you die, you wonder how many of your comrades will perish because of your mistake.
+set {chosen_path} = "Death7"
+[end_timeline]
+label Choice D2.2-A3
+You put down the shovel and pick up your Lee Enfield, moving slowly to the fire step. Now that you’re closer to the trench wall, you can hear the sounds more clearly.
+Could it be the enemy? More likely it’s a Trench Rat, and if there was an allied raiding party you would have been told and issued a password. 
+- Ask “who goes there!”
+	set {chosen_path} = "Choice D2.2-A31"
+- Look over the parapet
+	set {chosen_path} = "Choice D2.2-A32"
+- Stay where you are with your rifle at the ready
+	set {chosen_path} = "Choice D2.2-A33"
+[end_timeline]
+label Choice D2.2-A31
+You “HALT, who goes there!”\
+\
+The noise stops. Seconds pass and then you believe you hear a metallic sound.
+- Issue a second, final challenge
+	set {chosen_path} = "Choice D2.2-A311"
+- Throw a Grenade
+	set {chosen_path} = "Choice D2.2-A312"
+[end_timeline]
+label Choice D2.2-A311
+You decide to issue a second challenge.\
+\
+You “Who goes there!?”
+To add emphasis, you grab the bolt of your Lee Enfield rifle and chamber a round.
+Something flies over the top of the parapet and lands into the trench near your feet. A German Stick Grenade! It explodes before you can react, killing you instantly.
+set {chosen_path} = "Death8"
+[end_timeline]
+label Choice D2.2-A312
+Convinced that someone is on the other side of the trench, you grab a grenade, pull the pin, and toss it over the parapet. Despite the proximity, the sandbags and trench wall are sufficient to absorb the blast. The grenade hits the earth.
+Voice\: “Handgranate! Deckung! Deckung!”
+The panic voices of German soldiers are silenced by the explosion of your hand grenade. To your side Cpl Barron, the sentry, another soldier and, to your surprise, Sergeant Fitzgerald, the Platoon Sergeant, arrive, rifles at the ready, except for Fitzgerald and Barron, who are both holding grenades.
+They toss their grenades over the parapet. The explosions are met with silence.
+Sgt Fitzgerald “Sentry, use the periscope and confirm we got ‘em.”
+A soldier walks up to the firestep and scans the area with a Trench Periscope, an optical device that looks like a long tube, allowing the sentry to scan no man’s land while remaining inside the trench.
+At the same time, Second Lieutenant Holmes, the Platoon Commander arrives with a Flare Gun in hand.
+2Lt Holmes\: “Allow me to illuminate the area, sentry.”\
+\
+You hear a distinct ‘PLOOP’ as the projectile launches into the air with a ‘SWOOSH’, detonating in the sky with a muffled bang.
+Instantly, the area in front of your section of trench becomes brightly illuminated for the sentry. \
+\
+Sentry\: “I see three dead Germans, Sir.”
+A large and grim looking NCO bumps your shoulder. He is nearly thirty years old and was Mentioned-in-Dispatches for saving a wounded soldier in No Man’s Land.
+Sgt Fitzgerald\: “What were you thinking sending the sentry - you should have sent someone else and kept eyes on No Man’s Land.”
+You realize now your mistake. You were lucky that nobody got hurt or killed as a result. You imagine you might get written up for the mistake.
+set {chosen_path} = "3.1A"
+[end_timeline]
+label Choice D2.2-A32
+You peer over the parapet and scan the muddy, crater-filled landscape. Once a farmer’s field used for growing either wheat, sugar beets, or potatoes, it’s now a perilous hellscape full of unexploded shells, barbed wire, and the bodies of dead soldiers in varying states of decay.
+Somewhere in the distance, approximately a hundred meters from you, the enemy awaits in their trench. You wonder if a German soldier is also looking into No Man’s Land. Suddenly, you notice what appears to be the silhouette of a helmet in the distance.
+Before you can react, you see the muzzle flash of a sniper’s rifle… it’s the last thing you ever see. The bullet strikes your head. \
+\
+You Died.
+set {chosen_path} = "Death9"
+[end_timeline]
+label Choice D2.2-A33
+You stand your ground, not daring to move to the fire step. Slowly, you reach down to your left hip where, between some ammunition pouches, you find the hilt of your bayonet and pull it out of its frog.
+A 17 inch blade is an intimidating looking weapon, especially when it’s attached to the muzzle of your Lee-Enfield. The bayonet clicks securely into place.
+You then work the rifle’s action, and as quietly as possible, chamber a round. Bringing the rifle up to your shoulder, you focus the sights on the top of the parapet, hoping that the sentry returns any second now.
+To your dismay, you notice a German helmet slowly rise above the parapet as an enemy soldier risks a peek into the trench. Unfortunate for him, his head popped up right in front of your rifle. You fire a round, striking the soldier in the head.
+Shouts in German erupt as you load another round. Two more soldiers appear above the parapet - you fire and take down one but the other, armed with a pistol, manages to fire a shot, striking you in the chest.
+The round hits you like a speeding train, sending you flying back against the trench wall. To your surprise, the pain is dulled - it was too quick for your mind to register.
+The German readies his weapon to fire another and you close your eyes, awaiting the inevitable.
+BANG, BANG, BANG!
+You recognized the sound - it came from Lee Enfields\: three to be precise. Eyes opening, you see the Sentry, Cpl Barron, and Sergeant Fitzgerald, the Platoon Sergeant, with rifles raised.
+Moments later flares explode above No Man’s Land followed by machine gun fire from your side of the trench. A pain unlike any you’ve ever experienced sends electricity through your body as your nerves begin to register the damage.
+Sgt Fitzgerald comes to your side, retrieves the wound dressing you have stitched on the inside bottom flap of your tunic and presses it hard against your chest, which makes you groan aloud. Your vision blurs from the pain.
+Sgt Fitzgerald “Stay with me Private, your going to be okay. Get some stretcher bearers here on the double!
+But his voice fades into a distant, muffled echo as you slip into unconsciousness.
+You awaken sometime later in a hospital. You try to move but a jap of pain in your chest makes you reconsider and you settle back into the bed. A woman in a blue uniform comes into view - a nursing sister. 
+Nurse “Easy, don’t move. You just had surgery.”\
+\
+You glance to your right and notice your shoulder and arm in a cast.
+Nurse “You were lucky the bullet missed your lungs but it did a number to your shoulder. You won’t be using your arm or lifting anything soon.”
+The damage from your wound is enough to have you invalided home. Your time serving in the Great War is now finished.
+Eventually, your wound heals although your right arm never quite feels the same and your shoulder becomes a constant source of pain for the rest of your days. Still, you count yourself fortunate to have survived the war when so many of your friends and comrades did not.
+set {chosen_path} = "End1"
+[end_timeline]
+label A3: Go on Senty Duty
+You continue your sentry duty, using a Trench Periscope to safely peer into No Man’s Land. Your eyes scan the muddy, crater-filled landscape. Once a farmer’s field used for growing either wheat, sugar beets, or potatoes, it’s now a perilous hellscape full of unexploded shells, barbed wire, and the bodies of dead soldiers in varying states of decay.
+Somewhere in the distance, approximately a hundred meters from you, the enemy awaits in their trench. You wonder if a German soldier is also looking into No Man’s Land.
+Suddenly, you notice a few silhouettes, possibly people. You focus on the shapes and then, to your dismay, notice a spark - did someone just light a cigarette in No Man’s Land?
+You have trouble believing what you think you just saw\: nobody would ever be that reckless. Still, you’re having trouble trying to make sense of it. Perhaps the lenses of the periscope need to be cleaned?
+set {chosen_path} = "ChoiceStay"
+[end_timeline]
+label Choice Stay on Sentry Duty (2.4)
+You remain on sentry duty, well aware that leaving your post without permission or being relieved would lead to you being charged. You keep using the Trench Periscope to look into No Man’s Land but find it hard to see. 
+- Look into No Man’s Land
+	set {chosen_path} = "Choice 2.4-A"
+- Keep using the Trench Periscope
+	set {chosen_path} = "Choice 2.4-B"
+[end_timeline]
+label Choice 2.4-A
+You decide to poke your head over the parapet and scan the space between the Canadian and German trench. Just then you notice what appears to be the silhouette of a helmet in the distance. Before you can react, you see the muzzle flash of a sniper’s rifle… it’s the last thing you ever see. The bullet strikes your head. \
+\
+You Died.
+set {chosen_path} = "Death10"
+[end_timeline]
+label Choice 2.4-B
+You keep using the periscope to study the ground between the Canadian and German trenches. Suddenly, you notice some shapes moving out of a crater, about midway in No Man’s Land.
+Just then you hear men approaching behind you; the sentry has returned along with Cpl Barron, another corporal with a sniper rifle, and Sergeant Fitzgerald, the Platoon Sergeant.
+Sgt Fitzgerald\: “What have you got?” \
+\
+You\: “I think I see three people hiding in a crater, Sergeant.”\
+\
+Sgt Fitzgerald\: “It might be Germans, but it could also be one of our raiding parties.”
+- Tell him about the spark you noticed earlier.
+	set {chosen_path} = "Choice 2.4-B1"
+[end_timeline]
+label Choice 2.4-B1
+You “I did see a spark, like someone using a lighter.”\
+\
+Sgt Fitzgerald frowns and grunts.
+Sgt Fitzgerald “I’d bet my rum ration that they ain’t on our side. Still… keep your head on a swivel.
+If it is our raiding party, the password is “London Lights. We’ll be back in a few to check on you  – Corporal Pegahmagabow will stay here with you. Follow his lead.”
+You\: “Yes Sergeant.”
+Cpl Pegahmagabow comes up beside you. He’s holding a Canadian Mark II 1905 Ross Rifle, fitted with a scope. You frown.
+You\: “Why are you using a Canadian Club? Doesn’t it jam when you try to fire a few rounds?”
+The sniper, an Ojibwa, gives a slight smile.\
+\
+Cpl Pegahmagabow “Lucky for me, I only need one shot.”
+He considers something before speaking again.\
+\
+Cpl Pegahmagabow “I’m going up - there’s a spot I like to use to sneak out of the trench. If what you said is right, I’ll be ready to help.”
+Did you hear him right?\
+\
+You “You’re going into No Man’s Land? Are you crazy?”
+Cpl Pegahmagabow “No… a ghost.”\
+\
+Quietly, he moves down the trench and disappears into the darkness.
+The sentry joins you.\
+\
+Sentry\: Do you realize who that was?
+You shake your head. \
+\
+Sentry\: That was Peggy mate. The Ghost in the Trenches.
+Something clicks in your brain, like a lightswitch.\
+\
+You\: Really?
+Sentry\: Yeah.\
+\
+You\: I actually thought he would be shorter.
+An hour passes when you notice shapes moving from carter to crater towards your position.
+- Issue a challenge
+	set {chosen_path} = "Choice 2.4-B1A"
+- Switch positions to get a better view
+	set {chosen_path} = "Choice 2.4-B1C"
+- Use the nearby Sap
+	set {chosen_path} = "Choice 2.4-B1D"
+[end_timeline]
+label Choice 2.4-B1A Challenge
+You cup your hand to your mouth and shout a challenge.\
+\
+You\: Halt, who goes there?
+The men respond but as they are still some distance away, you can’t quite hear them.
+- Repeat the Challenge
+	set {chosen_path} = "Choice 2.4-B1AA"
+- Wait for them to get closer
+	set {chosen_path} = "Choice 2.4-B1B1"
+[end_timeline]
+label 2.4-B1AA Repeat Challenge
+You steady yourself and repeat the challenge. Everything is now quiet so you focus your periscope on the area. For a second you think that maybe a bird or something flew into view, but then register the dull sound of something falling onto the duckboards behind you.
+Instantly you realize the danger but it’s too late - the enemy grenade explodes, killing both you and the sentry.\
+\
+The End
+set {chosen_path} = "Death11"
+[end_timeline]
+label 2.4-B1B1 Wait for them to get closer
+Knowing that they are too far away, you decide to wait and keep a sharp eye on them. Since people move slowly in No Man’s Land, it takes about 20 minutes before they are in range.
+You\: “Halt, who goes there?”\
+\
+Voice\: “We are tommies.”
+Sentry\: “They're on our side.”\
+\
+You ignore the sentry and instead ask\:
+You\: “What’s the password?”\
+\
+Voice\: “Please, we needing help.”
+The other sentry nudges you.\
+\
+Sentry\: “I’m going to help.”
+- Go with the Sentry
+	set {chosen_path} = "Choice 2.4-B1BA"
+- Stop him.
+	set {chosen_path} = "Choice 2.4-B1BB"
+[end_timeline]
+label 2.4-B1BA
+You and the sentry both ready your gear and clammer out of the trench to help the wounded men and bring them to the safety of your trench. You slither into No Man’s Land and work your way to their position.
+Eventually, you make it into their crater. Rough hands grab you and the sentry, cupping your mouths as bayonets plunge into your body. Too late do you realize that they are German soldiers.  \
+\
+The End
+set {chosen_path} = "Death12"
+[end_timeline]
+label 2.4-B1BB
+You grab the sentry and keep him from moving.
+You\: No, they don’t know the password and didn’t you notice their accent? \
+\
+Sentry\: What?
+You shake your head and then say.\
+\
+You\: “Hold tight, we’ll come and help.”
+Pulling the sentry closer, you whisper in his ear and instruct him to inform the Sgt that enemy soldiers are nearby.
+He nods and slips off while you keep a watch on the enemy. Moments later, the sentry returns along with Sgt Fitzgerald, Cpl Barron, and 2Lt Holmes, the latter holding a flare gun in his hands.
+2Lt Holmes\: “You’ve got something?”
+You\: “Yes Sir, enemy soldiers about fifteen yards in front of us in a crater. They failed the challenge and have a less than convincing accent. I told them to hold tight and that we were coming to help.”
+Sgt Fitzgerald gives a broad smile.\
+\
+2Lt Holmes\: “Let’s say we help them see where they’re going, shall we?”
+As Holmes loads the flare gun, Fitzgerald has you, the sentry, and Cpl Barron prepare yourselves.You stash the periscope and grasp your rifle in your hands.
+Sgt Fitzgerald\: “Fix bayonets, just in case.”
+You reach down to your left hip where, between some ammunition pouches, you grab the hilt of the dagger and pull it out of its frog. A 17-inch blade is an intimidating looking weapon, especially when it’s attached to the muzzle of your Lee-Enfield.
+The bayonet clicks securely into place. You then work the rifle’s action, grabbing the bolt and chambering a round, and then join the others on the fire step, weapons held at the ready. 
+2Lt Holmes takes aim with the flaregun, pointing it up towards the sky above No Man’s Land, and pulls the trigger.
+A distinct ‘PLOOP’ sound rings out, followed by a ‘SWOOSH’ as the projectile launches into the air, detonating with a muffled bang.
+All of you bring your rifles to bear over the parapet. 
+- Fire your rifle
+	set {chosen_path} = "2.4-B1BB-1"
+- Wait
+	set {chosen_path} = "2.4-B1BB-2"
+[end_timeline]
+label 2.4-B1BB-1
+You scan the area, now brightly illuminated by the white phosphorus burning overhead. You can see five German Soldiers in a trench.
+You focus your sights on the nearest enemy and open fire, work the action, and take aim at the next. With everyone else firing beside you it’s all over in a matter of seconds.
+2Lt Holmes\: Good work Private. \
+\
+Sgt Fitizgerald gives you an approving nod and both men head off. Cpl Barron stays with you until your watch is over.
+set {chosen_path} = "3.1A2"
+[end_timeline]
+label 2.4-B1BB-2
+You scan the area, now brightly illuminated by the white phosphorus burning overhead. You can see five German Soldiers in a trench.
+You wait, and in that moment of hesitation, the enemy opens fire. A bullet strikes you in the head, killing you instantly.\
+\
+The End
+set {chosen_path} = "Death13"
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]
+label 
+<Empty Text Event>
+set 
+[end_timeline]

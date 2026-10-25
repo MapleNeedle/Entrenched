@@ -1,0 +1,459 @@
+[gd_resource type="Resource" script_class="DialogicGlossary" format=3 uid="uid://mhnvvxa6kidy"]
+
+[ext_resource type="Script" uid="uid://80elcodyqohb" path="res://addons/dialogic/Modules/Glossary/glossary_resource.gd" id="1_2kblc"]
+
+[resource]
+script = ExtResource("1_2kblc")
+entries = {
+"2IC": {
+"case_sensitive": false,
+"name": "2IC",
+"text": "Short for Second-in-Command/Second-in-Charge",
+"title": "2IC"
+},
+"Ammunition Belt": {
+"name": "Ammunition Belt",
+"text": " A long, flexible canvas-and-brass or fabric belt holding a few hundred rounds of ammunition for machine guns.",
+"title": "Ammunition Belt"
+},
+"Barbed Wire": {
+"name": "Barbed Wire",
+"text": "Steel fencing consisting of spooled wire fixed with sharp “barbed” points. It was used to slow soldiers down and was a valuable defensive structure. ",
+"title": "Barbed Wire"
+},
+"Bayonet": {
+"name": "Bayonet",
+"text": "A blade attached to the end of a rifle for use in close-quarter combat.",
+"title": "Bayonet"
+},
+"Blighty Wound": {
+"name": "Blighty Wound",
+"text": "A non-fatal wound/injury sustained on duty, serious enough to be sent home on a medical discharge. ",
+"title": "Blighty Wound"
+},
+"Brodie Helmet": {
+"name": "Brodie Helmet",
+"text": "A steel helmet worn by Commonwealth forces.",
+"title": "Brodie Helmet"
+},
+"Bully Beef": {
+"name": "Bully Beef",
+"text": "Canned corned beef ration frequently eaten by Canadian and Allied soldiers during the Great War.  ",
+"title": "Bully Beef"
+},
+"Canadian Club": {
+"name": "Canadian Club",
+"text": "A derisive moniker for the Ross Rifle, given by Canadian soldiers who found that it jammed too easily in the muddy trenches and was overly heavy and cumbersome. They joked that it was better used as a club than a rifle.",
+"title": "Canadian Club"
+},
+"Canadian Expeditionary Force": {
+"name": "Canadian Expeditionary Force",
+"text": "(CEF) A Canadian overseas fighting force sent to Europe to fight in the First World War. ",
+"title": "CEF"
+},
+"Captain": {
+"name": "Captain",
+"text": "A commissioned officer that was the rank of Lieutenant and below Major in the army (a naval officer holding this rank was equivalent to an army Colonel).",
+"title": "Captain"
+},
+"Casualty Clearing Station": {
+"name": "Casualty Clearing Station",
+"text": "A partially mobile medication station situated just behind the front lines. Here wounded soldiers would be brought for triage and initial medical treatment before being transported to a hospital. ",
+"title": "Casualty Clearing Station"
+},
+"Chlorine Gas": {
+"name": "Chlorine Gas",
+"text": "A toxic, pale yellowish-green chemical weapon used to maximize destruction and break the stalemate of trench warfare. When inhaled, chlorine reacts with the moisture inside the lungs, creating hydrochloric acid.",
+"title": "Chlorine Gas"
+},
+"Communication Trench": {
+"name": "Communication Trench",
+"text": "A connecting ditch that served as a link between the front line and reserve trenches.",
+"title": "Communication Trench"
+},
+"Company Commander": {
+"name": "Company Commander",
+"text": "Typically an officer at the rank of Captain who commands 150-200 soldiers, organized into several platoons.",
+"title": "Company Commander"
+},
+"Company Sergeant Major": {
+"name": "Company Sergeant Major",
+"text": "Was the senior non-commissioned officer in a Company, directly assisting the Company Commander. They were usually the rank of Warrant Officer Second Class.",
+"title": "CSM"
+},
+"Convalescence": {
+"name": "Convalescence",
+"text": "the period of time spent away from the front lines recovering from wounds or illnesses.  ",
+"title": "Convalescence"
+},
+"Cook": {
+"name": "Cook",
+"text": "Also known as “Cooking Off”, it was to deliberately hold onto a grenade after arming it to avoid it being picked up and tossed back by the enemy.",
+"title": "Cook"
+},
+"Corporal": {
+"name": "Corporal",
+"text": "The rank above Lance Corporal and under Sergeant, they were usually made Section Commanders in charge of 8 to12 soldiers.",
+"title": "Corporal"
+},
+"Corporal Pegahmagabow": {
+"name": "Corporal Pegahmagabow",
+"text": "Cpl Francis Pegahmagabow MM, an Ojibwa from the Parry Island Band (now Wasauksing First Nation) in Ontario, is widely considered the deadliest sniper of the entire war and the most highly decorated Indigenous soldier. He received three Military Medals for bravery. Affectionally known as “Peggy” among his comrades.",
+"title": "Corporal Francis Pegahmagabow"
+},
+"Court Martial": {
+"name": "Court Martial",
+"text": "Was a military court convened to try soldiers for offences. ",
+"title": "Court Martial"
+},
+"Crater": {
+"name": "Crater",
+"text": "A hole or depression in the ground, typically crated from an explosion. No Man’s Land was riddled with them.",
+"title": "Crater"
+},
+"Dinner": {
+"name": "Dinner",
+"text": "Lunch.",
+"title": "Dinner"
+},
+"Duckboards": {
+"name": "Duckboards",
+"text": "wood planks placed along the bottom of trenches or over very muddy land. ",
+"title": "Duckboards"
+},
+"Dugout": {
+"name": "Dugout",
+"text": "A shelter dug into the wall and/or ground of a trench.",
+"title": "Dugout"
+},
+"Fire Line": {
+"name": "Fire Line",
+"text": "A raised platform or step allowing soldiers to see over the wall of the trench. Also called a Fire Line. ",
+"title": "Fire Line"
+},
+"Fire Step": {
+"name": "Fire Step",
+"text": "A raised platform or step allowing soldiers to see over the wall of the trench. Also called a Fire Line. ",
+"title": "Fire Step"
+},
+"Flare Gun": {
+"name": "Flare Gun",
+"text": "(aka Very Pistol/Signal Pistol) was a single shot, break action handgun with a large barrel, which fired a colored pyrotechnic flare (or smoke). ",
+"title": "Flare Gun/Very Pistol/Signal Pistol"
+},
+"Frog": {
+"name": "Frog",
+"text": "a leather or canvas holder, like a sheath or scabbard, that secures a soldier’s bayonet to their webbing.",
+"title": "Frog"
+},
+"Good Conduct Badge": {
+"name": "Good Conduct Badge",
+"text": "Also known as a Good Conduct Stripe, it was an inverted chevron worn on the lower left sleeve by low-ranking non-commissioned members that recognized years of exemplary service.  ",
+"title": "Good Conduct Badge"
+},
+"Grenade": {
+"name": "Grenade",
+"text": "A small explosive which was thrown by hand and efficient at clearing trenches and dugouts.  ",
+"title": "Grenade"
+},
+"Hard Tack": {
+"name": "Hard Tack",
+"text": "A rock-hard, long-lasting cracker. Made of flour, salt, and water, it wouldn’t spoil or go moldy so long as it was kept dry. Soldiers would usually soak them in their drinks to soften them before consuming.",
+"title": "Hard Tack"
+},
+"Insulation Tape": {
+"name": "Insulation Tape",
+"text": "Rubber electrical tape/cotton used to insulate/repair spliced telephone and telegraph wire. ",
+"title": "Insulation Tape"
+},
+"Invalided": {
+"name": "Invalided",
+"text": "When a soldier is removed from active service due to injury, illness, or disease that had a permanent or long-term impact on their ability to fight.  ",
+"title": "Invalided"
+},
+"Jammy": {
+"name": "Jammy",
+"text": "A lucky solider who avoided being wounded or killed; also a soldier with an easy assignment or a relatively safe role away from the front lines. ",
+"title": "Jammy"
+},
+"Jerry": {
+"name": "Jerry",
+"text": "Commonwealth nickname for the Germans.",
+"title": "Jerry"
+},
+"Keep your Head on a Swivel": {
+"name": "Keep your Head on a Swivel",
+"text": "A phrase meaning to stay alert, looking for danger in all directions. It was reminder that being complacent often led to tragedy at the front. ",
+"title": "Keep your Head on a Swivel"
+},
+"Lance Corporal": {
+"name": "Lance Corporal",
+"text": "Was an appointment, rather than a rank, given to an experienced soldier. They typically would be made second-in-command of a section. ",
+"title": "Lance Corporal"
+},
+"Line Abreast": {
+"name": "Line Abreast",
+"text": " A military formation where, in this context, soldiers approach their objective standing side-by-side.  ",
+"title": "Line Abreast"
+},
+"MIA": {
+"name": "MIA",
+"text": "used if a soldier was unaccounted for after a battle. If nobody saw them get killed or captured, their status was listed as MIA. Whether or not the soldier was “presumed dead” depended on circumstances. Approximately 11,000 to 19,000 Canadian soldiers who perished in the First World War never had their bodies identified and/or recovered from the battlefield.  ",
+"title": "Missing in Action"
+},
+"Military Cross": {
+"name": "Military Cross",
+"text": "A third-tier gallantry medal awarded exemplary bravery and distinguished service during active operations (aka combat) against the enemy on land. ",
+"title": "MC"
+},
+"Mortar": {
+"name": "Mortar",
+"text": "A portable, short-barreled weapon that launches bombs at a steep, high angle so that they fall straight down into enemy trenches.",
+"title": "Mortar"
+},
+"Mustard Gas": {
+"name": "Mustard Gas",
+"text": "A chemical weapon, classified as a blistering agent. It had a delayed reaction but would overtime cause burns and large yellow fluid-filled blisters. The pain was intense and temporary blindness was common. ",
+"title": "Mustard Gas"
+},
+"NCO": {
+"name": "NCO",
+"text": "These were enlisted soldier holding a rank of authority over non-commissioned members (e.g. privates) but not holding a commission.",
+"title": "Non-Commissioned Officer"
+},
+"Neglect of Duty": {
+"name": "Neglect of Duty",
+"text": "An offence under military law where a soldier fails to carry out an order or perform an assigned task without having a lawful reason/excuse. It was not a capital offence (e.g. cowardice, desertion) but rather viewed as carelessness. ",
+"title": "Neglect of Duty"
+},
+"No Man’s Land": {
+"name": "No Man’s Land",
+"text": "The stretch of land between opposing trenches. The name references that no side has control over the territory.  ",
+"title": "No Man’s Land"
+},
+"Non-Commissioned Member": {
+"name": "Non-Commissioned Member",
+"text": "In the First World War, soldiers at the rank of Private and Lance Corporal were considered non-commissioned “members” rather than non-commissioned “officers”. ",
+"title": "Non-Commissioned Member"
+},
+"Number": {
+"name": "Number",
+"text": "The phrase “got his number” meant that a soldier’s fate had caught up with them and that they had died. As soldiers were each assigned a unique “service number”, when they were killed their number was literally struck off (removed) from a ledger/list.",
+"title": "Number"
+},
+"Officer": {
+"name": "Officer",
+"text": "Members of the armed forces who held a formal commission which gave them the legal  authority to command, train, and direct subordinate members. ",
+"title": "Officer"
+},
+"Ordnance Corps": {
+"name": "Ordnance Corps",
+"text": "Soldiers who, among other things, managed supplying ammunition to the front lines. A sub-group of the corps specialized in dealing with unexploded ordnance (UXO). ",
+"title": "Ordnance Corps"
+},
+"Over the Top": {
+"name": "Over the Top",
+"text": "Referring to when soldiers climb out of a trench and charge across No Man’s Land to attack the enemy.",
+"title": "Over the Top"
+},
+"Parapet": {
+"name": "Parapet",
+"text": "a protective wall of sandbags or raised earth on the front side of a trench that faces No Man’s Land. ",
+"title": "Parapet"
+},
+"Password": {
+"name": "Password",
+"text": "Secret passwords were used by sentries to identify anyone approaching their position. ",
+"title": "Password"
+},
+"Petrol Tang": {
+"name": "Petrol Tang",
+"text": "An oily aftertaste in drinks, a result of the army using recycled two-gallon commercial petrol containers to transport drinking water to the front lines. ",
+"title": "Petrol Tang"
+},
+"Pickets": {
+"name": "Pickets",
+"text": "Resembling large, metal corkscrews, they were used to secure wire.",
+"title": "Pickets"
+},
+"Pillbox": {
+"name": "Pillbox",
+"text": "A small, concrete structure with narrow firing slits (known as loopholes) for machine guns or rifles to fire while remaining relatively safe.",
+"title": "Pillbox"
+},
+"Platoon": {
+"name": "Platoon",
+"text": "A unit of 30 to 50 soldiers, commanded by a junior officer with the assistance of the Platoon Sergeant. Platoons were divided into 4 sections/squads. ",
+"title": "Platoon"
+},
+"Platoon Commander": {
+"name": "Platoon Commander",
+"text": "A junior, commissioned officer (usually a Second Lieutenant or Lieutenant), in charge of a platoon.",
+"title": "Platoon Commander"
+},
+"Platoon Sergeant": {
+"name": "Platoon Sergeant",
+"text": "Holding the rank of Sergeant, they were the senior non-commissioned officer responsible for the discipline of a platoon. They supported the platoon commander and ensure that standards were met.  ",
+"title": "Platoon Sergeant"
+},
+"Prosthetic": {
+"name": "Prosthetic",
+"text": "An artificial limb.",
+"title": "Prosthetic"
+},
+"Raiding Party": {
+"name": "Raiding Party",
+"text": "Were small teams of soldiers who would sneak across No Man's Land at night and attack the enemy, often attempting to capture prisoners, intelligence, or important equipment. ",
+"title": "Raiding Party"
+},
+"Rations": {
+"name": "Rations",
+"text": "Prepackaged or preserved food supplies issued to soldiers in the field when fresh food is unavailable. ",
+"title": "Rations"
+},
+"Relieved": {
+"name": "Relieved",
+"text": "The meaning varies depending on the circumstances. In this case, it means that your task/duty is being taken-on by another soldier, allowing you a reprieve.",
+"title": "Relieved"
+},
+"Sap": {
+"name": "Sap",
+"text": "A narrow trench dug into No Man’s Land, sticking out from the front line towards the enemy; ALSO an underground tunnel reaching across No Man’s Land and ending under an enemy trench.",
+"title": "Sap Line"
+},
+"Sap Line": {
+"name": "Sap Line",
+"text": "A narrow trench dug into No Man’s Land, sticking out from the front line towards the enemy; ALSO an underground tunnel reaching across No Man’s Land and ending under an enemy trench.  ",
+"title": "Sap Line"
+},
+"Second Lieutenant": {
+"name": "Second Lieutenant",
+"text": " In the army, it was the lowest-ranking commissioned officer. They were usually given command of a platoon.",
+"title": "Second Lieutenant"
+},
+"Section Commander": {
+"name": "Section Commander",
+"text": "An NCO in charge of a section, which consists of 8-12 soldiers. ",
+"title": "Section Commander"
+},
+"Sergeant": {
+"name": "Sergeant",
+"text": "A middle ranking NCO, primarily responsible for discipline, training, and training of soldiers. They supervised all routines and duties in and out of the trenches and drilled soldiers. ",
+"title": "Sergeant"
+},
+"Service Dress Cap": {
+"name": "Service Dress Cap",
+"text": "A khaki-drab wool serge hat worn by commonwealth soldiers. ",
+"title": "Service Dress Cap"
+},
+"Shrapnel": {
+"name": "Shrapnel",
+"text": "Small, solid projectiles that are sent flying over a battlefield by an explosion. They can be part of the weapon’s outer container, purposely placed within a bomb, or a result of the explosive detonating against an object. Often made of metal. ",
+"title": "Shrapnel"
+},
+"Signaler": {
+"name": "Signaler",
+"text": "Communication specialists. Keeping communication lines open on the front lines was their responsibility. ",
+"title": "Signaler"
+},
+"Somme": {
+"name": "Somme",
+"text": "The Battle of the Somme (July 1 to November 18, 1916) was a massive Allied operation fought over five-month period along the northern reaches of the Somme River. It was the one of the costliest battles of the war with over a million casualties.  ",
+"title": "Somme"
+},
+"Spent Casing": {
+"name": "Spent Casing",
+"text": "The empty brass left-over after a round has been discharged.  ",
+"title": "Spent Casing"
+},
+"Stand By": {
+"name": "Stand By",
+"text": "An order to soldiers that typically meant to hold their position. Standing by entailed remain alert and ready to move, fight, or launch an attack at a moment’s notice.",
+"title": "Stand By"
+},
+"Stand to": {
+"name": "Stand to",
+"text": "Stand-to-Arms (abbreviated “Stand To”) was a daily routine where soldiers lined the front-lines, weapons in hand, ready to defend their trench against an enemy attack (which never came at this time). ",
+"title": "Stand-To"
+},
+"Swagger Stick": {
+"name": "Swagger Stick",
+"text": "A short, light stick or wood or braided leather, similar to a riding crop, carried in the army as a symbol of authority. ",
+"title": "Swagger Stick"
+},
+"The Listening Post": {
+"name": "The Listening Post",
+"text": "A popular Canadian trench newspaper during the First World War. It was meant to relieve stress and was both uncensored and informal, featuring humor, satire, and even fake advertisements.  ",
+"title": "The Listening Post"
+},
+"Tommies": {
+"name": "Tommies",
+"text": "Common slang for the typical British private, but also meaning “British”.",
+"title": "Tommy/Tommies"
+},
+"Trench Periscope": {
+"name": "Trench Periscope",
+"text": "An optical device that allowed soldiers to safely see over the top of a trench wall.  ",
+"title": "Trench Periscope"
+},
+"Trench Rat": {
+"name": "Trench Rat",
+"text": "There was an infestation of large rats along the entire Western Front. Due to the endless supply of food (i.e. dead bodies) they numbered in the millions.",
+"title": "Trench Rat"
+},
+"Trench Shovel": {
+"name": "Trench Shovel",
+"text": "Also known as an entrenching tool, it was a small, portable spade/shovel that soldier’s used to dig shelters. ",
+"title": "Trench Shovel"
+},
+"Trench Whistles": {
+"name": "Trench Whistles",
+"text": "A small, metal whistle (or “call”) used by infantry officers during the First World War to signal attacks/retreats during battles.",
+"title": "Trench Whistles"
+},
+"Tumpline": {
+"name": "Tumpline",
+"text": "n indigenous method of carrying equipment using a strap worn across the forehead; also Canadian slang for how a logistical transport technique for hauling the  that an indigenous carrying method using a strap across the forehead—as a critical logistical slang and transport technique to haul heavy supply packs through mud-choked forward areas where horses and vehicles could not go ",
+"title": "Tumpline"
+},
+"Tunic": {
+"name": "Tunic",
+"text": "The military jacket worn by soldiers. ",
+"title": "Tunic"
+},
+"Valcartier": {
+"name": "Valcartier",
+"text": "Valcartier, Quebec, was an army training camp for the first contingent of Canadians who volunteered to serve the First World War.",
+"title": "Valcartier"
+},
+"Vimy": {
+"name": "Vimy",
+"text": "imy Ridge was a major Canadian battle that took place from April 9 to 12, 1917, in northern France. It was a major allied victory and a defining moment for Canada.",
+"title": "Vimy"
+},
+"Warrant Officer": {
+"name": "Warrant Officer",
+"text": "Warrant officers were above the rank of Staff Sergeant but below commissioned officers. They served as the backbone of discipline on the front lines. Only the most experienced and seasoned NCOs rose to this rank. As such, they could be very intimidating individuals, commanding both fear and respect from the rank-and-file soldier.  ",
+"title": "Warrant Officer"
+},
+"Wooden Overcoats": {
+"name": "Wooden Overcoats",
+"text": "Slang term for a coffin.",
+"title": "Wooden Overcoats"
+},
+"Wound Dressing": {
+"name": "Wound Dressing",
+"text": "A thick, absorbent cloth pad contained in a waterproof pouch. The pad was often attached to a strip of material that could be used to wrap around a limb to hold it in place.",
+"title": "Wound Dressing"
+},
+"Wound Stripe": {
+"name": "Wound Stripe",
+"text": "A badge worn on the service uniform indicating that the recipient had been wounded in combat. Similar to the Purple Heart Medal awarded to American soldiers.",
+"title": "Wound Stripe"
+},
+"Ypres": {
+"name": "Ypres",
+"text": "the Second Battle of Ypres (22 April – 25 May 1915) was Canada’s first engagement in the war. It was also the battle where Chlorine Gas was first utilized on the Western Front. ",
+"title": "Ypres (ee-pruh)"
+}
+}

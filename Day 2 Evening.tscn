@@ -1,0 +1,229 @@
+[gd_scene format=3 uid="uid://rojieao3j1n7"]
+
+[ext_resource type="Script" uid="uid://biv16btoidtof" path="res://scripts/AAchangeDialogicVar.gd" id="1_xc8di"]
+[ext_resource type="Texture2D" uid="uid://dlip6aa0pb4en" path="res://Backgrounds/opening trench bottom.png" id="2_e2jqt"]
+[ext_resource type="Texture2D" uid="uid://bw8umvf4m6kdb" path="res://Backgrounds/start trench scene top.png" id="3_h5oq4"]
+[ext_resource type="PackedScene" uid="uid://bbpkrp2ou73nt" path="res://maincharacter.tscn" id="4_5pbh6"]
+[ext_resource type="Script" uid="uid://dmjawte8qnvug" path="res://scripts/static_body_2d_2.gd" id="5_r1urr"]
+[ext_resource type="Texture2D" uid="uid://b17kus2kt1c6k" path="res://other characters/Cpl Barron.png" id="6_bg7ql"]
+[ext_resource type="Script" uid="uid://488h7b1xkgtm" path="res://scripts/trigger_box_&_signals.gd" id="7_boeg6"]
+[ext_resource type="Script" uid="uid://03m0qdtk7sn2" path="res://scripts/Day 2 evening.gd" id="8_ti0tc"]
+[ext_resource type="PackedScene" uid="uid://bo2h148okhotg" path="res://signal.tscn" id="9_5pbh6"]
+[ext_resource type="Script" uid="uid://djg5veowek2rs" path="res://scripts/ChoiceMove 1.1.gd" id="10_r1urr"]
+[ext_resource type="Script" uid="uid://c46cuinef5ig3" path="res://scripts/ChoiceMove 2.1.gd" id="11_bg7ql"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mcmpo"]
+size = Vector2(20, 91)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_63ath"]
+radius = 35.83139
+height = 168.61829
+
+[sub_resource type="Animation" id="Animation_ienyo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CplBarron:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.47444442, 0.47444445)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CplBarron:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_bg7ql")]
+}
+
+[sub_resource type="Animation" id="Animation_3ovj8"]
+resource_name = "cpl barron idle"
+length = 0.9
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CplBarron:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.46666667, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.47444442, 0.47444445), Vector2(0.474, 0.424), Vector2(0.474, 0.474)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CplBarron:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_smtqx"]
+_data = {
+&"RESET": SubResource("Animation_ienyo"),
+&"cpl barron idle": SubResource("Animation_3ovj8")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1uqg7"]
+size = Vector2(106, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_boeg6"]
+size = Vector2(22, 87)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ti0tc"]
+size = Vector2(20, 78)
+
+[node name="Node2D" type="Node2D" unique_id=1557323486]
+y_sort_enabled = true
+script = ExtResource("1_xc8di")
+new_value = "Choice 1.1"
+
+[node name="OpeningTrenchBottom" type="Sprite2D" parent="." unique_id=874603192]
+y_sort_enabled = true
+position = Vector2(-13, -391)
+texture = ExtResource("2_e2jqt")
+offset = Vector2(4, 381)
+
+[node name="ReferenceRect" type="ReferenceRect" parent="." unique_id=34934695]
+y_sort_enabled = true
+offset_left = -521.0
+offset_top = -394.0
+offset_right = -481.0
+offset_bottom = -354.0
+scale = Vector2(25.631756, 19.22408)
+border_width = 0.1
+metadata/_edit_use_anchors_ = true
+
+[node name="StartTrenchSceneTop" type="Sprite2D" parent="." unique_id=869334657]
+y_sort_enabled = true
+position = Vector2(-58.999996, -146)
+scale = Vector2(1.0079992, 1)
+texture = ExtResource("3_h5oq4")
+offset = Vector2(50.59527, 136)
+
+[node name="Main_Character" parent="." unique_id=341919493 instance=ExtResource("4_5pbh6")]
+y_sort_enabled = true
+position = Vector2(-212, -144)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=501496209]
+y_sort_enabled = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1532608269]
+polygon = PackedVector2Array(-168, -157, -80, -157, -78, -156, -92, 108, -92, 121, -67, 234, -101, 374, -524, 374, -521, -17, -202, -17, -172, -119, -176, -147)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=168826522]
+polygon = PackedVector2Array(-24, -154, 88, -154, 99, -30, 137, -17, 499, -12, 508, 373, -28, 374, -9, 281, -38, 98)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=2082816656]
+polygon = PackedVector2Array(-521, -93, -284, -93, -252, -183, -77, -183, -68, -287, -69, -299, -82, -299, -84, -340, -239, -340, -239, -299, -248, -298, -249, -284, -247, -280, -262, -279, -269, -217, -298, -157, -315, -158, -313, -224, -467, -225, -468, -177, -520, -178)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1222608527]
+polygon = PackedVector2Array(-25, -183, 135, -183, 170, -84, 503, -71, 503, -195, 203, -195, 190, -263, 143, -295, 129, -296, 127, -341, 101, -341, 99, -295, 7, -298, 4, -340, -28, -341, -28, -299, -37, -298)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=132616498]
+position = Vector2(-532, -57)
+shape = SubResource("RectangleShape2D_mcmpo")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1853395633]
+position = Vector2(514, -45)
+shape = SubResource("RectangleShape2D_mcmpo")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=665305767]
+position = Vector2(-70, 384)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_mcmpo")
+
+[node name="cplBarron" type="StaticBody2D" parent="." unique_id=1622129634]
+y_sort_enabled = true
+script = ExtResource("5_r1urr")
+
+[node name="CplBarron" type="Sprite2D" parent="cplBarron" unique_id=1300129142]
+y_sort_enabled = true
+position = Vector2(-236, -159)
+scale = Vector2(0.47444442, 0.47444445)
+texture = ExtResource("6_bg7ql")
+offset = Vector2(-2.1077576, -84.30914)
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cplBarron" unique_id=745813191]
+y_sort_enabled = true
+position = Vector2(-244.00002, -196.00002)
+scale = Vector2(0.47444442, 0.47444445)
+shape = SubResource("CapsuleShape2D_63ath")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="cplBarron" unique_id=1866445205]
+libraries/ = SubResource("AnimationLibrary_smtqx")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=464425621]
+y_sort_enabled = true
+script = ExtResource("7_boeg6")
+
+[node name="TT1" type="Sprite2D" parent="Node2D" unique_id=577473630]
+y_sort_enabled = true
+
+[node name="Area2D" type="Area2D" parent="Node2D/TT1" unique_id=1818261428]
+y_sort_enabled = true
+script = ExtResource("8_ti0tc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/TT1/Area2D" unique_id=976924366]
+y_sort_enabled = true
+position = Vector2(-218, -149)
+shape = SubResource("RectangleShape2D_1uqg7")
+
+[node name="Choice 1_1" type="Sprite2D" parent="Node2D" unique_id=1040242285]
+y_sort_enabled = true
+
+[node name="signal" parent="Node2D/Choice 1_1" unique_id=657468987 instance=ExtResource("9_5pbh6")]
+y_sort_enabled = true
+position = Vector2(-382, -58)
+
+[node name="Area2D" type="Area2D" parent="Node2D/Choice 1_1" unique_id=54824599]
+y_sort_enabled = true
+script = ExtResource("10_r1urr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Choice 1_1/Area2D" unique_id=1650739219]
+y_sort_enabled = true
+position = Vector2(-514, -53.5)
+shape = SubResource("RectangleShape2D_boeg6")
+
+[node name="Choice 2_1" type="Sprite2D" parent="Node2D" unique_id=1059482153]
+y_sort_enabled = true
+
+[node name="signal" parent="Node2D/Choice 2_1" unique_id=1624376930 instance=ExtResource("9_5pbh6")]
+y_sort_enabled = true
+position = Vector2(-13, -175)
+rotation = 3.1415927
+
+[node name="signal2" parent="Node2D/Choice 2_1" unique_id=350532596 instance=ExtResource("9_5pbh6")]
+y_sort_enabled = true
+position = Vector2(233, -52)
+rotation = -3.1415925
+
+[node name="Area2D" type="Area2D" parent="Node2D/Choice 2_1" unique_id=2087121927]
+y_sort_enabled = true
+script = ExtResource("11_bg7ql")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Choice 2_1/Area2D" unique_id=1216327828]
+y_sort_enabled = true
+position = Vector2(498, -43)
+shape = SubResource("RectangleShape2D_ti0tc")
+
+[connection signal="body_entered" from="Node2D/TT1/Area2D" to="Node2D/TT1/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/Choice 1_1/Area2D" to="Node2D/Choice 1_1/Area2D" method="_on_body_entered"]

@@ -1,0 +1,212 @@
+[gd_scene format=3 uid="uid://dpjchxk1s66u1"]
+
+[ext_resource type="Texture2D" uid="uid://b3pb540g8hwkd" path="res://Backgrounds/periscopeTop.png" id="1_1holo"]
+[ext_resource type="Script" uid="uid://biv16btoidtof" path="res://scripts/AAchangeDialogicVar.gd" id="1_38jvy"]
+[ext_resource type="Script" uid="uid://488h7b1xkgtm" path="res://scripts/trigger_box_&_signals.gd" id="1_hdbxb"]
+[ext_resource type="Texture2D" uid="uid://b8pde2ohksgyd" path="res://Backgrounds/periscopeBotton.png" id="2_ws0vw"]
+[ext_resource type="PackedScene" uid="uid://bbpkrp2ou73nt" path="res://maincharacter.tscn" id="3_hdbxb"]
+[ext_resource type="Script" uid="uid://cs84q7fxkluim" path="res://scripts/to A1.3.gd" id="4_ws0vw"]
+[ext_resource type="PackedScene" uid="uid://bo2h148okhotg" path="res://signal.tscn" id="5_vg7ty"]
+[ext_resource type="Script" uid="uid://dudkckcngq8qn" path="res://scripts/A2.13; Periscope.gd" id="6_20qbi"]
+[ext_resource type="Script" uid="uid://dh27uniawgx22" path="res://scripts/A1.1; Laying Sandbags.gd" id="7_flhcr"]
+[ext_resource type="Script" uid="uid://dggychholeavh" path="res://scripts/A2.12; Decoy.gd" id="9_ib4ab"]
+[ext_resource type="Script" uid="uid://co0yf1ocyvvpe" path="res://scripts/A2.1; Go on Sentry Duty.gd" id="10_38jvy"]
+[ext_resource type="Script" uid="uid://cxmuvdaytntih" path="res://scripts/ChoiceD1.gd" id="11_b052g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_38jvy"]
+size = Vector2(20, 117)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4dpqh"]
+size = Vector2(56, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1holo"]
+size = Vector2(109, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jx4qc"]
+size = Vector2(20, 69)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qy1ac"]
+size = Vector2(86, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4w2x4"]
+size = Vector2(75, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_savun"]
+size = Vector2(61, 20)
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_ib4ab"]
+
+[node name="Node2D" type="Node2D" unique_id=2110059810]
+y_sort_enabled = true
+script = ExtResource("1_38jvy")
+new_value = "dugout"
+
+[node name="PeriscopeTop" type="Sprite2D" parent="." unique_id=1026207460]
+z_index = -1
+y_sort_enabled = true
+position = Vector2(-2, 6)
+scale = Vector2(1.28, 1.28)
+texture = ExtResource("1_1holo")
+offset = Vector2(35.9375, 55.46875)
+
+[node name="ReferenceRect" type="ReferenceRect" parent="." unique_id=2086434264]
+y_sort_enabled = true
+offset_left = -468.0
+offset_top = -307.0
+offset_right = -428.0
+offset_bottom = -267.0
+scale = Vector2(25.625668, 19.439505)
+border_width = 0.1
+metadata/_edit_use_anchors_ = true
+
+[node name="PeriscopeBotton" type="Sprite2D" parent="." unique_id=556107091]
+y_sort_enabled = true
+position = Vector2(-1, -36)
+scale = Vector2(1.28, 1.28)
+texture = ExtResource("2_ws0vw")
+offset = Vector2(35.15625, 88.28125)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1693027341]
+y_sort_enabled = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=11475527]
+y_sort_enabled = true
+polygon = PackedVector2Array(-120, -43, 140, -43, 143, -43, 139, -14, 149, 16, 149, 57, 188, 70, 556, 74, 556, 461, -468, 461, -468, -90, -415, -90, -414, -138, -262, -138, -260, -86, -251, -89, -213, -198, -192, -211, -185, -211, -185, -253, -34, -254, -36, -212, -24, -213, -35, -95, -197, -95, -232, -7, -364, -6, -339, 3, -321, 29, -321, 51, -332, 60, -344, 70, -281, 70, -281, 76, -172, 76, -172, 70, -149, 70, -119, -32)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=945894159]
+y_sort_enabled = true
+polygon = PackedVector2Array(19, -212, 33, -96, 185, -95, 206, -60, 206, -28, 222, -16, 223, 3, 556, 17, 557, -104, 272, -108, 273, -70, 262, -70, 243, -177, 194, -211, 179, -210, 178, -254, 25, -253, 27, -211)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=922603068]
+y_sort_enabled = true
+position = Vector2(560, 50)
+shape = SubResource("RectangleShape2D_38jvy")
+
+[node name="Main_Character" parent="." unique_id=341919493 instance=ExtResource("3_hdbxb")]
+y_sort_enabled = true
+position = Vector2(528, 66)
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1129169525]
+y_sort_enabled = true
+position = Vector2(1, 0)
+script = ExtResource("1_hdbxb")
+
+[node name="periscope" type="Sprite2D" parent="Node2D" unique_id=1767058924]
+y_sort_enabled = true
+
+[node name="signal" parent="Node2D/periscope" unique_id=657468987 instance=ExtResource("5_vg7ty")]
+y_sort_enabled = true
+position = Vector2(-2, -161)
+rotation = 1.5707964
+
+[node name="Area2D" type="Area2D" parent="Node2D/periscope" unique_id=630883527]
+script = ExtResource("6_20qbi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/periscope/Area2D" unique_id=1376652796]
+position = Vector2(-2, -115)
+shape = SubResource("RectangleShape2D_4dpqh")
+
+[node name="dugout" type="Sprite2D" parent="Node2D" unique_id=1022486173]
+y_sort_enabled = true
+position = Vector2(-469, -307)
+scale = Vector2(25.625668, 19.439505)
+
+[node name="OverToA1_3" type="Area2D" parent="Node2D/dugout" unique_id=1853752260]
+position = Vector2(18.301964, 15.792584)
+scale = Vector2(0.039023377, 0.051441643)
+script = ExtResource("4_ws0vw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/dugout/OverToA1_3" unique_id=488540090]
+position = Vector2(-226.5, 80)
+shape = SubResource("RectangleShape2D_1holo")
+
+[node name="Node2D2" parent="Node2D/dugout" unique_id=176206368 instance=ExtResource("5_vg7ty")]
+position = Vector2(9.560725, 16.97574)
+rotation = -1.5707964
+scale = Vector2(0.051441643, 0.039023377)
+
+[node name="sandbags" type="Sprite2D" parent="Node2D" unique_id=389280965]
+y_sort_enabled = true
+
+[node name="Node2D" parent="Node2D/sandbags" unique_id=240371596 instance=ExtResource("5_vg7ty")]
+position = Vector2(404, 39)
+
+[node name="Area2D" type="Area2D" parent="Node2D/sandbags" unique_id=1102815137]
+script = ExtResource("7_flhcr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/sandbags/Area2D" unique_id=1576579649]
+position = Vector2(341, 38.5)
+shape = SubResource("RectangleShape2D_jx4qc")
+
+[node name="decoy" type="Sprite2D" parent="Node2D" unique_id=470491363]
+y_sort_enabled = true
+position = Vector2(1, -4)
+
+[node name="signal" parent="Node2D/decoy" unique_id=1343493954 instance=ExtResource("5_vg7ty")]
+y_sort_enabled = true
+position = Vector2(90, -78)
+
+[node name="Area2D" type="Area2D" parent="Node2D/decoy" unique_id=854876198]
+script = ExtResource("9_ib4ab")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/decoy/Area2D" unique_id=1193822920]
+position = Vector2(-1, -61)
+shape = SubResource("RectangleShape2D_qy1ac")
+
+[node name="sentry" type="Sprite2D" parent="Node2D" unique_id=1648468171]
+y_sort_enabled = true
+
+[node name="signal" parent="Node2D/sentry" unique_id=1672350101 instance=ExtResource("5_vg7ty")]
+y_sort_enabled = true
+position = Vector2(179, 7)
+rotation = 1.5707964
+
+[node name="Area2D" type="Area2D" parent="Node2D/sentry" unique_id=687621700]
+script = ExtResource("10_38jvy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/sentry/Area2D" unique_id=1296138808]
+position = Vector2(172.5, -52.5)
+shape = SubResource("RectangleShape2D_4w2x4")
+
+[node name="look_over" type="Sprite2D" parent="Node2D" unique_id=128147863]
+y_sort_enabled = true
+
+[node name="signal" parent="Node2D/look_over" unique_id=753815999 instance=ExtResource("5_vg7ty")]
+y_sort_enabled = true
+position = Vector2(-1, -226)
+rotation = 1.5707964
+
+[node name="Area2D" type="Area2D" parent="Node2D/look_over" unique_id=1480286994]
+y_sort_enabled = true
+script = ExtResource("11_b052g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/look_over/Area2D" unique_id=1171676386]
+y_sort_enabled = true
+position = Vector2(-0.5, -191)
+shape = SubResource("RectangleShape2D_savun")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Node2D/look_over/Area2D" unique_id=137094699]
+layer = 6
+
+[node name="D1" type="VideoStreamPlayer" parent="Node2D/look_over/Area2D/CanvasLayer" unique_id=1237302169]
+z_index = 5
+y_sort_enabled = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -466.0
+offset_top = -305.0
+offset_right = -466.0
+offset_bottom = -305.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = SubResource("VideoStreamTheora_ib4ab")
+autoplay = true
+expand = true
+
+[connection signal="body_entered" from="Node2D/periscope/Area2D" to="Node2D/periscope/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/dugout/OverToA1_3" to="Node2D/dugout/OverToA1_3" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/sandbags/Area2D" to="Node2D/sandbags/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/decoy/Area2D" to="Node2D/decoy/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/sentry/Area2D" to="Node2D/sentry/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/look_over/Area2D" to="Node2D/look_over/Area2D" method="_on_body_entered"]

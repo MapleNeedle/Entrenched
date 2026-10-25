@@ -1,0 +1,140 @@
+[gd_scene format=3 uid="uid://ckj3106u2nsmc"]
+
+[ext_resource type="Script" uid="uid://biv16btoidtof" path="res://scripts/AAchangeDialogicVar.gd" id="1_odytx"]
+[ext_resource type="Texture2D" uid="uid://b3pb540g8hwkd" path="res://Backgrounds/periscopeTop.png" id="2_vbal1"]
+[ext_resource type="Texture2D" uid="uid://b8pde2ohksgyd" path="res://Backgrounds/periscopeBotton.png" id="3_76dbq"]
+[ext_resource type="PackedScene" uid="uid://bbpkrp2ou73nt" path="res://maincharacter.tscn" id="4_ojbcb"]
+[ext_resource type="Script" uid="uid://b1m3yko836srx" path="res://scripts/to_FixTrench&Coms.gd" id="5_k8gun"]
+[ext_resource type="Script" uid="uid://488h7b1xkgtm" path="res://scripts/trigger_box_&_signals.gd" id="5_vbal1"]
+[ext_resource type="PackedScene" uid="uid://bo2h148okhotg" path="res://signal.tscn" id="6_6vaq7"]
+[ext_resource type="Script" uid="uid://bfwrsmhst2wm" path="res://scripts/Fix Trench 1.gd" id="7_k8gun"]
+[ext_resource type="Script" uid="uid://s04teyxjkhf7" path="res://scripts/Com Wire 1.gd" id="8_1l740"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_76dbq"]
+size = Vector2(129, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1l740"]
+size = Vector2(20, 117)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hquc8"]
+size = Vector2(20, 76)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jx45d"]
+size = Vector2(33, 81)
+
+[node name="Node2D" type="Node2D" unique_id=79470013]
+y_sort_enabled = true
+script = ExtResource("1_odytx")
+new_value = "Fix Trench"
+
+[node name="PeriscopeTop" type="Sprite2D" parent="." unique_id=409636670]
+z_index = -1
+y_sort_enabled = true
+position = Vector2(1, 6)
+scale = Vector2(1.28, 1.28)
+texture = ExtResource("2_vbal1")
+offset = Vector2(35.9375, 55.46875)
+
+[node name="ReferenceRect" type="ReferenceRect" parent="." unique_id=1948596666]
+y_sort_enabled = true
+offset_left = -465.0
+offset_top = -307.0
+offset_right = -425.0
+offset_bottom = -267.0
+scale = Vector2(25.625668, 19.439505)
+border_width = 0.1
+metadata/_edit_use_anchors_ = true
+
+[node name="PeriscopeBotton" type="Sprite2D" parent="." unique_id=133230210]
+y_sort_enabled = true
+position = Vector2(2, -37)
+scale = Vector2(1.28, 1.28)
+texture = ExtResource("3_76dbq")
+offset = Vector2(35.15625, 88.28125)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=873666253]
+y_sort_enabled = true
+position = Vector2(3, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1762008551]
+y_sort_enabled = true
+position = Vector2(-222.5, 80)
+shape = SubResource("RectangleShape2D_76dbq")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1829183223]
+y_sort_enabled = true
+polygon = PackedVector2Array(-120, -43, 140, -43, 143, -43, 139, -14, 149, 16, 149, 57, 188, 70, 556, 74, 556, 461, -468, 461, -468, -90, -415, -90, -414, -138, -262, -138, -260, -86, -251, -89, -213, -198, -192, -211, -185, -211, -185, -253, -34, -254, -36, -212, -24, -213, -35, -95, -197, -95, -232, -7, -364, -6, -339, 3, -321, 29, -321, 51, -332, 60, -344, 70, -281, 70, -281, 76, -172, 76, -172, 70, -149, 70, -119, -32)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1548941996]
+y_sort_enabled = true
+polygon = PackedVector2Array(19, -212, 33, -96, 185, -95, 206, -60, 206, -28, 222, -16, 223, 3, 556, 17, 557, -104, 272, -108, 273, -70, 262, -70, 243, -177, 194, -211, 179, -210, 178, -254, 25, -253, 27, -211)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1982698082]
+y_sort_enabled = true
+position = Vector2(566, 47)
+shape = SubResource("RectangleShape2D_1l740")
+
+[node name="Main_Character" parent="." unique_id=341919493 instance=ExtResource("4_ojbcb")]
+y_sort_enabled = true
+position = Vector2(-225, 66)
+
+[node name="To next" type="Area2D" parent="." unique_id=1270592658]
+y_sort_enabled = true
+script = ExtResource("5_k8gun")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="To next" unique_id=498748274]
+position = Vector2(551, 46)
+shape = SubResource("RectangleShape2D_hquc8")
+
+[node name="Node2D2" parent="." unique_id=657468987 instance=ExtResource("6_6vaq7")]
+y_sort_enabled = true
+position = Vector2(325, 37)
+rotation = -3.1415925
+
+[node name="Node2D" type="Node2D" parent="." unique_id=836058505]
+y_sort_enabled = true
+script = ExtResource("5_vbal1")
+
+[node name="Fix Trench" type="Sprite2D" parent="Node2D" unique_id=733466956]
+y_sort_enabled = true
+
+[node name="Node2D" parent="Node2D/Fix Trench" unique_id=737944222 instance=ExtResource("6_6vaq7")]
+y_sort_enabled = true
+position = Vector2(-142, -78)
+rotation = -3.1415925
+
+[node name="Node2D2" parent="Node2D/Fix Trench" unique_id=516467216 instance=ExtResource("6_6vaq7")]
+y_sort_enabled = true
+position = Vector2(325, 37)
+rotation = 3.1415927
+
+[node name="Area2D" type="Area2D" parent="Node2D/Fix Trench" unique_id=1759676597]
+script = ExtResource("7_k8gun")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Fix Trench/Area2D" unique_id=287847460]
+position = Vector2(261, 38.5)
+shape = SubResource("RectangleShape2D_jx45d")
+
+[node name="Communication Wire" type="Sprite2D" parent="Node2D" unique_id=1352800825]
+y_sort_enabled = true
+
+[node name="Node2D" parent="Node2D/Communication Wire" unique_id=427684128 instance=ExtResource("6_6vaq7")]
+y_sort_enabled = true
+position = Vector2(-142, -78)
+rotation = -3.1415925
+
+[node name="Node2D2" parent="Node2D/Communication Wire" unique_id=85382546 instance=ExtResource("6_6vaq7")]
+y_sort_enabled = true
+position = Vector2(325, 37)
+rotation = 3.1415927
+
+[node name="Area2D" type="Area2D" parent="Node2D/Communication Wire" unique_id=1566298323]
+script = ExtResource("8_1l740")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Communication Wire/Area2D" unique_id=1431468648]
+position = Vector2(261, 38.5)
+shape = SubResource("RectangleShape2D_jx45d")
+
+[connection signal="body_entered" from="To next" to="To next" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/Fix Trench/Area2D" to="Node2D/Fix Trench/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/Communication Wire/Area2D" to="Node2D/Communication Wire/Area2D" method="_on_body_entered"]

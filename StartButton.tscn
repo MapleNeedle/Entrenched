@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c71ia1x12agcb"]
+
+[ext_resource type="Texture2D" uid="uid://y365btebgqga" path="res://ui/startButton.png" id="1_17ka4"]
+[ext_resource type="Texture2D" uid="uid://b54qhsu5ssfbk" path="res://ui/startButtonPressed.png" id="2_unvg1"]
+[ext_resource type="Script" uid="uid://dnblxapjdhcuy" path="res://scripts/StartButton.gd" id="3_2ijew"]
+
+[node name="StartButton" type="TextureButton" unique_id=2002312205]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_17ka4")
+texture_pressed = ExtResource("2_unvg1")
+texture_hover = ExtResource("1_17ka4")
+texture_disabled = ExtResource("2_unvg1")
+script = ExtResource("3_2ijew")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
