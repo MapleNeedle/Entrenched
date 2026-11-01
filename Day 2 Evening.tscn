@@ -93,7 +93,7 @@ size = Vector2(20, 78)
 [node name="Node2D" type="Node2D" unique_id=1557323486]
 y_sort_enabled = true
 script = ExtResource("1_xc8di")
-new_value = "Choice 1.1"
+new_value = "Choice 2.1"
 
 [node name="OpeningTrenchBottom" type="Sprite2D" parent="." unique_id=874603192]
 y_sort_enabled = true
