@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://djhbvuh8e15h7" path="res://other characters/asian solder.png" id="11_755ft"]
 [ext_resource type="Script" uid="uid://dqpit3nmnhfqo" path="res://scripts/you fix.gd" id="12_ueoub"]
 [ext_resource type="PackedScene" uid="uid://bcwqeuqdmk3w5" path="res://transition_layer.tscn" id="13_up0ak"]
+[ext_resource type="Script" uid="uid://bo0e1ejtlhilo" path="res://scripts/CT1D.gd" id="14_755ft"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v0tc8"]
 size = Vector2(20, 91)
@@ -288,7 +289,7 @@ position = Vector2(350.66666, -182.66667)
 rotation = -1.5707964
 
 [node name="Area2D" type="Area2D" parent="Node2D/You Join" unique_id=1312788489]
-script = ExtResource("12_ueoub")
+script = ExtResource("14_755ft")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/You Join/Area2D" unique_id=1732863446]
 position = Vector2(340.66666, -120)

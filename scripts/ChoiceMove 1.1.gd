@@ -2,7 +2,7 @@ extends Area2D
 
 var has_triggered: bool = false
 
-var target_scene: String = "res://A1.3Dugout.tscn"
+var target_scene: String = "res://A2;_Laying_Sandbags_(Day 2).tscn"
 
 func _on_body_entered(body):
 	
