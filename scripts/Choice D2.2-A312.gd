@@ -1,18 +1,34 @@
 extends Area2D
 
 var has_triggered: bool = false
+@onready var transition_layer = $"../TransitionLayer"
+var target_scene: String = "res://A1.3Dugout.tscn"
 
+func _ready() -> void:
+	if transition_layer and transition_layer.has_signal("midpoint_reached"):
+		transition_layer.midpoint_reached.connect(_on_animation_midpoint_reached)
+		
+		
 
-func _on_body_entered(body):
-	
+func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Main_Character" and not has_triggered:
 		has_triggered = true
-		
 		body.is_talking = true
 		
 		Dialogic.start("MainTimeline", "Choice D2.2-A312")
 		
-		Dialogic.timeline_ended.connect(func(): 
-			if is_instance_valid(body) and "is_talking" in body:
-				body.is_talking = false
-		, CONNECT_ONE_SHOT)
+		await Dialogic.timeline_ended
+		
+		SignalBus.start_cutscene.emit()
+		
+		await transition_layer.transition_done
+		
+		body.is_talking = false
+		
+		SignalBus.player_not_done = false
+
+func _on_animation_midpoint_reached() -> void:
+	
+	if target_scene != "":
+			
+			get_tree().change_scene_to_file(target_scene)

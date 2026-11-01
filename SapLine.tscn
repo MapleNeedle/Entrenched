@@ -1,0 +1,473 @@
+[gd_scene format=3 uid="uid://c82kbl6nw2jtf"]
+
+[ext_resource type="Texture2D" uid="uid://i5t4v8pg8l3q" path="res://Backgrounds/Sap line.png" id="1_bk1vt"]
+[ext_resource type="Script" uid="uid://biv16btoidtof" path="res://scripts/AAchangeDialogicVar.gd" id="1_hqnn5"]
+[ext_resource type="PackedScene" uid="uid://bbpkrp2ou73nt" path="res://maincharacter.tscn" id="2_vwcxd"]
+[ext_resource type="Script" uid="uid://488h7b1xkgtm" path="res://scripts/trigger_box_&_signals.gd" id="4_o31k1"]
+[ext_resource type="Script" uid="uid://eoae70acgd5g" path="res://scripts/blonde_solder.gd" id="4_vmg42"]
+[ext_resource type="Texture2D" uid="uid://caop43xh4deb3" path="res://other characters/blonde solder.png" id="5_vbwte"]
+[ext_resource type="PackedScene" uid="uid://bo2h148okhotg" path="res://signal.tscn" id="7_dwenq"]
+[ext_resource type="Script" uid="uid://18r2bnqid4w2" path="res://scripts/2.4-B1D1.gd" id="8_afxr4"]
+[ext_resource type="Script" uid="uid://c2vc2inxahmt1" path="res://scripts/2.5 Issue Challenge.gd" id="9_57t3e"]
+[ext_resource type="Script" uid="uid://cle3qcjq4vyfi" path="res://scripts/2.14 Rescue SoldierSceneSwtich.gd" id="10_0warv"]
+[ext_resource type="Script" uid="uid://bliatm8l5hhxk" path="res://scripts/2.8 Assist Solider.gd" id="11_qt4d6"]
+[ext_resource type="PackedScene" uid="uid://bcwqeuqdmk3w5" path="res://transition_layer.tscn" id="12_s87td"]
+[ext_resource type="Script" uid="uid://6733hmw50nnx" path="res://scripts/asian_solder_2.8show.gd" id="13_0warv"]
+[ext_resource type="Texture2D" uid="uid://djhbvuh8e15h7" path="res://other characters/asian solder.png" id="14_k3mgq"]
+[ext_resource type="Script" uid="uid://n37xilpo7mkw" path="res://scripts/2.12 Try to throw the grenade away.gd" id="15_qt4d6"]
+[ext_resource type="Script" uid="uid://dielu0nw4u8a2" path="res://scripts/asian_solder.gd" id="16_s87td"]
+[ext_resource type="Script" uid="uid://26x4fm3gfppm" path="res://scripts/2.13 Smother Grenade.gd" id="17_k3mgq"]
+[ext_resource type="Script" uid="uid://d3txxqw2lft0y" path="res://scripts/2.15 Con’t Suppressive Fire.gd" id="18_ulkqk"]
+[ext_resource type="Script" uid="uid://dv7pi8j0enyh" path="res://scripts/2_14_rescue_soldier_3Pos.gd" id="19_ulkqk"]
+[ext_resource type="Script" uid="uid://dugmffe0pix5f" path="res://scripts/2_14 Rescue Soldier3.gd" id="20_wb5tm"]
+[ext_resource type="Script" uid="uid://cg8rlwpk8rpf2" path="res://scripts/2.9 Run to the crater.gd" id="21_wb5tm"]
+[ext_resource type="Script" uid="uid://6x0r5jjc21p8" path="res://scripts/2.6 Say Nothing.gd" id="22_amu1g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vmg42"]
+size = Vector2(1033, 20)
+
+[sub_resource type="Animation" id="Animation_7si2w"]
+resource_name = "blonde npc up down"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlondeSolder:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_vbwte")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlondeSolder:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.45, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.025, 1.02), Vector2(1.025, 0.98), Vector2(1.025, 1.02)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dwenq"]
+_data = {
+&"blonde npc up down": SubResource("Animation_7si2w")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_afxr4"]
+radius = 13.333336
+height = 56.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0kyxl"]
+size = Vector2(95, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wb5tm"]
+size = Vector2(103, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_amu1g"]
+size = Vector2(1091, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cr4vf"]
+size = Vector2(108, 29)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_52y61"]
+radius = 9.333332
+height = 72.0
+
+[sub_resource type="Animation" id="Animation_bjxv0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AsianSolder:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("14_k3mgq")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AsianSolder:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-0.896, 0.896)]
+}
+
+[sub_resource type="Animation" id="Animation_mgbtu"]
+resource_name = "asian npc up down"
+length = 0.9
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AsianSolder:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("14_k3mgq")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AsianSolder:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.45, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-0.896, 0.896), Vector2(-0.896, 0.856), Vector2(-0.896, 0.896)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y123h"]
+_data = {
+&"RESET": SubResource("Animation_bjxv0"),
+&"asian npc up down": SubResource("Animation_mgbtu")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0warv"]
+size = Vector2(113, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_52y61"]
+size = Vector2(117, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y123h"]
+size = Vector2(115, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2k820"]
+size = Vector2(70, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wdekn"]
+size = Vector2(111, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uqlka"]
+size = Vector2(107, 32)
+
+[node name="Node2D" type="Node2D" unique_id=924057765]
+y_sort_enabled = true
+script = ExtResource("1_hqnn5")
+new_value = "2.8 Assist Solider"
+
+[node name="Node2D2" type="Node2D" parent="." unique_id=288314538]
+y_sort_enabled = true
+script = ExtResource("19_ulkqk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D2" unique_id=2009142944]
+z_index = -1
+y_sort_enabled = true
+
+[node name="SapLine" type="Sprite2D" parent="Node2D2/StaticBody2D" unique_id=689518513]
+y_sort_enabled = true
+position = Vector2(-1, 1)
+texture = ExtResource("1_bk1vt")
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Node2D2/StaticBody2D" unique_id=1588019331]
+y_sort_enabled = true
+offset_left = -511.00003
+offset_top = -384.0
+offset_right = -471.00003
+offset_bottom = -344.0
+scale = Vector2(25.465395, 19.223557)
+border_width = 0.1
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D2/StaticBody2D" unique_id=298289987]
+z_index = 1
+y_sort_enabled = true
+polygon = PackedVector2Array(-20, 381, -1, 292, -30, 105, -17, -265, -26, -296, -9, -301, 12, -293, 15, -107, 1, 116, 31, 309, 15, 384, -119, 384, -119, 361, -91, 253, -116, 142, -106, -107, -108, -204, -104, -219, -103, -291, -84, -305, -59, -291, -57, -269, -72, -264, -77, -22, -78, 107, -85, 122, -60, 240, -59, 253, -92, 381)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/StaticBody2D" unique_id=900542967]
+y_sort_enabled = true
+position = Vector2(-515, 0)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_vmg42")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D2/StaticBody2D" unique_id=1766723897]
+y_sort_enabled = true
+position = Vector2(-13, -383)
+shape = SubResource("RectangleShape2D_vmg42")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D2/StaticBody2D" unique_id=1172044569]
+y_sort_enabled = true
+position = Vector2(515, 48)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_vmg42")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Node2D2/StaticBody2D" unique_id=388109137]
+y_sort_enabled = true
+position = Vector2(0, 388)
+shape = SubResource("RectangleShape2D_vmg42")
+
+[node name="Main_Character" parent="Node2D2" unique_id=341919493 instance=ExtResource("2_vwcxd")]
+y_sort_enabled = true
+position = Vector2(-53, 375)
+
+[node name="blonde solder" type="StaticBody2D" parent="Node2D2" unique_id=900848006]
+y_sort_enabled = true
+position = Vector2(-357.00003, -122)
+scale = Vector2(0.75, 0.75)
+script = ExtResource("4_vmg42")
+
+[node name="BlondeSolder" type="Sprite2D" parent="Node2D2/blonde solder" unique_id=110614230]
+y_sort_enabled = true
+position = Vector2(390.66666, -29.333344)
+scale = Vector2(1.025, 1.02)
+texture = ExtResource("5_vbwte")
+offset = Vector2(-1.300766, -55.052208)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D2/blonde solder" unique_id=1937461970]
+libraries/ = SubResource("AnimationLibrary_dwenq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/blonde solder" unique_id=1511927656]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(392.00003, -58.666668)
+shape = SubResource("CapsuleShape2D_afxr4")
+
+[node name="Node2D" type="Node2D" parent="Node2D2" unique_id=430395155]
+y_sort_enabled = true
+script = ExtResource("4_o31k1")
+
+[node name="2_4-B1D1" type="Sprite2D" parent="Node2D2/Node2D" unique_id=1281371559]
+y_sort_enabled = true
+
+[node name="signal" parent="Node2D2/Node2D/2_4-B1D1" unique_id=657468987 instance=ExtResource("7_dwenq")]
+y_sort_enabled = true
+position = Vector2(-56, 142)
+rotation = 1.5707964
+
+[node name="signal2" parent="Node2D2/Node2D/2_4-B1D1" unique_id=310197122 instance=ExtResource("7_dwenq")]
+y_sort_enabled = true
+position = Vector2(-50, -80)
+rotation = 1.5707964
+
+[node name="Area2D" type="Area2D" parent="Node2D2/Node2D/2_4-B1D1" unique_id=1275264037]
+y_sort_enabled = true
+script = ExtResource("8_afxr4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/Node2D/2_4-B1D1/Area2D" unique_id=173568043]
+position = Vector2(-45.5, -168.5)
+shape = SubResource("RectangleShape2D_0kyxl")
+
+[node name="2_5 Issue Challenge" type="Sprite2D" parent="Node2D2/Node2D" unique_id=1171314267]
+y_sort_enabled = true
+
+[node name="Area2D" type="Area2D" parent="Node2D2/Node2D/2_5 Issue Challenge" unique_id=1756207815]
+y_sort_enabled = true
+script = ExtResource("9_57t3e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/Node2D/2_5 Issue Challenge/Area2D" unique_id=2120892466]
+y_sort_enabled = true
+position = Vector2(-45.5, -168)
+shape = SubResource("RectangleShape2D_wb5tm")
+
+[node name="2_14 Rescue Soldier" type="Sprite2D" parent="Node2D2/Node2D" unique_id=1779014784]
+y_sort_enabled = true
+
+[node name="signal" parent="Node2D2/Node2D/2_14 Rescue Soldier" unique_id=748958499 instance=ExtResource("7_dwenq")]
+y_sort_enabled = true
+position = Vector2(-40, -336)
+rotation = 1.5707964
+
+[node name="Area2D" type="Area2D" parent="Node2D2/Node2D/2_14 Rescue Soldier" unique_id=954089407]
+y_sort_enabled = true
+script = ExtResource("10_0warv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/Node2D/2_14 Rescue Soldier/Area2D" unique_id=1745855520]
+y_sort_enabled = true
+position = Vector2(-20, -385)
+shape = SubResource("RectangleShape2D_amu1g")
+
+[node name="2_8 Assist Solider" type="Sprite2D" parent="Node2D2/Node2D" unique_id=599184977]
+y_sort_enabled = true
+
+[node name="Area2D" type="Area2D" parent="Node2D2/Node2D/2_8 Assist Solider" unique_id=191499154]
+y_sort_enabled = true
+script = ExtResource("11_qt4d6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/Node2D/2_8 Assist Solider/Area2D" unique_id=1672774191]
+y_sort_enabled = true
+position = Vector2(-46, -168.5)
+shape = SubResource("RectangleShape2D_cr4vf")
+
+[node name="TransitionLayer" parent="Node2D2/Node2D/2_8 Assist Solider" unique_id=818695167 instance=ExtResource("12_s87td")]
+z_index = 11
+y_sort_enabled = true
+
+[node name="ColorRect" parent="Node2D2/Node2D/2_8 Assist Solider/TransitionLayer/AnimationPlayer" parent_id_path=PackedInt32Array(818695167, 976009718) index="0" unique_id=997188241]
+z_index = 10
+offset_left = -653.99994
+offset_top = -678.00006
+offset_right = -653.99994
+offset_bottom = -678.00006
+scale = Vector2(1.6257877, 2.0403793)
+
+[node name="asian solder" type="StaticBody2D" parent="Node2D2/Node2D/2_8 Assist Solider" unique_id=908574429]
+y_sort_enabled = true
+position = Vector2(-243, -60)
+scale = Vector2(0.75, 0.75)
+script = ExtResource("13_0warv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/Node2D/2_8 Assist Solider/asian solder" unique_id=1225913043]
+y_sort_enabled = true
+position = Vector2(310.66666, -114.666664)
+shape = SubResource("CapsuleShape2D_52y61")
+
+[node name="AsianSolder" type="Sprite2D" parent="Node2D2/Node2D/2_8 Assist Solider/asian solder" unique_id=1208616098]
+y_sort_enabled = true
+position = Vector2(285.54382, -75.77179)
+scale = Vector2(-0.896, 0.896)
+texture = ExtResource("14_k3mgq")
+offset = Vector2(-2.741272, -59.778503)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D2/Node2D/2_8 Assist Solider/asian solder" unique_id=1126162107]
+libraries/ = SubResource("AnimationLibrary_y123h")
+
+[node name="2_12 Try to throw the grenade away" type="Sprite2D" parent="Node2D2/Node2D" unique_id=570252455]
+y_sort_enabled = true
+
+[node name="Area2D" type="Area2D" parent="Node2D2/Node2D/2_12 Try to throw the grenade away" unique_id=223106393]
+y_sort_enabled = true
+script = ExtResource("15_qt4d6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/Node2D/2_12 Try to throw the grenade away/Area2D" unique_id=498205099]
+y_sort_enabled = true
+position = Vector2(-46, -169)
+shape = SubResource("RectangleShape2D_0warv")
+
+[node name="asian solder" type="StaticBody2D" parent="Node2D2/Node2D/2_12 Try to throw the grenade away" unique_id=370432647]
+y_sort_enabled = true
+position = Vector2(-243, -60)
+scale = Vector2(0.75, 0.75)
+script = ExtResource("16_s87td")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/Node2D/2_12 Try to throw the grenade away/asian solder" unique_id=1252328785]
+y_sort_enabled = true
+position = Vector2(310.66666, -113.33333)
+shape = SubResource("CapsuleShape2D_52y61")
+
+[node name="AsianSolder" type="Sprite2D" parent="Node2D2/Node2D/2_12 Try to throw the grenade away/asian solder" unique_id=1255020901]
+y_sort_enabled = true
+position = Vector2(285.54382, -75.77179)
+scale = Vector2(-0.896, 0.896)
+texture = ExtResource("14_k3mgq")
+offset = Vector2(-2.741272, -59.778503)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D2/Node2D/2_12 Try to throw the grenade away/asian solder" unique_id=1664975385]
+libraries/ = SubResource("AnimationLibrary_y123h")
+
+[node name="2_13 Smother Grenade" type="Sprite2D" parent="Node2D2/Node2D" unique_id=268490086]
+y_sort_enabled = true
+
+[node name="Area2D" type="Area2D" parent="Node2D2/Node2D/2_13 Smother Grenade" unique_id=1800364393]
+y_sort_enabled = true
+script = ExtResource("17_k3mgq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/Node2D/2_13 Smother Grenade/Area2D" unique_id=1048064791]
+y_sort_enabled = true
+position = Vector2(-46.5, -169)
+shape = SubResource("RectangleShape2D_52y61")
+
+[node name="asian solder" type="StaticBody2D" parent="Node2D2/Node2D/2_13 Smother Grenade" unique_id=905028185]
+y_sort_enabled = true
+position = Vector2(-243, -60)
+scale = Vector2(0.75, 0.75)
+script = ExtResource("16_s87td")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/Node2D/2_13 Smother Grenade/asian solder" unique_id=631369029]
+y_sort_enabled = true
+position = Vector2(309.33334, -115.99999)
+shape = SubResource("CapsuleShape2D_52y61")
+
+[node name="AsianSolder" type="Sprite2D" parent="Node2D2/Node2D/2_13 Smother Grenade/asian solder" unique_id=1261039395]
+y_sort_enabled = true
+position = Vector2(285.54382, -75.77179)
+scale = Vector2(-0.896, 0.896)
+texture = ExtResource("14_k3mgq")
+offset = Vector2(-2.741272, -59.778503)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D2/Node2D/2_13 Smother Grenade/asian solder" unique_id=1566733518]
+libraries/ = SubResource("AnimationLibrary_y123h")
+
+[node name="2_15 Con’t Suppressive Fire" type="Sprite2D" parent="Node2D2/Node2D" unique_id=1406390043]
+y_sort_enabled = true
+
+[node name="Area2D" type="Area2D" parent="Node2D2/Node2D/2_15 Con’t Suppressive Fire" unique_id=1147451208]
+y_sort_enabled = true
+script = ExtResource("18_ulkqk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/Node2D/2_15 Con’t Suppressive Fire/Area2D" unique_id=658051246]
+y_sort_enabled = true
+position = Vector2(-46.5, -169)
+shape = SubResource("RectangleShape2D_y123h")
+
+[node name="2_14 Rescue Soldier3" type="Sprite2D" parent="Node2D2/Node2D" unique_id=351602353]
+y_sort_enabled = true
+
+[node name="signal" parent="Node2D2/Node2D/2_14 Rescue Soldier3" unique_id=892979445 instance=ExtResource("7_dwenq")]
+y_sort_enabled = true
+position = Vector2(-41, -303)
+rotation = -1.5707964
+
+[node name="Area2D" type="Area2D" parent="Node2D2/Node2D/2_14 Rescue Soldier3" unique_id=112271584]
+y_sort_enabled = true
+script = ExtResource("20_wb5tm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/Node2D/2_14 Rescue Soldier3/Area2D" unique_id=1488178189]
+y_sort_enabled = true
+position = Vector2(-44, -232)
+shape = SubResource("RectangleShape2D_2k820")
+
+[node name="2_9 Run to the crater" type="Sprite2D" parent="Node2D2/Node2D" unique_id=55716980]
+y_sort_enabled = true
+
+[node name="signal" parent="Node2D2/Node2D/2_9 Run to the crater" unique_id=1029808421 instance=ExtResource("7_dwenq")]
+y_sort_enabled = true
+position = Vector2(-39, -324)
+rotation = 1.5707964
+
+[node name="Area2D" type="Area2D" parent="Node2D2/Node2D/2_9 Run to the crater" unique_id=260323354]
+y_sort_enabled = true
+script = ExtResource("21_wb5tm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/Node2D/2_9 Run to the crater/Area2D" unique_id=1070810541]
+y_sort_enabled = true
+position = Vector2(-46.5, -168.5)
+shape = SubResource("RectangleShape2D_wdekn")
+
+[node name="2_6 Say Nothing" type="Sprite2D" parent="Node2D2/Node2D" unique_id=1910063794]
+
+[node name="Area2D" type="Area2D" parent="Node2D2/Node2D/2_6 Say Nothing" unique_id=1366967164]
+script = ExtResource("22_amu1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/Node2D/2_6 Say Nothing/Area2D" unique_id=1422978973]
+position = Vector2(-46.5, -168)
+shape = SubResource("RectangleShape2D_uqlka")
+
+[connection signal="body_entered" from="Node2D2/Node2D/2_4-B1D1/Area2D" to="Node2D2/Node2D/2_4-B1D1/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D2/Node2D/2_5 Issue Challenge/Area2D" to="Node2D2/Node2D/2_5 Issue Challenge/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D2/Node2D/2_8 Assist Solider/Area2D" to="Node2D2/Node2D/2_8 Assist Solider/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D2/Node2D/2_12 Try to throw the grenade away/Area2D" to="Node2D2/Node2D/2_12 Try to throw the grenade away/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D2/Node2D/2_13 Smother Grenade/Area2D" to="Node2D2/Node2D/2_13 Smother Grenade/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D2/Node2D/2_15 Con’t Suppressive Fire/Area2D" to="Node2D2/Node2D/2_15 Con’t Suppressive Fire/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D2/Node2D/2_14 Rescue Soldier3/Area2D" to="Node2D2/Node2D/2_14 Rescue Soldier3/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D2/Node2D/2_9 Run to the crater/Area2D" to="Node2D2/Node2D/2_9 Run to the crater/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D2/Node2D/2_6 Say Nothing/Area2D" to="Node2D2/Node2D/2_6 Say Nothing/Area2D" method="_on_body_entered"]
+
+[editable path="Node2D2/Node2D/2_8 Assist Solider/TransitionLayer"]

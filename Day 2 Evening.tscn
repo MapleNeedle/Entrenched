@@ -227,3 +227,4 @@ shape = SubResource("RectangleShape2D_ti0tc")
 
 [connection signal="body_entered" from="Node2D/TT1/Area2D" to="Node2D/TT1/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Node2D/Choice 1_1/Area2D" to="Node2D/Choice 1_1/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/Choice 2_1/Area2D" to="Node2D/Choice 2_1/Area2D" method="_on_body_entered"]

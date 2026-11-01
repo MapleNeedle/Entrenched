@@ -426,10 +426,6 @@ shape = SubResource("RectangleShape2D_hg45h")
 [node name="Choice D 2_2-B" type="Sprite2D" parent="Node2D" unique_id=2117314555]
 y_sort_enabled = true
 
-[node name="signal" parent="Node2D/Choice D 2_2-B" unique_id=862671648 instance=ExtResource("8_3no8l")]
-y_sort_enabled = true
-position = Vector2(-382, -58)
-
 [node name="Area2D" type="Area2D" parent="Node2D/Choice D 2_2-B" unique_id=140943825]
 y_sort_enabled = true
 script = ExtResource("21_mlnqo")
@@ -457,10 +453,6 @@ shape = SubResource("RectangleShape2D_qx70y")
 
 [node name="Choice D2_2-A3" type="Sprite2D" parent="Node2D" unique_id=966700276]
 y_sort_enabled = true
-
-[node name="signal" parent="Node2D/Choice D2_2-A3" unique_id=918383161 instance=ExtResource("8_3no8l")]
-y_sort_enabled = true
-position = Vector2(-382, -58)
 
 [node name="Area2D" type="Area2D" parent="Node2D/Choice D2_2-A3" unique_id=1272137683]
 y_sort_enabled = true
@@ -512,6 +504,17 @@ y_sort_enabled = true
 position = Vector2(122.5, -97.5)
 shape = SubResource("RectangleShape2D_5k5jx")
 
+[node name="TransitionLayer" parent="Node2D/Choice D2_2-A312" unique_id=1568479493 instance=ExtResource("14_brikx")]
+z_index = 11
+
+[node name="ColorRect" parent="Node2D/Choice D2_2-A312/TransitionLayer/AnimationPlayer" parent_id_path=PackedInt32Array(1568479493, 976009718) index="0" unique_id=997188241]
+z_index = 10
+offset_left = -819.0
+offset_top = -621.0
+offset_right = -819.0
+offset_bottom = -621.0
+scale = Vector2(1.6257877, 2.0403793)
+
 [node name="Choice D2_2-A32" type="Sprite2D" parent="Node2D" unique_id=1846665361]
 y_sort_enabled = true
 
@@ -544,6 +547,7 @@ shape = SubResource("RectangleShape2D_pli16")
 [connection signal="body_entered" from="Node2D/Choice 1_1/Area2D" to="Node2D/Choice 1_1/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Node2D/EDashCharge1/OverToA1_3" to="Node2D/EDashCharge1/OverToA1_3" method="_on_body_entered"]
 [connection signal="body_entered" from="Node2D/Choice A 1_2/Area2D" to="Node2D/Choice A 1_2/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/Choice D 2_2/Area2D" to="Node2D/Choice D 2_2/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Node2D/Choice D 1_2-A/Area2D" to="Node2D/Choice D 1_2-A/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Node2D/Choice A 1_2-B/Area2D" to="Node2D/Choice A 1_2-B/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Node2D/Choice A 1_2-C/Area2D" to="Node2D/Choice A 1_2-C/Area2D" method="_on_body_entered"]
@@ -553,9 +557,13 @@ shape = SubResource("RectangleShape2D_pli16")
 [connection signal="body_entered" from="Node2D/Choice D2_2-A1/left" to="Node2D/Choice D2_2-A1/left" method="_on_body_entered"]
 [connection signal="body_entered" from="Node2D/Choice D2_2-A1/right" to="Node2D/Choice D2_2-A1/right" method="_on_body_entered"]
 [connection signal="body_entered" from="Node2D/Choice D 2_2-B/Area2D" to="Node2D/Choice D 2_2-B/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/Choice D2_2-A2/Area2D" to="Node2D/Choice D2_2-A2/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/Choice D2_2-A3/Area2D" to="Node2D/Choice D2_2-A3/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Node2D/Choice D2_2-A31/Area2D" to="Node2D/Choice D2_2-A31/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Node2D/Choice D2_2-A311/Area2D" to="Node2D/Choice D2_2-A311/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/Choice D2_2-A312/Area2D" to="Node2D/Choice D2_2-A312/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Node2D/Choice D2_2-A32/Area2D" to="Node2D/Choice D2_2-A32/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Node2D/Choice D2_2-A33/Area2D" to="Node2D/Choice D2_2-A33/Area2D" method="_on_body_entered"]
 
 [editable path="Node2D/Choice A 1_2-C/TransitionLayer"]
+[editable path="Node2D/Choice D2_2-A312/TransitionLayer"]

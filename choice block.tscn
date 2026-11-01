@@ -1,8 +1,179 @@
 [gd_scene format=3 uid="uid://bgctg3sot3f8j"]
 
 [ext_resource type="PackedScene" uid="uid://bo2h148okhotg" path="res://signal.tscn" id="1_roqi5"]
+[ext_resource type="PackedScene" uid="uid://bcwqeuqdmk3w5" path="res://transition_layer.tscn" id="2_aa8x8"]
+[ext_resource type="Script" uid="uid://dielu0nw4u8a2" path="res://scripts/asian_solder.gd" id="3_5jmki"]
+[ext_resource type="Texture2D" uid="uid://djhbvuh8e15h7" path="res://other characters/asian solder.png" id="4_5yjm5"]
+[ext_resource type="Script" uid="uid://eoae70acgd5g" path="res://scripts/blonde_solder.gd" id="5_2d1gu"]
+[ext_resource type="Texture2D" uid="uid://caop43xh4deb3" path="res://other characters/blonde solder.png" id="6_qyih8"]
+[ext_resource type="Script" uid="uid://deja3ioh3fprv" path="res://scripts/sentryUpDown.gd" id="7_38aft"]
+[ext_resource type="Texture2D" uid="uid://bf1ejct3341qt" path="res://other characters/solder back.png" id="8_jdqfq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aa8x8"]
+
+[sub_resource type="Animation" id="Animation_bjxv0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AsianSolder:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_5yjm5")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AsianSolder:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-0.896, 0.896)]
+}
+
+[sub_resource type="Animation" id="Animation_mgbtu"]
+resource_name = "asian npc up down"
+length = 0.9
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AsianSolder:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_5yjm5")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AsianSolder:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.45, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-0.896, 0.896), Vector2(-0.896, 0.856), Vector2(-0.896, 0.896)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ry1km"]
+_data = {
+&"RESET": SubResource("Animation_bjxv0"),
+&"asian npc up down": SubResource("Animation_mgbtu")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0s6cb"]
+radius = 15.9999695
+height = 82.66667
+
+[sub_resource type="Animation" id="Animation_7si2w"]
+resource_name = "blonde npc up down"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlondeSolder:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_qyih8")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlondeSolder:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.45, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.025, 1.02), Vector2(1.025, 0.98), Vector2(1.025, 1.02)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4p7vv"]
+_data = {
+&"blonde npc up down": SubResource("Animation_7si2w")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fu0ml"]
+radius = 13.333336
+height = 56.0
+
+[sub_resource type="Animation" id="Animation_8l1hq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../sentry/SolderBack:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("8_jdqfq")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../sentry/SolderBack:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2.84963, 2.84963)]
+}
+
+[sub_resource type="Animation" id="Animation_bbjnh"]
+resource_name = "sentry up down"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../sentry/SolderBack:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("8_jdqfq")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../sentry/SolderBack:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(2.84963, 2.84963), Vector2(2.85, 2.78), Vector2(2.85, 2.85)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_57bn8"]
+_data = {
+&"RESET": SubResource("Animation_8l1hq"),
+&"sentry up down": SubResource("Animation_bbjnh")
+}
 
 [node name="Node2D" type="Node2D" unique_id=1915000698]
 
@@ -16,3 +187,71 @@ position = Vector2(-382, -58)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Null/Area2D" unique_id=140301742]
 position = Vector2(-37, -451)
 shape = SubResource("RectangleShape2D_aa8x8")
+
+[node name="TransitionLayer" parent="." unique_id=818695167 instance=ExtResource("2_aa8x8")]
+z_index = 11
+
+[node name="ColorRect" parent="TransitionLayer/AnimationPlayer" parent_id_path=PackedInt32Array(818695167, 976009718) index="0" unique_id=997188241]
+z_index = 10
+offset_left = -819.0
+offset_top = -621.0
+offset_right = -819.0
+offset_bottom = -621.0
+scale = Vector2(1.6257877, 2.0403793)
+
+[node name="asian solder" type="StaticBody2D" parent="." unique_id=1447292496]
+y_sort_enabled = true
+position = Vector2(-489, -33)
+scale = Vector2(0.75, 0.75)
+script = ExtResource("3_5jmki")
+
+[node name="AsianSolder" type="Sprite2D" parent="asian solder" unique_id=2064805499]
+position = Vector2(285.54382, -75.77179)
+scale = Vector2(-0.896, 0.896)
+texture = ExtResource("4_5yjm5")
+offset = Vector2(-2.741272, -59.778503)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="asian solder" unique_id=824111711]
+libraries/ = SubResource("AnimationLibrary_ry1km")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="asian solder" unique_id=1890023122]
+position = Vector2(280, -124)
+shape = SubResource("CapsuleShape2D_0s6cb")
+
+[node name="blonde solder" type="StaticBody2D" parent="." unique_id=408311508]
+y_sort_enabled = true
+position = Vector2(-356.00003, -122)
+scale = Vector2(0.75, 0.75)
+script = ExtResource("5_2d1gu")
+
+[node name="BlondeSolder" type="Sprite2D" parent="blonde solder" unique_id=671550346]
+y_sort_enabled = true
+position = Vector2(390.66666, -29.333344)
+scale = Vector2(1.025, 1.02)
+texture = ExtResource("6_qyih8")
+offset = Vector2(-1.300766, -55.052208)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="blonde solder" unique_id=366911735]
+libraries/ = SubResource("AnimationLibrary_4p7vv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blonde solder" unique_id=1826998693]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(392.00003, -58.666668)
+shape = SubResource("CapsuleShape2D_fu0ml")
+
+[node name="sentry" type="Node2D" parent="." unique_id=807175148]
+y_sort_enabled = true
+position = Vector2(152, 58)
+script = ExtResource("7_38aft")
+
+[node name="SolderBack" type="Sprite2D" parent="sentry" unique_id=651738332]
+y_sort_enabled = true
+position = Vector2(2, -99)
+scale = Vector2(2.84963, 2.84963)
+texture = ExtResource("8_jdqfq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sentry" unique_id=768125021]
+libraries/ = SubResource("AnimationLibrary_57bn8")
+
+[editable path="TransitionLayer"]

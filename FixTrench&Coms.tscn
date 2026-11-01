@@ -31,7 +31,7 @@ size = Vector2(30, 100.5)
 [node name="Node2D" type="Node2D" unique_id=960905488]
 y_sort_enabled = true
 script = ExtResource("1_3ga2s")
-new_value = "CT1"
+new_value = "3.1A1"
 
 [node name="OpeningTrenchBottom" type="Sprite2D" parent="." unique_id=577156977]
 z_index = -1

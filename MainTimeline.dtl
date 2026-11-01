@@ -622,251 +622,589 @@ You wait, and in that moment of hesitation, the enemy opens fire. A bullet strik
 The End
 set {chosen_path} = "Death13"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 2.4-B1D
+You tell the sentry to keep an eye on them and decide to head down the trench to a sap line.
+set {chosen_path} = "2.4-B1D1"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 2.4-B1D1
+Now that you’re a bit deeper into No Man’s Land, you use your periscope to observe and find the crater with the men in it. They are already moving closer to the front lines.
+- Issue Challenge
+	set {chosen_path} = "2.5 Issue Challenge"
+- Say nothing
+	set {chosen_path} = "2.6 Say Nothing"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 2.6 Say Nothing
+You decide to say nothing and instead keep watching No Man’s Land. For a second you think you see something in the sky, perhaps a bird, but then register the dull sound of something falling onto the duckboards behind you. Instantly you realize the danger but it’s too late - the enemy grenade explodes, killing both you and the other soldiers.\
+\
+The End
+set {chosen_path} = "Death 14"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 2.5 Issue Challenge
+You\: “Halt, who goes there?”\
+\
+Voice\: London Lights.\
+\
+The men are Canadian.
+Suddenly, a flare flies into the sky. It came from the enemy trench. The area around No Man’s Land becomes brightly illuminated, every detail suddenly coming into focus, including three Canadian soldiers.
+Enemy machine gun fire erupts, forcing the men to take cover. Then a mortar round explodes about twenty meters away from the crater. The next one explodes closer. One of the soldiers darts out of the crater for the sap and manages to dive in without being hit, bullets narrowly missing him.
+- Lay suppressing fire
+	set {chosen_path} = "2.7 Suppressing Fire"
+- Assist the soldier
+	set {chosen_path} = "2.8 Assist Solider"
+- Run to the crater
+	set {chosen_path} = "2.9 Run to the crater"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 2.7 Suppressing Fire
+You use your periscope and locate the machined gun. \
+\
+You\: Fire at the machine gun!
+Your fire interrupts the machine gunner enough to allow another of the soldiers to dart from the crater and into your trench. But the third soldier is hit in the leg by a bullet and drops only ten feet from the sap line. Your eyes meet, his hand outstretched.
+- Run out of the trench and rescue him.
+	set {chosen_path} = "2.14 Rescue Soldier"
+- Continue suppressive fire.
+	set {chosen_path} = "2.15 Con’t Suppressive Fire"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 2.14 Rescue Soldier
+Feeling compelled to help, you climb out of the sap and run to the injured man. Your legs feel wobbly and your stomach sinks like you’re in freefall. The fear is beyond anything you’ve ever felt and you vaguely register the bullets striking the earth around you and mortar rounds exploding. A persistent thought sticks in the back of your mind - I’m going to die - but you push past it, focusing instead on the man on the ground. Reaching out with numb fingers, you grasp the soldier’s webbing and desperately drag him back to the sap.
+set {chosen_path} = "2.14 Rescue Soldier1"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 2.14 Rescue Soldier2
+Meanwhile, the enemy mortar crew adjust their aim, ready to launch a bomb at you when one of the men is shot by a bullet. Before the other could react, another bullet strikes him as well. Two more kills for the Ghost in the Trenches.
+set {chosen_path} = "2.14 Rescue Soldier3"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 2.14 Rescue Soldier3
+With the suppressive fire coming front the sap, as well as from the front lines which have joined in to help, and the momentary stop of mortar rounds, you make it back to the sap and hurl yourself into it, pulling the injured soldier with you.
+You roll onto your back and pull your knees to your chest, shaking uncontrollably. Suddenly a pair of very strong hands grab you, lift your body, and pull you out of the sap. The man then brings you into his arms and rocks you like a child.
+Sgt Fitzgerald\: Easy son, easy. You’re okay.\
+\
+You feel your body relax as the Platoon Sergeant soothes you.\
+\
+You\: Did I… is he…?
+Sgt Fitzgerald\: He’s being taken to a Casualty Clearing Station. You saved him.
+After some time he releases you and helps you back to your dugout.\
+\
+Sgt Fitizgerald\: “Go and lay down. You did good today.”
+set {chosen_path} = "3.1AMM"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 2.15 Con’t Suppressive Fire
+You want to help the soldier and feel laying suppressive fire on the German Machine Gun is the best way to do it.
+Just then, one of the soldier’s comrades darts out of the trench and, grabbing the injured man by his webbing, yanks him safely back into the trench.
+A mortar crew arrives, sent by the Platoon Commander, and begins firing bombs back at the enemy. Meanwhile, you and the raiding party help carry the injured man back to the support trench where stretcher bearers take him to get medical attention.\
+\
+You are relieved and allowed to go back to your dug out.
+set {chosen_path} = "3.1A"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 2.8 Assist Solider
+You tend to the soldier who just landed in your trench. To your relief, he is not wounded. \
+\
+Soldier\: Where are the others?\
+\
+You\: Still in the crater.\
+\
+Soldier\: We have to help them!
+The man is frenzied and before you can act, pulls a grenade from his webbing and moves to toss it at the machine gun, despite it being too far away. Unfortunately, enemy rifle fire hits him as he’s about to toss the bomb, causing the grenade to fall out of his hand and back into the trench. It lands at your feet.
+- Try to pick up and toss the grenade out of the sap.
+	set {chosen_path} = "2.12 Try to throw the grenade away"
+- Smother the grenade with your body.
+	set {chosen_path} = "2.13 Smother Grenade "
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 2.12 Try to throw the grenade away
+You scoop up the Grenade and attempt to toss it outside the trench, but it explodes just as it leaves your hand, killing you and the other soldiers in the sap.\
+\
+The End
+set {chosen_path} = "Death 15"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 2.13 Smother Grenade
+There’s no time. Without hesitation, and with complete disregard for your own life, you remove your helmet and put it over the grenade, pressing your body on top of it. Time slows - you think of home, your family, your friends\: Brad, Jack, and John and lastly the other men in the sap.
+At least you know they will survive, and the thought brings you some comfort. The grenade detonates, killing you instantly but sparing the lives of the other two men. You die a hero of the Great War.\
+\
+The End
+set {chosen_path} = "VC"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 2.9 Run to the crater
+Feeling compelled to help, you climb out of the sap and run to the crater. It’s a brave and very dangerous move.
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 2.10 Shot on way to Crater
+You are hit and die in No Man’s Land.\
+\
+The End
+set {chosen_path} = "End 2"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 2.11 Crater
+You make it into the crater. The two men already in there are startled to see you. \
+\
+Soldier\: Are you mad?
+You\: Not enough to stay here. Come on - let’s go!
+You don’t hear the single gun shot from a Ross Rifle that strikes the German machine gunner, nor the second one that kills the other soldiers holding the ammunition belt. But you do realize that the machine gun stopped.
+You\: Come on, this is our chance!
+A mortar round lands too close and kills all three of you.\
+\
+The End
+set {chosen_path} = "End 3"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 2.6 Say Nothing
+You decide to say nothing and instead keep watching No Man’s Land. For a second you think you see something in the sky, perhaps a bird, but then register the dull sound of something falling onto the duckboards behind you. Instantly you realize the danger but it’s too late - the enemy grenade explodes, killing both you and the other soldiers.\
+\
+The End
+set {chosen_path} = "Death 17"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 3.1A
+Upon entering your dugout, you remove your webbing and boots and drop onto your bunk.\
+\
+Brad\: Hey, word is you guys saw a bit of action?\
+\
+You\: A little. I’m wiped. It’s harder than I thought getting used to this routine.
+Brad\: Well, in a couple of days we’ll be back in the reserve line and then it’s a week of rest. \
+\
+You\: *Sigh* Sometimes it feels like this war is never going to end.
+set {chosen_path} = "3.1A1"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 3.1A1
+You can’t recall falling asleep. The next morning you awake, get your gear back on, and head out of the dugout for stand to, followed by the morning’s inspection. When 2Lt Holmes comes up to you he’s smiling.
+2Lt Holmes\: You’re out of uniform, Lance Corporal.\
+\
+You\: Sir?\
+\
+He extends his right hand and you grasp it, his left hand producing a large, single wool chevron.
+2Lt Holmes\: Long overdue… Congratulations. Keep it up and you’ll be a section commander soon enough.
+You\: Thank-you, Sir!\
+\
+Sgt Fitzgerald walks up next and gives you his characteristic smack on the arm that nearly knocks you over and nods in approval.
+Once everyone is dismissed, Cpl Barron takes you aside.\
+\
+Cpl Barron\: Well, you’re now Section 2IC. That means you’ll be helping me do the inspections and supervising work details.
+- I have some questions
+	set {chosen_path} = "3.1B"
+- No questions
+	set {chosen_path} = "3.2"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 3.1AMM
+Upon entering your dugout, you remove your webbing and boots and drop onto your bunk.\
+\
+Brad\: Hey, word is you guys saw a bit of action?
+You\: A little. I’m wiped. It’s harder than I thought getting used to this routine.\
+\
+Brad\: Well, in a couple of days we’ll be back in the reserve line and then it’s a week of rest.
+You\: *Sigh* Sometimes it feels like this war is never going to end.
+set {chosen_path} = "3.1AMM1"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 3.1AMM1
+You can’t recall falling asleep. The next morning you awake, get your gear back on, and head out of the dugout for stand to, followed by the morning’s inspection. When 2Lt Holmes comes up to you he’s smiling.
+2Lt Holmes\: You’re out of uniform, Lance Corporal.\
+\
+You\: Sir?\
+\
+He extends his right hand and you grasp it, his left hand producing a large, single wool chevron.
+2Lt Holmes\: Long overdue… Also, I’ve put you in for a decoration. Sergeant Fitzgerald told me about what you did yesterday. Congratulations. Keep it up and you’ll be a section commander soon enough.
+You\: Thank-you, Sir!\
+\
+Sgt Fitzgerald walks up next and gives you his characteristic smack on the arm that nearly knocks you over. He’s beaming with pride.
+Once everyone is dismissed, Cpl Barron takes you aside.\
+\
+Cpl Barron\: Well, you’re now Section 2IC. That means you’ll be helping me do the inspections and supervising work details.
+- I have some questions
+	set {chosen_path} = "3.1B"
+- No questions
+	set {chosen_path} = "3.2"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 3.1B
+Cpl Barron\: Yes, Lance Corporal?
+- Can you explain my duties again?
+	set {chosen_path} = "3.1C"
+- Any advice?
+	set {chosen_path} = "3.1D"
+- What privileges do I get?
+	set {chosen_path} = "3.1G"
+- No questions
+	set {chosen_path} = "3.2"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 3.1C
+Cpl Barron\: You are in a junior leadership position. It’s your job now to help me run the section. That means ensuring duties are assigned and completed, conducting barrack and dugout inspections, and, if necessary, enforcing discipline.
+set {chosen_path} = "3.1B"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 3.1D
+Cpl Barron\: When I became a Lance Corporal, I found it hard at first not jumping in to do jobs. Fitzy jacked me up right quick and told me that it was my job to supervise and follow-up, not do the work myself. \
+\
+You\: But won’t that help get the work done quicker?
+Cpl Barron\: That’s what I said. But here’s the problem\: if you do that, then there’s nobody left to oversee the work being done. And that’s when mistakes happen.
+set {chosen_path} = "3.1B"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 3.1G
+Cpl Barron\: Well, it’s not a lot, but, for starters you get more pay. And you get a better spot in the dug out. But you’ll learn quickly that any privilege comes with increased responsibilities. If anything goes awry, Fitzy will be on us first. Always put the needs of our soldiers first.
+set {chosen_path} = "3.1B"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 3.2
+Cpl Barron\: Okay, we have several men taking up positions along the front. I want you to keep watch on them. Move around and make sure everyone is on task.
+You\: Yes Corporal.
+Cpl Barron\: Before you go. Remember that everyone will look to you for guidance. We may not be Senior NCOs or Officers, but we are the ones the men see all the time. Lead by example - stay calm, no matter what. Nothing worse for the men than to see their leader panic.
+set {chosen_path} = "3.4"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 3.4
+You notice two soldiers chatting with each other and not being diligent about keeping sentry. \
+You\: Back to your post. \
+\
+\
+Soldier\: Oh, c’mon Lance Corporal. Cut is some slack.
+- Order them
+	set {chosen_path} = "3.5"
+- Let it go
+	set {chosen_path} = "3.6"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 3.5
+You\: Back to you post, now! That’s an order.\
+\
+Both men sigh and go back to the fire step.
+A chorus of distant thunderous explosions erupt, followed by loud whistling. The ground around you shakes as artillery shells strike the ground around the trench.
+- Take cover
+	set {chosen_path} = "3.7"
+- Run for the dugout
+	set {chosen_path} = "3.8"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 3.7
+You\: Barrage, take cover!\
+\
+You and the two men dive into shelters dug into the side of no man’s land.
+The ground shakes and debris falls around you. A shell strikes the top of the trench above the shelter, causing the earth to collapse and bury all three of you. The weight presses down on you, making it impossible to move… and breathe!\
+\
+You suffocate to death.\
+\
+The End
+set {chosen_path} = "Death 18"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 3.8
+You\: Barrage, run for the dug out!\
+\
+The ground shakes as you run back to the safety of your dug out. Shells land all around, men shouting and making their way to the safety of their designated shelters. When you reach your dugout, you all but leap through the entrance. Brad is already there.
+Brad\: Think it’ll be a long one?\
+\
+You\: Not sure, but usually, the longer they are, the more likely they will attack when it’s done.
+The bombardment continues for hours. There’s nothing to do but hunker down and wait. To pass the time you eat some food, play cards with Brad, and pen a letter to your parents back home. A new soldier is having trouble with the constant sound of the bombing. Cpl Barron goes over and chats with him, trying to calm his nerves.
+The constant shaking and explosions are nerve wracking. It was almost impossible to sleep and the fear of the ceiling caving in made most feel a bit claustrophobic.
+More hours pass and still the bombardment continues unabated.\
+\
+Then, just before dusk, the bombardment suddenly stops.
+set {chosen_path} = "A8"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 3.6
+You\: Okay, fine.\
+\
+As you get ready to leave the sound of whistling artillery rings overhead. Before you can say or do anything, a shell lands in the trench and kills you and the soldiers.
+set {chosen_path} = "Death 19"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label A8
+Cpl Barron shouts for everyone to prepare for battle; a small group of German soldiers are rushing towards your trench.
+- Grab your rifle and help Cpl Barron usher folks out to the front lines.
+	set {chosen_path} = "A9"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label A9
+You\: Come on, move!\
+\
+You help the Cpl usher people out. The entire company is now stationed on the front lines. You notice 2Lt Holmes walking beside Captain Shaw, the Company Commander, with the Company Sergeant Major, Warrant Officer Shepherd on his other side.
+Capt Shaw is a tall, well-manucured man with a crisp uniform and mustache. He’s the poster image of an officer, and among the undress ribbons on his uniform, you note one that is white with a purple line in the center, indicating that he’s been awarded a Military Cross. He holds a swagger stick under his left arm.
+If Capt Shaw is the quintessential gentleman soldier, WO Shepherd is the textbook image of a Sergeant-Major. While shorter than Sgt Fitizgerald, his strong frame, piercing stare, and chestful of ribbons, makes every Non-Commissioned Member nervous. A career military man, he’s experienced and battle-hardened.
+Capt Shaw issues an order to 2Lt Holmes, who in turn orders everyone to “Fix Bayonets”. The CSM immediately supports the order, by barking out commands, which down the line various Platoon Sergeants echo.
+Next, calls to “Stand To” ring out. Unlike morning and evening Stand To, you can hear a difference in the tone, a seriousness that lets everyone know this is real. Cpl Barron and you move onto the fire steps along with everyone else, minus the officers and senior NCOs who stay back, watching the lines. Brad is on your left and Cpl Barron on your right. You all step up, point your rifles into No Man’s Land, and scan the area.
+Over the parapet, you see a small group of German soldiers rushing, line abreast, across the scarred wasteland. The order to Open Fire is given and you squeeze the trigger. A chorus of ‘bangs’ ringing out as everyone  attacks. Reloading your rifle, you note that the Germans appeared to have stopped their advance, hunkering down in NO Man’s Land. You and Brad trade puzzled looks.
+A loud whistle rings out, followed by a loud BOOM as explosions erupt in No Man’s Land between the Germans and your trench. You duck for cover, but then pop back up to see a yellow-brown gas blowing with the wind towards your trench.
+As the cloud slowly creeps towards your trench, the voices of your NCOs and Officers begin shouting “GAS GAS GAS!”, confirming what you already suspected - the enemy was launching a chemical attack. You suffered from a Chlorine Gas attack some years ago in Ypres, but this isn’t the same weapon\: its Mustard Gas.
+- Put on your gas mask
+	set {chosen_path} = "A11"
+- Take one more shot at the enemy then put on your gas mask
+	set {chosen_path} = "A12"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label A11
+The procedure to put on your Small Box Respirator (SBR) is a well practiced drill and, at this point, second nature\: you take a deep breath, hold it, open the large canvas pouch at your chest, pull out the jumble of rubberized canvas, round glass eyepieces, and a rubber corrugated tube attached to a tin canister, and place the mask over your head. You then secure it via straps, ensuring it’s tight. The canister, which contains charcoal and asbestos, filters the chemicals, allowing you to breathe.
+Checking Brad, you take your rifle and once again look over the parapet. The gas is getting closer but, behind it, you see the silhouettes of the enemy advancing, using the gas as a screen. You fire at the enemy but the gas becomes thicker. Soon you can’t see anything at all beyond the barrier.
+- Run Back to Dug Out
+	set {chosen_path} = "EDashCharge"
+- Stay at your post.
+	set {chosen_path} = "A13"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label A12
+You take aim and fire one last shot, then proceed to put on your Small Box Respirator (SBR). The procedure is second nature to you know\: you take a deep breath, hold it, open the large canvas pouch at your chest, pull out the jumble of rubberized canvas, round glass eyepieces, and a rubber corrugated tube attached to a tin canister, and place the mask over your head. You then secure it via straps, ensuring it’s tight. The canister, which contains charcoal and asbestos, filters the chemicals, allowing you to breathe.
+Unfortunately, some of the gas made it to your position before you were able to fully secure your SBR. You start to feel a burning sensation on your face, followed by your hands and neck. Your eyes are very irritated and you’re having trouble seeing anything clearly in  No Man’s Land.
+- Take off your mask and rub your eyes.
+	set {chosen_path} = "1.12"
+- Keep your gas mask on even though your eyes are burning.
+	set {chosen_path} = "A13"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label 1.12
+Removing your mask to rub your eyes, you unwittingly expose your face and lungs to the gas, but because of the delayed symptoms, you replace your mask without realizing the damage you’ve done.
+As the hours pass, you begin to suffer from excruciating pain. Blisters appear on your skin and your lungs are damaged. You are sent to a decontamination unit and, soon after, to a field aid station.
+Your injuries prove quite extensive - you are sent to a hospital in France and spend the better part of the month recovering. You are invalided back home and honourably discharged from the army.
+set {chosen_path} = "Death20"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label A13
+The Mustard Gas blows over you and into the trench. You can feel a burning sensation over your hands and neck, one that gradually gets more and more irritating. But your continued fire forces the enemy to retreat. \
+\
+Capt Shaw\: Cease Fire!
+Eventually, the order to Stand Down is given. You head to a decontamination unit in the back lines, removing your clothing and washing your body of toxins before changing into a clean uniform and heading back to your dugout. 
+set {chosen_path} = "A14"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label A14
+Your artillery conducts a seven-day barrage on the enemy trench. It’s the precursor to a push - a coordinated attack that will see everyone go Over the Top and charge at the German trench. During this time, you continue to supervise watches as well as help prepare soldiers for the upcoming attack.
+About two hours before the bombardment is due to stop at 0500 hours, you head out of your bunker and make your way to the front lines.
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label A16
+A roar emanates from the line as every Canadian, including yourself, let out a battle cry as you pull yourselves over the parapet and step into No Man's Land.
+The order to fix bayonets is given. You quickly attach the blade to the end of your Lee Enfield and then feel the soldier to your right poke your arm. You don’t recognize him - he’s new, young, and inexperienced.\
+\
+Soldier\: Lance Corporal… have you been Over the Top before?
+You\: A few times. \
+\
+Soldier\: I’m… scared. \
+\
+You force a smile, projecting calm despite also feeling afraid. \
+\
+You\: That’s normal. Focus on your task, keep your rifle pointed straight, and your training will kick in.
+He gives a shaky nod. Just then the artillery stops. Officers behind the fire steps begin blowing on trench whistles.
+A roar emanates from the line as every Canadian, including yourself, let out a battle cry as you pull yourselves over the parapet and step into No Man's Land.
+You step into the wasteland along with thousands of other Canadians, doing your best to close the distance as quickly as possible. Enemy mortar rounds explode around you, killing soldiers, throwing bodies into the air, and sending shrapnel and debris raining down on you.
+Your legs feel wobbly and numb. The ground is also uneven, which makes running even harder, and the constant explosions and gun fire makes things hazy and details hard to see in the distance.
+Enemy soldiers defending the line start opening fire, sending bullets like a horizontal rain. Machine gun echos and men scream as metal and heat rip through uniforms, flesh, and bone. Hundreds are dying in a matter of seconds - these may be the last seconds of your life but you push the thought out of your mind.
+You're close enough now to make out the shapes of German helmets along the trench.
+- Shoot at the German soldiers
+	set {chosen_path} = "A16A"
+- Rush forward with your bayonet
+	set {chosen_path} = "D16A"
+- Throw a Grenade
+	set {chosen_path} = "D16B"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label D16A
+You again let out a scream and attempt to charge and stab the soldier ahead of you. Unfortunately you are too far away - the German sees you, takes aim with his rifle, and fires a shot that strikes you in the head. You die instantly.
+set {chosen_path} = "Death 21"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label D16B
+Grabbing a grenade from your webbing you pull the pin and throw it ahead of you. Unfortunately you're still too far from the enemy trench - the bomb explodes ahead of the enemy position. A German sees you, takes aim with his rifle, and fires a shot that strikes you in the head. You die instantly.
+set {chosen_path} = "Death 22"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label D16BB
+Grabbing another grenade from your webbing you go to pull the pin but machine gun fire crosses your body, peppering you with bullets. You die instantly.
+set {chosen_path} = "Death 23"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label D16C
+Nearing the barbed wire just before the enemy trench, you take aim and shoot at another German soldier. While you do manage to hit your target, another German tosses a grenade that lands at your feet and explodes, killing you and the men beside you.
+set {chosen_path} = "Death 24"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label A16A
+You take aim at the nearest helmet in the distance and fire a shot but it’s impossible to tell if you hit the soldier. You reload and advance all by muscle memory.
+- Shoot at the German Soldiers
+	set {chosen_path} = "D16C"
+- Rush forward with your bayonet
+	set {chosen_path} = "D16A"
+- Throw a Grenade
+	set {chosen_path} = "A16B"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label A16B
+Grabbing Brad by his webbing, you crouch and lift him up, positioning his torso onto your shoulders. His body rises off the ground.
+An officer approaches you and, seeing that you’ve brought a wounded soldier, immediately calls for aid. Meanwhile, you roll Brad onto his back and lay beside him, trying to catch your breath.
+Many years later, you stand in a well-kept graveyard before rows of white-grey gravestones, wearing a navy-blue blazer, grey trousers, medals gleaming in the early morning sun. Your family - children and grandchildren - are with you. 
+In your mind’s eye, you can see your friend as he once was - young, energized, and optimistic. Even though he died so many years ago, it feels as if he is watching you. Your body straightens and your right hand comes up in a salute.
+- Shoot at the German Soldiers
+	set {chosen_path} = "D16C"
+- Rush Forward with your bayonet
+	set {chosen_path} = "A16C"
+- Throw a Grenade
+	set {chosen_path} = "D16BB"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label A16C
+A soldier ahead of you dives onto the barbed wire, allowing you to safely run over his back. You jump into the trench and immediately thrust your bayonet into an unsuspecting German soldier.
+set {chosen_path} = "A19"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label A17
+You head to an open space on the firing line. Soon after, the order to fix bayonets is given. You quickly attach the blade to the end of your Lee Enfield.
+The artillery stops and your body tenses. Officers behind the fire steps begin blowing on trench whistles.
+A roar rings out from the line as every Canadian, including yourself, let out a battle cry as you pull yourselves over the parapet and step into No Man's Land.
+You step into the wasteland along with thousands of other Canadians, doing your best to close the distance as quickly as possible. Enemy mortar rounds explode around you, killing soldiers, throwing bodies into the air, and sending shrapnel and debris raining down on you.
+Your legs feel wobbly and numb. The ground is also uneven, which makes running even harder, and the constant explosions and gun fire makes things hazy and details hard to see in the distance.
+Something catches your eyes in front of you - a wounded Canadian on the ground. It’s your friend Brad; he’s been shot!
+- Help him
+	set {chosen_path} = "A18"
+- Keep moving forward to the enemy trench
+	set {chosen_path} = "D14"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label A18
+Despite the bullets and explosions, you dive down onto the ground beside Brad and check him over. The bullet struck his abdomen, which means there’s a chance he can live if he were to get medical treatment.
+Bullets pelt the dirt right beside you, causing your body to become rigid. You feel exposed.\
+\
+You\: Brad, can you hear me?
+Brad\: They shot me…\
+\
+You\: I know buddy. I’m going to take care of it.
+You grab the wound dressing stitched on the inside bottom flap of Brad’s tunic, rip open the canvas bag, and pull out the bandage. He groans in pain as you press it hard against his wound. \
+\
+Brad\: I wanna go home… I want my mom…
+Your mind is racing. In the distance you can just make out the enemy. Seeing your wounded friend brings on a surge of anger. If he dies, you’ll have lost your last friend.
+- Pick Brad up and head back to your trench
+	set {chosen_path} = "A18A"
+- Drag Brad back to your trench
+	set {chosen_path} = "D12"
+- Fight the Germans
+	set {chosen_path} = "D13"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label A18A
+Grabbing Brad by his webbing, you lift him up and then, crouching you position him onto your shoulders and lift him off the ground.
+Adrenaline releasing, you run back to your lines, zig-zagging left and right to make yourself a harder target. You hope the sight of carrying a wounded soldier might just make the German soldiers reconsider shooting at you.
+Approaching your trench you jump over the parapet and crash into the duck boards below, allowing your body to absorb the impact. It’s a miracle that you didn’t break both of your legs.
+An officer approaches you and, seeing that you’ve brought a wounded soldier, immediately call for aid. Meanwhile, you roll Brad onto his back and lay beside him, trying to catch your breath.
+Brad\: Thanks for getting me out of there buddy. I didn’t want the rats to get me.\
+\
+You\: Nothing is going to get you. We’re getting help and you’ll be going back home.
+Brad’s demeanor changes - he becomes calm. His breathing slows and placing a hand upon yours, he looks at you with knowing eyes.
+Brad\: Write to my parents. Tell them I love them… tell my Mom I’m sorry I broke my promise. That I didn’t come home. \
+\
+You\: Brad, stop it! The doctor will take care of you, you can’t…
+He squeezes your hand with the last of his strength - you realize you can’t ignore the truth.\
+\
+Brad\: Promise me.\
+\
+The tears flow freely from your eyes.
+You\: … I promise Brad.\
+\
+He smiles and closes his eyes. His body becomes heavier in your arms, his grip loosening. Men come to your side with a stretcher, but it's too late. Brad is gone.
+Eventually, you are joined by a wounded 2Lt Holmes and Sgt Fitzgerald. Unfortunately, Cpl Barron was killed in the attack.
+The next day, you are promoted to the rank of Corporal and made Section Commander.
+You serve until the end of the war, rising to the rank of Sergeant. Of your eight friends, you alone have survived The Great War. You carry the memory of your fallen comrades for the rest of your days, but honour their memory and live life to the fullest. You get married, have a family, and name your three sons\: Jack, Bill, and Brad.
+Many years later, you stand in a well kept graveyard before rows of white-grey gravestones, wearing a navy blue blazer, grey trousers, medals gleaming in the early morning sun. Your family - children and grandchildren - are with you.
+set {chosen_path} = "End 4"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label D12
+You grip both straps of Brad’s webbing and proceed to drag him back towards your trench. You ignore the bullets striking the earth around you, pulling your wounded friend across the wasteland as quickly as you can. Suddenly, you feel a sharp pain in your side, followed by another beside it.
+Pushing the pain aside, you continue pulling your friend closer and closer to your trench. Finally, with one last heave, you and Brad tumble into the trench.
+Stretchers arrive and you are both taken to an aid station. While your actions managed to save your friend’s life, you succumb to your wounds. Your heroism earns you a posthumous Order of St. John Life Saving Medal in Gold.
+set {chosen_path} = "End 5"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label D13
+You take up a prone position beside your wounded friend and aim your rifle at a distant German helmet. The explosions, bullets, and screams make your body turn to ice. Your limbs are numb and - not for the first time - you lose control of your bowls.
+You fire your weapon, work the bolt, camber another round, and fire again. Are your shots doing anything? You can’t tell. 
+Machine gun fire suddenly sprays overhead, dropping dozens of soldiers. Before you can move, another spray of bullets strikes the earth around you, this time killing both you and Brad.
+Your bodies are but two of thousands littering a small segment of land, soon to be feasted upon by rats. Your remains are never recovered.\
+\
+The End
+set {chosen_path} = "Death 25"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label D14
+You feel bad leaving Brad behind but it would be almost suicidal to stop in the middle of an advance, with little cover. You figure attacking and keeping any enemy fire away from him is the best move.
+You rush the enemy trench along with your comrades, firing your rifle. Suddenly, a machine gun housed in a protective Pill Box behind the enemy trench, opens fire. Bullets spray across you and your fellow soldiers, killing you all in seconds.
+set {chosen_path} = "Death 26"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label A19
+Pulling your blade from the dead soldier, you glance at two other Germans and feel a sudden chill run through you - the fear of imminent death - but neither of the men move. They are terrified, frozen in place.
+You consider taking them prisoner, or at least you would have if two other soldiers hadn’t shot them as they jumped into the trench. There’s no time to dwell on it – you have to keep moving.
+Part of the trench ahead has collapsed from an artillery shell, blocking the way. Machine gun fire draws your attention to a spot behind the enemy trench. There you noted a large concrete fortification. 
+Nicknamed a Pill Box, it is elevated above the trench, which not only provides the machine gun crew a perfect vantage point to fire on enemy soldiers, but also protection from enemy fire.
+- Head back into No Man’s Land to find a way around the collapsed trench
+	set {chosen_path} = "D191"
+- Make your way to the pillbox
+	set {chosen_path} = "A19A"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label D191
+You decide to climb back out of the trench and slither around on the battlefield. Pulling yourself over the enemy parapet, you crouch down and move sideways along the edge of the trench. 
+You feel something hold you back, gripping your uniform and webbing. It’s the enemy barbed wire. You struggle to free yourself but, as you do, machine gun fire strikes you. You die, your body propped up by the wire.
+set {chosen_path} = "Death 27"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label A19A
+All around you, Canadians and Germans are locked in close quarter combat. An enemy soldier rounds the corner of the communication trench, and you fire a round into him. Working the bolt, a second German appears and swings at you with a trench shovel. 
+There now appears to be more Canadians in the trench now – the Germans have retreated.
+You lean back, narrowly avoiding the strike. You hear a TING as the metal shovel brushes the front of your steel brodie helmet.
+You fall back and onto the ground. The German soldier immediately raises his shovel over his head, but as he brings it down to strike, you manage to raise your rifle and stab him with your bayonet.
+Before you can recover, three more Germans appear. One, an officer, is holding a pistol. He takes aim at you.
+BANG.
+You blink and see the officer fall back. 2Lt Holmes is standing, revolver in hand. He immediately fires at another German soldier - at the same time, a shot from behind you drops the third.
+2Lt Holmes\: Help him up.\
+\
+Strong hands grab you under your armpits and lift you to your feet. You turn to see Sgt Fitzgerald.
+Sgt Fitzgerald\: You alright, lad?\
+\
+You\: Yes Sergeant. Thanks.
+There appears to be even more Canadians around then Germans now.\
+\
+2Lt Holmes\: We have this part of the trench, keep moving!
+He and Sgt. Fitzgerald turn and head in the opposite direction as you move up the communication line with some other soldiers, intent on making it to the pill box.
+You reach a part of the enemy trench that leads up to the pill box. Thankfully, you are not directly in front of it.
+- Throw a grenade into the pill box
+	set {chosen_path} = "A20"
+- Approach the pill box and take it by shooting the soldiers inside
+	set {chosen_path} = "D16"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label A20
+Sliding out of the trench on your stomach, you military crawl towards the concrete fortification. You’re now close enough to feel the rattling of the machine gun fire and hear the German soldiers inside shouting orders.
+You roll onto your back, pull another grenade from a pouch, a No. 5 Mk I "Mills Bomb". You grasp the pineapple shaped grenade and hold down the lever, keeping it in place. With some effort, you pull the pin out.
+Then, with eyes fixed on the rectangular shaped opening of the pill box, you release the lever, allowing it to spring free, but hold onto the grenade to cook it.
+One Second... Two Seconds
+You toss it towards the opening at the exact time the machine gun begins to fire. The sound of the gun may have muffled the bomb’s landing. Or perhaps the Germans noticed it. Either way, the grenade explodes almost immediately, killing all inside. The gun falls silent.
+You move towards the entrance of the box, rifle ready, and enter. You first confirm that each soldier is dead before searching the area. Looking out of the pill box opening you notice some German soldiers making their way into the communication trench.
+Turning, you look back and, to your surprise, see a British Lewis Gun on the cold concrete floor, beside another machine gun you don’t recognize. Perhaps they were captured at some point?
+- Man the machine gun
+	set {chosen_path} = "D17"
+- Take the lewis gun
+	set {chosen_path} = "A21"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label A21
+As you take hold of the lewis gun, head to the opening, and proceed to fire on any German soldiers that you see. After a minute, you notice that several enemy soldiers are coming from a distant communication line, so you focus your fire there, suppressing any further advance.
+Eventually, you are joined by a wounded 2Lt Holmes and Sgt Fitzgerald. Unfortunately, Cpl Barron was killed in the attack.
+The next day, you are promoted to the rank of Corporal and made Section Commander. 2Lt Holmes also notes your courage and quick thinking, submitting you for an honour.
+You serve until the end of the war, rising to the rank of Sergeant and retire a decorated veteran of The Great War.
+Congratulations, you beat the odds and not only managed to survive, but end your service with distinction. \
+\
+The End
+set {chosen_path} = "End 6"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label D17
+As you get on your knees behind the machine gun, ready to mow down any Germans that you see outside the pill box. Taking a deep breath, you load the ammo into the hopper. Then, once you see the Germans you begin firing.
+Enemy soldiers fall one by one. Suddenly, the machine gun stops. You notice that the extruder - the component responsible for removing spent casings - had failed.
+- D17A
+	set {chosen_path} = "Try to clear the jam."
+- D17D
+	set {chosen_path} = "Go for the Lewis Gun"
+- D17E
+	set {chosen_path} = "Switch back to your Lee Enfield"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label D17A
+You decide to try and clear the jam. Should you try to work the bolt or use an object to loosen the jammed spent casing?
+- Focus on the bolt
+	set {chosen_path} = "D17B"
+- Loosen the casing
+	set {chosen_path} = "D17C"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label D17B
+You keep tugging and hitting the bolt, trying to get it to loose. A German soldier enters through the back door, sees you, and tosses a grenade behind you before closing the door. You turn and see the bomb, which then explodes, killing you instantly. \
+\
+The End
+set {chosen_path} = "Death 29"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label D16
+As you carefully make your way towards the opening of the pill box, you bring your rifle up and unload into the gun crew. You manage to take out three men but a fourth, further back in the enclosure, raises a pistol and fires three rounds into your chest. You fall back, dead. \
+\
+The End
+set {chosen_path} = "Death 30"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label D17C
+You pull at the loose casing, hitting it a few times with your fist, succeeding in getting it out. Again, you start firing into an advancing group of German soldiers.You hit them all but one manages to toss a grenade before your bullets strike him down.
+The grenade spins towards the narrow slit opening of the pill box, prematurely detonating just outside of the structure. The concrete absorbs much of the blast, but you and the machine gun are both sent backwards from the remainder of the kinetic energy.
+Ears ringing and vision blurred, it’s a struggle to remain semi-conscious. The entrance to the pill box flings open and two German soldiers rush in. One presses a boot onto your chest, cracking ribs and forcing the air out of your lungs. The muzzle of his Gewehr 98 is set right between your eyes.
+German\: Du hast meine Freunde getötet!\
+\
+You have no idea what he said - you can’t even take your last breath.
+BANG!
+A shot rings out, followed by another. You stay frozen, bracing yourself for the bullet, and then realize the weight on your chest is gone. You take in a desperate lung full of air, your cracked ribs causing incredible pain.\
+\
+Brad\: Hey chum, thought I’d bare a hand!
+You manage a weak smile before passing out from the strain. You awaken in hospital with bandages covering your eyes. A nursing sister explains that Brad had managed to get you medical attention and that your eyes had been damaged by the exploding grenade. Next, the doctor arrives and slowly removes your bandages.
+You open your eyes – your vision is blurry but after several minutes, it remains unchanged. Everything around you his fuzzy – you can make out colours and shapes but details are obscure. While not blind, your vision is permanently impaired. You are honourably discharged and sent back home.
+Thankfully, Brad survives the war and returns a year later, remaining a lifelong friend who assists you in daily life. While living with the impairment is challenging, you adjust to your new life, grateful to have survived the war.  
+set {chosen_path} = "End 6"
 [end_timeline]
-label 
-<Empty Text Event>
-set 
+label D17D
+The jam is too hard to dislodge and so you make the split-second decision to grab the Lewis Gun. Diving for the weapon you scoop it up into your arms just as a stick grenade lands behind you.
+Noticing the threat, you drop the machine gun and pick-up the grenade, tossing it towards the pillbox’s opening. Unfortunately, it detonates only feet from your hand, killing you instantly.
+The End
+set {chosen_path} = "Deeath 31"
+[end_timeline]
+label D17E
+Deciding that the jam is too hard to dislodge, you decide instead to switch to your Lee Enfield. You lift the rifle, work the bolt, take aim at the nearest approaching German soldier, and fire.
+Repeating the drill, you take out another soldier, and then another, methodically dropping the advancing force one by one. But there are too many – as you duck down and load another magazine, a stick grenade lands inside the pillbox.
+You dive forward to scoop it up and toss it back out the opening when two more grenades land inside the shelter. Defiant to the end, you throw it back at the enemy, seeing it explode just before the two inside the pillbox detonate, killing you.
+The End
+set {Dialogic} = "Death 32"
 [end_timeline]

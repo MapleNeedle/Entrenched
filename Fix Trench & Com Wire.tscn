@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bo2h148okhotg" path="res://signal.tscn" id="6_6vaq7"]
 [ext_resource type="Script" uid="uid://bfwrsmhst2wm" path="res://scripts/Fix Trench 1.gd" id="7_k8gun"]
 [ext_resource type="Script" uid="uid://s04teyxjkhf7" path="res://scripts/Com Wire 1.gd" id="8_1l740"]
+[ext_resource type="Script" uid="uid://b6fb8rwj0b647" path="res://to_next3.1.gd" id="10_1l740"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_76dbq"]
 size = Vector2(129, 20)
@@ -25,7 +26,7 @@ size = Vector2(33, 81)
 [node name="Node2D" type="Node2D" unique_id=79470013]
 y_sort_enabled = true
 script = ExtResource("1_odytx")
-new_value = "Fix Trench"
+new_value = "3.1A1"
 
 [node name="PeriscopeTop" type="Sprite2D" parent="." unique_id=409636670]
 z_index = -1
@@ -83,7 +84,7 @@ y_sort_enabled = true
 script = ExtResource("5_k8gun")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="To next" unique_id=498748274]
-position = Vector2(551, 46)
+position = Vector2(562, 46)
 shape = SubResource("RectangleShape2D_hquc8")
 
 [node name="Node2D2" parent="." unique_id=657468987 instance=ExtResource("6_6vaq7")]
@@ -135,6 +136,50 @@ script = ExtResource("8_1l740")
 position = Vector2(261, 38.5)
 shape = SubResource("RectangleShape2D_jx45d")
 
+[node name="3_1A1" type="Sprite2D" parent="Node2D" unique_id=1823303191]
+y_sort_enabled = true
+
+[node name="Node2D" parent="Node2D/3_1A1" unique_id=1743233128 instance=ExtResource("6_6vaq7")]
+y_sort_enabled = true
+position = Vector2(-142, -78)
+rotation = -3.1415925
+
+[node name="Node2D2" parent="Node2D/3_1A1" unique_id=434969655 instance=ExtResource("6_6vaq7")]
+y_sort_enabled = true
+position = Vector2(325, 37)
+rotation = 3.1415927
+
+[node name="To next" type="Area2D" parent="Node2D/3_1A1" unique_id=1844341016]
+y_sort_enabled = true
+script = ExtResource("10_1l740")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/3_1A1/To next" unique_id=1003324943]
+position = Vector2(551, 46)
+shape = SubResource("RectangleShape2D_hquc8")
+
+[node name="3_1AMM1" type="Sprite2D" parent="Node2D" unique_id=1808571257]
+y_sort_enabled = true
+
+[node name="Node2D" parent="Node2D/3_1AMM1" unique_id=63348133 instance=ExtResource("6_6vaq7")]
+y_sort_enabled = true
+position = Vector2(-142, -78)
+rotation = -3.1415925
+
+[node name="Node2D2" parent="Node2D/3_1AMM1" unique_id=225296065 instance=ExtResource("6_6vaq7")]
+y_sort_enabled = true
+position = Vector2(325, 37)
+rotation = 3.1415927
+
+[node name="To next" type="Area2D" parent="Node2D/3_1AMM1" unique_id=142903722]
+y_sort_enabled = true
+script = ExtResource("10_1l740")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/3_1AMM1/To next" unique_id=230711171]
+position = Vector2(551, 46)
+shape = SubResource("RectangleShape2D_hquc8")
+
 [connection signal="body_entered" from="To next" to="To next" method="_on_body_entered"]
 [connection signal="body_entered" from="Node2D/Fix Trench/Area2D" to="Node2D/Fix Trench/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Node2D/Communication Wire/Area2D" to="Node2D/Communication Wire/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/3_1A1/To next" to="Node2D/3_1A1/To next" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/3_1AMM1/To next" to="Node2D/3_1AMM1/To next" method="_on_body_entered"]

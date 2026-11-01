@@ -1,0 +1,194 @@
+[gd_scene format=3 uid="uid://cuvtyxmfq18bt"]
+
+[ext_resource type="Script" uid="uid://biv16btoidtof" path="res://scripts/AAchangeDialogicVar.gd" id="1_jq8dl"]
+[ext_resource type="Texture2D" uid="uid://cfyfm2fjbhuir" path="res://Backgrounds/NML#1.png" id="1_q1ssc"]
+[ext_resource type="PackedScene" uid="uid://bbpkrp2ou73nt" path="res://maincharacter.tscn" id="2_fljql"]
+[ext_resource type="Script" uid="uid://488h7b1xkgtm" path="res://scripts/trigger_box_&_signals.gd" id="4_qr4eq"]
+[ext_resource type="PackedScene" uid="uid://bo2h148okhotg" path="res://signal.tscn" id="5_tthkm"]
+[ext_resource type="Script" uid="uid://dsdkw1xk81hg4" path="res://scripts/2.14 Rescue Soldier.gd" id="6_3wrnh"]
+[ext_resource type="Script" uid="uid://sjvef7eiw5wf" path="res://scripts/2_14 Rescue Soldier1.gd" id="7_siwtl"]
+[ext_resource type="Script" uid="uid://bqstscxyhffeb" path="res://scripts/2.11 Crater.gd" id="8_3wrnh"]
+[ext_resource type="Script" uid="uid://deja3ioh3fprv" path="res://scripts/sentryUpDown.gd" id="9_siwtl"]
+[ext_resource type="Texture2D" uid="uid://bf1ejct3341qt" path="res://other characters/solder back.png" id="10_o8enr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o8enr"]
+size = Vector2(110, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mjp45"]
+size = Vector2(155, 45)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3nkik"]
+size = Vector2(138, 20)
+
+[sub_resource type="Animation" id="Animation_8l1hq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../sentry/SolderBack:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("10_o8enr")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../sentry/SolderBack:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2.84963, 2.84963)]
+}
+
+[sub_resource type="Animation" id="Animation_bbjnh"]
+resource_name = "sentry up down"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../sentry/SolderBack:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("10_o8enr")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../sentry/SolderBack:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(2.84963, 2.84963), Vector2(2.85, 2.78), Vector2(2.85, 2.85)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rvqvc"]
+_data = {
+&"RESET": SubResource("Animation_8l1hq"),
+&"sentry up down": SubResource("Animation_bbjnh")
+}
+
+[node name="Node2D" type="Node2D" unique_id=338143903]
+script = ExtResource("1_jq8dl")
+new_value = "2.14 Rescue Soldier"
+
+[node name="Nml#1" type="Sprite2D" parent="." unique_id=1080727084]
+position = Vector2(10.0000305, 629)
+scale = Vector2(0.9235207, 0.9235207)
+texture = ExtResource("1_q1ssc")
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Nml#1" unique_id=1021888092]
+offset_left = -796.00006
+offset_top = -592.0
+offset_right = -732.9274
+offset_bottom = -529.99054
+scale = Vector2(25.322395, 19.158098)
+border_width = 0.2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Nml#1" unique_id=555569770]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Nml#1/StaticBody2D" unique_id=1390591503]
+polygon = PackedVector2Array(791.5361, -587.96735, -793.70184, -591.21576, -793.70184, 596.6299, 801.28143, 596.6299, 791.5361, -590.13293, 820.77203, -590.13293, 841.34546, 639.9424, -855.4222, 632.3627, -842.4284, -622.6174, 814.27515, -617.20325, 820.77203, -590.13293)
+
+[node name="Main_Character" parent="." unique_id=341919493 instance=ExtResource("2_fljql")]
+position = Vector2(-22.000002, 1174)
+scale = Vector2(1.0218749, 1.0218749)
+
+[node name="Node2D" type="Node2D" parent="." unique_id=271628884]
+script = ExtResource("4_qr4eq")
+
+[node name="2_14 Rescue Soldier" type="Sprite2D" parent="Node2D" unique_id=1057168864]
+position = Vector2(-77, 1332)
+
+[node name="signal" parent="Node2D/2_14 Rescue Soldier" unique_id=657468987 instance=ExtResource("5_tthkm")]
+position = Vector2(-40, -336)
+rotation = 1.5707964
+
+[node name="Area2D" type="Area2D" parent="Node2D/2_14 Rescue Soldier" unique_id=287504476]
+script = ExtResource("6_3wrnh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/2_14 Rescue Soldier/Area2D" unique_id=420513793]
+position = Vector2(-41, -403)
+shape = SubResource("RectangleShape2D_o8enr")
+
+[node name="2_14 Rescue Soldier1" type="Sprite2D" parent="Node2D" unique_id=684732068]
+position = Vector2(-77, 1332)
+
+[node name="signal" parent="Node2D/2_14 Rescue Soldier1" unique_id=251379949 instance=ExtResource("5_tthkm")]
+position = Vector2(57, -250)
+rotation = -1.5707964
+
+[node name="Area2D" type="Area2D" parent="Node2D/2_14 Rescue Soldier1" unique_id=1347406294]
+script = ExtResource("7_siwtl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/2_14 Rescue Soldier1/Area2D" unique_id=1945624586]
+position = Vector2(51, -176)
+shape = SubResource("RectangleShape2D_mjp45")
+
+[node name="2_9 Run to the crater" type="Sprite2D" parent="Node2D" unique_id=891175452]
+
+[node name="signal" parent="Node2D/2_9 Run to the crater" unique_id=1443440578 instance=ExtResource("5_tthkm")]
+position = Vector2(43, 886)
+rotation = 1.7300514
+
+[node name="signal2" parent="Node2D/2_9 Run to the crater" unique_id=2114873875 instance=ExtResource("5_tthkm")]
+position = Vector2(92, 584)
+rotation = 2.31511
+
+[node name="signal3" parent="Node2D/2_9 Run to the crater" unique_id=1439091695 instance=ExtResource("5_tthkm")]
+position = Vector2(235.99998, 332.00006)
+rotation = 1.6040314
+
+[node name="Area2D" type="Area2D" parent="Node2D/2_9 Run to the crater" unique_id=857899274]
+script = ExtResource("8_3wrnh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/2_9 Run to the crater/Area2D" unique_id=805213841]
+position = Vector2(232, 234)
+shape = SubResource("RectangleShape2D_3nkik")
+
+[node name="sentry" type="Node2D" parent="Node2D/2_9 Run to the crater" unique_id=841366577]
+y_sort_enabled = true
+position = Vector2(317, 347)
+scale = Vector2(1.3739034, 1.3739034)
+script = ExtResource("9_siwtl")
+
+[node name="SolderBack" type="Sprite2D" parent="Node2D/2_9 Run to the crater/sentry" unique_id=509101126]
+y_sort_enabled = true
+position = Vector2(2, -99)
+scale = Vector2(2.84963, 2.84963)
+texture = ExtResource("10_o8enr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/2_9 Run to the crater/sentry" unique_id=748435298]
+libraries/ = SubResource("AnimationLibrary_rvqvc")
+
+[node name="sentry2" type="Node2D" parent="Node2D/2_9 Run to the crater" unique_id=865114077]
+y_sort_enabled = true
+position = Vector2(339, 366)
+scale = Vector2(-1.294, 1.294)
+script = ExtResource("9_siwtl")
+
+[node name="SolderBack" type="Sprite2D" parent="Node2D/2_9 Run to the crater/sentry2" unique_id=72272620]
+y_sort_enabled = true
+position = Vector2(2, -99)
+scale = Vector2(2.84963, 2.84963)
+texture = ExtResource("10_o8enr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/2_9 Run to the crater/sentry2" unique_id=854580538]
+libraries/ = SubResource("AnimationLibrary_rvqvc")
+
+[connection signal="body_entered" from="Node2D/2_14 Rescue Soldier/Area2D" to="Node2D/2_14 Rescue Soldier/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/2_14 Rescue Soldier1/Area2D" to="Node2D/2_14 Rescue Soldier1/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Node2D/2_9 Run to the crater/Area2D" to="Node2D/2_9 Run to the crater/Area2D" method="_on_body_entered"]
